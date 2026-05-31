@@ -139,21 +139,33 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .stories-intro p{font-size:clamp(14.5px,1.5vw,16.5px);line-height:1.55;color:#2a2540;max-width:520px}
 @media (max-width:760px){.stories-head{grid-template-columns:1fr;gap:14px}}
 
-.stories-track-wrap{overflow:hidden;position:relative;width:100%}
-.stories-track{display:flex;gap:18px;padding:0 clamp(22px,4vw,40px);width:max-content;animation:storiesScroll 70s linear infinite;will-change:transform}
-.stories-track:hover{animation-play-state:paused}
-.story-card{display:block;flex:0 0 clamp(260px,30vw,340px);position:relative;border-radius:14px;overflow:hidden;background:#222;color:#fff;text-align:left;transition:transform .35s,box-shadow .35s;cursor:pointer;aspect-ratio:3/4}
-.story-card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(0,0,0,.22)}
-.story-card img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
-.story-card .card-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.35) 50%,rgba(0,0,0,.85) 100%)}
-.story-card .story-card-tag{position:absolute;top:14px;left:14px;background:rgba(255,255,255,.92);color:#0a0a0a;padding:6px 10px;border-radius:100px;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;z-index:2}
-.story-card-body{position:absolute;left:0;right:0;bottom:0;padding:clamp(18px,2vw,24px);z-index:2}
-.story-card-name{font-style:italic;font-weight:900;font-size:clamp(20px,2.3vw,28px);line-height:1;letter-spacing:-.01em;margin-bottom:6px;color:#fff}
-.story-card-author{font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:10px}
-.story-card-meta{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#fff;border-top:1px solid rgba(255,255,255,.3);padding-top:10px}
-.story-card-meta::after{content:'\2192';font-size:14px;letter-spacing:0}
-@keyframes storiesScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.stories-track{animation:none}}
+/* ===== D2. CASE STUDIES (vertical alternating hero blocks, replaces marquee) ===== */
+.case-studies-stack{max-width:1200px;margin:0 auto;padding:0 clamp(22px,4vw,40px);display:flex;flex-direction:column;gap:clamp(72px,9vw,128px)}
+.case-study-block{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,72px);align-items:center}
+.case-study-block.reverse .case-study-image{order:2}
+.case-study-image{position:relative;aspect-ratio:4/5;border-radius:18px;overflow:hidden;background:#222}
+.case-study-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(0.16,1,0.3,1)}
+.case-study-block:hover .case-study-image img{transform:scale(1.04)}
+.case-study-tag{position:absolute;top:18px;left:18px;background:rgba(255,255,255,.95);color:#0a0a0a;padding:8px 14px;border-radius:100px;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;z-index:2}
+.case-study-content{display:flex;flex-direction:column;gap:clamp(20px,2.4vw,28px)}
+.case-study-quote{font-style:italic;font-weight:900;font-size:clamp(28px,4.4vw,56px);line-height:1.05;letter-spacing:-.02em;color:#0a0a0a;margin:0}
+.case-study-quote::before{content:'\201C';color:#233dff;margin-right:.04em}
+.case-study-quote::after{content:'\201D';color:#233dff;margin-left:.04em}
+.case-study-author{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6b6480}
+.case-study-cta{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;background:#0a0a0a;color:#fff;padding:14px 24px;border-radius:100px;font-weight:700;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;border:none;cursor:pointer;transition:background .25s,transform .25s;min-height:48px;text-decoration:none}
+.case-study-cta:hover{background:#233dff;transform:translateY(-2px)}
+.case-study-cta::after{content:'\2192';font-size:14px;letter-spacing:0}
+@media (max-width:880px){
+  .case-study-block{grid-template-columns:1fr;gap:24px}
+  .case-study-block.reverse .case-study-image{order:0}
+  .case-study-quote{font-size:clamp(26px,7vw,40px)}
+}
+
+/* ===== D3. PULL QUOTE DIVIDER ===== */
+.pull-quote-divider{background:#0a0a0a;color:#fff;padding:clamp(80px,10vw,140px) clamp(22px,4vw,40px);text-align:center}
+.pull-quote-divider-inner{max-width:1100px;margin:0 auto}
+.pull-quote-divider-text{font-style:italic;font-weight:900;font-size:clamp(30px,5.2vw,68px);line-height:1.08;letter-spacing:-.02em;color:#fff;margin:0}
+.pull-quote-divider-text em{color:#9faaff;font-style:italic;font-weight:900}
 
 /* ===== STORY ARTICLE OVERLAY ===== */
 .story-overlay{position:fixed;inset:0;background:#fff;z-index:1100;display:none;overflow-y:auto;-webkit-overflow-scrolling:touch}
@@ -429,18 +441,17 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   </div>
 </section>
 
-<!-- ================ D. SLIDER STORIES (clickable thumbnails open article overlay) ================ -->
+<!-- ================ D. CASE STUDIES (vertical alternating blocks, opens article overlay) ================ -->
 <section class="stories" id="slider-stories">
   <div class="stories-head">
-    <h2 class="stories-title rise-on-scroll">Read their<br>stories</h2>
+    <h2 class="stories-title rise-on-scroll">The<br>research.</h2>
     <div class="stories-intro rise-on-scroll">
-      <span class="eyebrow">Ambassadors</span>
-      <p>Read about the research and the people shaping Unstoppable. Each card opens a story drawn from a published study guiding how we design healing spaces for Black and underserved communities.</p>
+      <span class="eyebrow">Case Studies</span>
+      <p>Five published studies shape how we design healing spaces for Black and underserved communities. Each one is the reason a specific part of Unstoppable looks the way it does.</p>
     </div>
   </div>
-  <div class="stories-track-wrap">
-    <!-- Cards are populated by JS so we can duplicate them for the infinite marquee and bind click handlers -->
-    <div class="stories-track" id="storiesTrack"></div>
+  <div class="case-studies-stack" id="caseStudiesStack">
+    <!-- Blocks are populated by JS from the same stories[] data that powers the overlay -->
   </div>
 </section>
 
@@ -475,6 +486,13 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
     </a>
   </div>
 </div>
+
+<!-- ================ D2. PULL QUOTE DIVIDER ================ -->
+<section class="pull-quote-divider" aria-label="Pull quote">
+  <div class="pull-quote-divider-inner rise-on-scroll">
+    <p class="pull-quote-divider-text">When we heal ourselves, we heal <em>generations before us</em> and <em>generations to come</em>.</p>
+  </div>
+</section>
 
 <!-- ================ E. SHARE YOUR STORY ================ -->
 <section class="share" id="share-your-story">
@@ -673,10 +691,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
       <div class="supporter-cell rise-on-scroll">
         <div class="supporter-logo"><img src="./partner-cyfer.png" alt="CYFER"></div>
         <span class="supporter-name">CYFER</span>
-      </div>
-      <div class="supporter-cell rise-on-scroll">
-        <div class="supporter-logo"><img src="./partner-take-action.png" alt="Take Action LA"></div>
-        <span class="supporter-name">Take Action LA Coalition</span>
       </div>
       <div class="supporter-cell rise-on-scroll">
         <div class="supporter-logo"><img src="./unstoppable-logo.png" alt="Health Matters Clinic Unstoppable"></div>
@@ -967,30 +981,27 @@ const stories = [
   }
 ];
 
-// ==================== STORY CARD BUILD + DUPLICATION FOR INFINITE MARQUEE ====================
-const storiesTrack = document.getElementById('storiesTrack');
-function buildCard(story) {
-  const a = document.createElement('a');
-  a.className = 'story-card';
-  a.href = '#';
-  a.dataset.storyId = story.id;
-  a.innerHTML = `
-    <img src="${story.thumbnail}" alt="">
-    <div class="card-scrim"></div>
-    <span class="story-card-tag">${story.tag}</span>
-    <div class="story-card-body">
-      <div class="story-card-name">${story.name}</div>
-      <div class="story-card-author">${story.author}</div>
-      <div class="story-card-meta">Read the story</div>
+// ==================== CASE STUDY BLOCK BUILD (vertical alternating) ====================
+const caseStudiesStack = document.getElementById('caseStudiesStack');
+function buildCaseStudyBlock(story, index) {
+  const block = document.createElement('div');
+  block.className = 'case-study-block rise-on-scroll' + (index % 2 === 1 ? ' reverse' : '');
+  // Strip wrapping quote characters from the power statement since CSS adds curly quotes
+  const cleanQuote = story.body.quote.replace(/^["“‘]+|["”’]+$/g, '');
+  block.innerHTML = `
+    <div class="case-study-image">
+      <span class="case-study-tag">${story.tag}</span>
+      <img src="${story.thumbnail}" alt="${story.name}">
+    </div>
+    <div class="case-study-content">
+      <blockquote class="case-study-quote">${cleanQuote}</blockquote>
+      <span class="case-study-author">${story.author}</span>
+      <button class="case-study-cta" type="button" data-story-id="${story.id}">Read the full study</button>
     </div>`;
-  a.addEventListener('click', function(e){
-    e.preventDefault();
-    openStory(story.id);
-  });
-  return a;
+  block.querySelector('.case-study-cta').addEventListener('click', () => openStory(story.id));
+  return block;
 }
-// Duplicate the array so the marquee loops with no blank gap
-[...stories, ...stories].forEach(s => storiesTrack.appendChild(buildCard(s)));
+stories.forEach((s, i) => caseStudiesStack.appendChild(buildCaseStudyBlock(s, i)));
 
 // ==================== STORY OVERLAY ====================
 const overlay = document.getElementById('storyOverlay');
