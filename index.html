@@ -36,57 +36,24 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 @keyframes heroKenBurns{from{transform:scale(1.04)}to{transform:scale(1.12)}}
 @media (prefers-reduced-motion:reduce){.hero-slide.active{animation:none;transform:scale(1.04)}}
 .hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,rgba(0,0,0,.15) 30%,rgba(0,0,0,.25) 65%,rgba(0,0,0,.75) 100%);pointer-events:none}
-.hero-top{position:absolute;top:24px;left:0;right:0;z-index:6;display:flex;align-items:center;justify-content:space-between;padding:0 32px;gap:16px}
-.hero-logo{display:inline-flex;align-items:center;gap:10px}
-.hero-logo img{height:42px;width:auto;filter:brightness(0) invert(1)}
-
-/* Floating white pill nav (ASICS style): single rounded white pill */
-.hero-pill{display:inline-flex;align-items:center;gap:2px;background:#fff;border-radius:100px;padding:5px 5px 5px 20px;box-shadow:0 6px 24px rgba(0,0,0,.18)}
-.hero-pill a.hero-pill-link{color:#0a0a0a;font-size:12.5px;font-weight:600;letter-spacing:.01em;padding:10px 14px;border-radius:100px;white-space:nowrap;transition:background .2s,color .2s;text-decoration:none}
-.hero-pill a.hero-pill-link:hover{background:#f0eef5}
-.hero-pill .hero-pill-cta{display:inline-flex;align-items:center;background:#233dff;color:#fff;font-size:12.5px;font-weight:700;letter-spacing:.02em;padding:10px 18px;border-radius:100px;white-space:nowrap;transition:background .2s;text-decoration:none}
-.hero-pill .hero-pill-cta:hover{background:#1a2bcc}
-.hero-pill-burger{width:40px;height:40px;border-radius:50%;background:#0a0a0a;color:#fff;display:inline-flex;align-items:center;justify-content:center;border:none;cursor:pointer;margin-left:4px;transition:transform .25s,background .2s;flex-shrink:0}
-.hero-pill-burger:hover{transform:scale(1.06);background:#233dff}
-.hero-pill-burger span{display:block;width:16px;height:2px;background:#fff;position:relative}
-.hero-pill-burger span::before,.hero-pill-burger span::after{content:'';position:absolute;left:0;width:16px;height:2px;background:#fff}
-.hero-pill-burger span::before{top:-5px}.hero-pill-burger span::after{top:5px}
-
-/* Mobile hamburger */
-.hero-burger-mobile{display:none;width:44px;height:44px;border-radius:50%;background:#fff;color:#0a0a0a;align-items:center;justify-content:center;border:none;cursor:pointer;box-shadow:0 6px 24px rgba(0,0,0,.18)}
-.hero-burger-mobile span{display:block;width:18px;height:2px;background:#0a0a0a;position:relative}
-.hero-burger-mobile span::before,.hero-burger-mobile span::after{content:'';position:absolute;left:0;width:18px;height:2px;background:#0a0a0a}
-.hero-burger-mobile span::before{top:-6px}.hero-burger-mobile span::after{top:6px}
-
-/* Full-screen menu overlay */
-.hero-menu-overlay{position:fixed;inset:0;background:#0a0a0a;color:#fff;z-index:1000;display:none;flex-direction:column;padding:24px 28px;overflow-y:auto}
-.hero-menu-overlay.open{display:flex}
-.hero-menu-overlay .menu-close{align-self:flex-end;width:44px;height:44px;border-radius:50%;background:#fff;color:#0a0a0a;display:inline-flex;align-items:center;justify-content:center;border:none;cursor:pointer;font-size:24px;font-weight:300;line-height:1}
-.hero-menu-overlay nav{display:flex;flex-direction:column;gap:6px;margin-top:24px}
-.hero-menu-overlay nav a{display:block;color:#fff;font-style:italic;font-weight:800;font-size:34px;letter-spacing:-.01em;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12);text-decoration:none}
-.hero-menu-overlay nav a.menu-cta{color:#fff;background:#233dff;border:none;border-radius:100px;padding:16px 24px;font-style:normal;font-size:14px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;text-align:center;margin-top:18px}
-
-/* Hero content: title centered-vertical, left-aligned, stacked 2-line ASICS-style */
+/* Hero content: title centered-vertical, left-aligned */
 .hero-content{position:absolute;inset:0;z-index:4;padding:0 clamp(22px,5vw,80px);display:flex;flex-direction:column;justify-content:center;pointer-events:none;max-width:1400px;margin:0 auto;left:0;right:0}
-.hero-title{color:#fff;font-style:italic;font-weight:900;letter-spacing:-.035em;line-height:.86;font-size:clamp(64px,13.5vw,210px);text-shadow:0 4px 30px rgba(0,0,0,.45);text-align:left;max-width:14ch;margin-bottom:clamp(20px,2.4vw,32px);text-transform:none}
-.hero-title .line{display:block}
-.hero-title .line-2{padding-left:clamp(36px,7vw,140px)} /* echoes ASICS staggered indent of "Her Mind" */
-.hero-tagline{max-width:540px;color:#fff;font-family:'Questrial','Inter',sans-serif;font-size:clamp(15px,1.4vw,19px);line-height:1.5;font-weight:400;text-shadow:0 2px 12px rgba(0,0,0,.55);text-align:left;padding-left:clamp(36px,7vw,140px);letter-spacing:-.005em}
-.hero-scroll{position:absolute;right:clamp(22px,4vw,44px);bottom:clamp(22px,3vw,36px);z-index:5;color:#fff;font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;width:72px;height:72px;border-radius:50%;border:1px solid rgba(255,255,255,.6);display:inline-flex;align-items:center;justify-content:center;text-decoration:none;background:rgba(255,255,255,.06);backdrop-filter:blur(4px);transition:background .25s,transform .25s,border-color .25s}
-.hero-scroll:hover{background:rgba(255,255,255,.16);border-color:#fff;transform:translateY(-2px)}
-.hero-scroll::after{content:'';position:absolute;left:50%;bottom:14px;width:1px;height:14px;background:rgba(255,255,255,.55);transform:translateX(-50%)}
+.hero-title{color:#fff;font-style:italic;font-weight:900;letter-spacing:-.035em;line-height:.86;font-size:clamp(72px,14.5vw,220px);text-shadow:0 4px 30px rgba(0,0,0,.45);text-align:left;max-width:14ch;margin-bottom:clamp(20px,2.4vw,32px);text-transform:none}
+.hero-tagline{max-width:540px;color:#fff;font-family:'Questrial','Inter',sans-serif;font-size:clamp(15px,1.4vw,19px);line-height:1.5;font-weight:400;text-shadow:0 2px 12px rgba(0,0,0,.55);text-align:left;letter-spacing:-.005em;margin-top:18px}
+
+/* Animated mouse scroll cue */
+.hero-scroll{position:absolute;left:50%;bottom:clamp(28px,3.5vw,48px);transform:translateX(-50%);z-index:5;display:inline-flex;width:30px;height:48px;border:2px solid rgba(255,255,255,.78);border-radius:18px;background:rgba(255,255,255,.06);backdrop-filter:blur(4px);text-decoration:none;transition:border-color .25s,transform .25s}
+.hero-scroll:hover{border-color:#fff;transform:translateX(-50%) translateY(-3px)}
+.hero-scroll::after{content:'';position:absolute;left:50%;top:8px;width:3px;height:8px;background:#fff;border-radius:2px;transform:translateX(-50%);animation:mouseScroll 1.8s cubic-bezier(0.6,0,0.4,1) infinite}
+@keyframes mouseScroll{0%{opacity:0;transform:translate(-50%,-4px)}30%{opacity:1}80%{opacity:1;transform:translate(-50%,16px)}100%{opacity:0;transform:translate(-50%,16px)}}
+@media (prefers-reduced-motion:reduce){.hero-scroll::after{animation:none;top:14px;opacity:1}}
 
 @media (max-width:880px){
   .hero{min-height:560px}
   .hero-content{padding:0 22px;justify-content:flex-end;padding-bottom:clamp(96px,18vw,130px)}
-  .hero-title{font-size:clamp(56px,15vw,100px);line-height:.9;max-width:100%;margin-bottom:18px}
-  .hero-title .line-2{padding-left:clamp(20px,7vw,40px)}
-  .hero-tagline{max-width:100%;font-size:14.5px;padding-left:clamp(20px,7vw,40px)}
-  .hero-top{padding:0 18px;top:18px}
-  .hero-logo img{height:32px}
-  .hero-pill{display:none}
-  .hero-burger-mobile{display:inline-flex}
-  .hero-scroll{right:18px;bottom:18px;width:60px;height:60px;font-size:9px}
+  .hero-title{font-size:clamp(60px,17vw,108px);line-height:.9;max-width:100%;margin-bottom:18px}
+  .hero-tagline{max-width:100%;font-size:14.5px}
+  .hero-scroll{bottom:22px;width:26px;height:42px}
 }
 
 /* ===== B. SLIDER MISSION (lavender, right-side dots) ===== */
@@ -343,49 +310,12 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   </div>
   <div class="hero-scrim"></div>
 
-  <div class="hero-top">
-    <a class="hero-logo" href="/">
-      <img src="./unstoppable-logo-white.png" alt="Health Matters Clinic" onerror="this.style.display='none'">
-    </a>
-
-    <!-- ASICS navigation.links (4) + navigation.report CTA -->
-    <div class="hero-pill" role="navigation" aria-label="Page sections">
-      <a class="hero-pill-link" href="#slider-stories">Stories</a>
-      <a class="hero-pill-link" href="#share-your-story">Share your story</a>
-      <a class="hero-pill-link" href="#resources-products">Resources &amp; Products</a>
-      <a class="hero-pill-link" href="#supporters">Supporters</a>
-      <a class="hero-pill-cta" href="#report">Report</a>
-      <button class="hero-pill-burger" type="button" aria-label="Open menu" data-open-menu>
-        <span></span>
-      </button>
-    </div>
-
-    <button class="hero-burger-mobile" type="button" aria-label="Open menu" data-open-menu>
-      <span></span>
-    </button>
-  </div>
-
   <div class="hero-content">
-    <h1 class="hero-title">
-      <span class="line line-1">Live</span>
-      <span class="line line-2">Unstoppable.</span>
-    </h1>
+    <h1 class="hero-title">Unstoppable.</h1>
     <p class="hero-tagline">A community-built mental health program for Black and underserved Los Angeles. Movement, healing, and conversations that make us well.</p>
   </div>
-  <a class="hero-scroll" href="#mission" aria-label="Scroll to next section">Scroll</a>
+  <a class="hero-scroll" href="#mission" aria-label="Scroll to next section"></a>
 </section>
-
-<!-- Full-screen menu overlay -->
-<div class="hero-menu-overlay" id="menuOverlay" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
-  <button class="menu-close" type="button" aria-label="Close menu" data-close-menu>&times;</button>
-  <nav>
-    <a href="#slider-stories" data-close-menu>Stories</a>
-    <a href="#share-your-story" data-close-menu>Share your story</a>
-    <a href="#resources-products" data-close-menu>Resources &amp; Products</a>
-    <a href="#supporters" data-close-menu>Supporters</a>
-    <a href="#report" class="menu-cta" data-close-menu>Report</a>
-  </nav>
-</div>
 
 <!-- ================ B. SLIDER MISSION (2 slides, lavender, right-side dots) ================ -->
 <section class="mission" id="mission">
@@ -1099,21 +1029,6 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && overlay.cl
     if (Math.abs(dx) > 50) go(dx < 0 ? (idx + 1) % slides.length : (idx - 1 + slides.length) % slides.length);
     touchStartX = null;
   }, {passive:true});
-})();
-
-// ==================== MOBILE MENU ====================
-(function(){
-  const menu = document.getElementById('menuOverlay');
-  document.querySelectorAll('[data-open-menu]').forEach(b => b.addEventListener('click', () => {
-    menu.hidden = false;
-    menu.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }));
-  document.querySelectorAll('[data-close-menu]').forEach(b => b.addEventListener('click', () => {
-    menu.classList.remove('open');
-    menu.hidden = true;
-    document.body.style.overflow = '';
-  }));
 })();
 
 // ==================== RESOURCES FILTER ====================
