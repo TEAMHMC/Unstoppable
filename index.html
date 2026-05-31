@@ -31,7 +31,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 /* ===== A. HERO (homeHeader) — ASICS Move Her Mind layout ===== */
 .hero{position:relative;height:100vh;height:100dvh;min-height:640px;width:100%;overflow:hidden;background:#0a0a0a;color:#fff}
 .hero-carousel{position:absolute;inset:0;z-index:0}
-.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transform:scale(1.04);transition:opacity 1.4s ease-in-out}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:50% 25%;opacity:0;transform:scale(1.04);transition:opacity 1.4s ease-in-out}
 .hero-slide.active{opacity:1;animation:heroKenBurns 9s ease-out forwards}
 @keyframes heroKenBurns{from{transform:scale(1.04)}to{transform:scale(1.12)}}
 @media (prefers-reduced-motion:reduce){.hero-slide.active{animation:none;transform:scale(1.04)}}
@@ -117,7 +117,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .case-study-block{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,72px);align-items:center}
 .case-study-block.reverse .case-study-image{order:2}
 .case-study-image{position:relative;aspect-ratio:4/5;border-radius:18px;overflow:hidden;background:#222}
-.case-study-image img{width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block;transition:transform .8s cubic-bezier(0.16,1,0.3,1)}
+.case-study-image img{width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block;transition:transform .8s cubic-bezier(0.16,1,0.3,1)}
 .case-study-block:hover .case-study-image img{transform:scale(1.04)}
 .case-study-tag{position:absolute;top:18px;left:18px;background:rgba(255,255,255,.95);color:#0a0a0a;padding:8px 14px;border-radius:100px;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;z-index:2}
 .case-study-content{display:flex;flex-direction:column;gap:clamp(20px,2.4vw,28px)}
@@ -139,7 +139,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .live-cta-bg{position:absolute;inset:0;background:url('./photos/DSC_2867.jpg') center/cover no-repeat;z-index:0;animation:liveCtaKenBurns 20s ease-in-out infinite alternate}
 @keyframes liveCtaKenBurns{from{transform:scale(1.04)}to{transform:scale(1.12)}}
 @media (prefers-reduced-motion:reduce){.live-cta-bg{animation:none;transform:scale(1.04)}}
-.live-cta-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.35) 50%,rgba(0,0,0,.7) 100%);z-index:1}
+.live-cta-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.18) 50%,rgba(0,0,0,.5) 100%);z-index:1}
 .live-cta-inner{position:relative;z-index:2;max-width:1100px;margin:0 auto}
 .live-cta-title{font-style:italic;font-weight:900;text-transform:uppercase;font-size:clamp(64px,12vw,180px);line-height:.88;letter-spacing:-.025em;color:#fff;text-shadow:0 4px 30px rgba(0,0,0,.5);margin:0}
 .live-cta-sub{margin:clamp(20px,2.4vw,32px) auto 0;font-style:italic;font-weight:900;font-size:clamp(20px,2.6vw,32px);line-height:1.15;letter-spacing:-.01em;color:#fff;max-width:780px;text-shadow:0 2px 14px rgba(0,0,0,.45)}
@@ -910,7 +910,7 @@ const stories = [
     author: 'Williams, D. R. (2021)',
     thumbnail: './photos/DSC_2589.jpg',
     citation: 'Williams, D. R. (2021). Addressing mental health disparities in Black men. APA Monitor on Psychology, 52(7), 24-31.',
-    scholarUrl: 'https://scholar.google.com/scholar?q=' + encodeURIComponent('Williams 2021 Addressing mental health disparities in Black men APA Monitor on Psychology 52 7 24-31'),
+    scholarUrl: 'https://www.apa.org/monitor/2021/09/ce-black-mental-health',
     body: {
       featureImage: './photos/DSC_2589.jpg',
       intro: 'David R. Williams maps the disparities Black men face inside the mental health system and the cultural scripts that teach them silence is the price of strength.',
