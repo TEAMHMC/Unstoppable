@@ -41,33 +41,39 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .hero-title{color:#fff;font-style:italic;font-weight:900;letter-spacing:-.035em;line-height:.86;font-size:clamp(72px,14.5vw,220px);text-shadow:0 4px 30px rgba(0,0,0,.45);text-align:left;max-width:14ch;margin-bottom:clamp(20px,2.4vw,32px);text-transform:none}
 .hero-tagline{max-width:540px;color:#fff;font-family:'Questrial','Inter',sans-serif;font-size:clamp(15px,1.4vw,19px);line-height:1.5;font-weight:400;text-shadow:0 2px 12px rgba(0,0,0,.55);text-align:left;letter-spacing:-.005em;margin-top:18px}
 
-/* Animated mouse scroll cue */
-.hero-scroll{position:absolute;left:50%;bottom:clamp(28px,3.5vw,48px);transform:translateX(-50%);z-index:5;display:inline-flex;width:30px;height:48px;border:2px solid rgba(255,255,255,.78);border-radius:18px;background:rgba(255,255,255,.06);backdrop-filter:blur(4px);text-decoration:none;transition:border-color .25s,transform .25s}
-.hero-scroll:hover{border-color:#fff;transform:translateX(-50%) translateY(-3px)}
-.hero-scroll::after{content:'';position:absolute;left:50%;top:8px;width:3px;height:8px;background:#fff;border-radius:2px;transform:translateX(-50%);animation:mouseScroll 1.8s cubic-bezier(0.6,0,0.4,1) infinite}
-@keyframes mouseScroll{0%{opacity:0;transform:translate(-50%,-4px)}30%{opacity:1}80%{opacity:1;transform:translate(-50%,16px)}100%{opacity:0;transform:translate(-50%,16px)}}
-@media (prefers-reduced-motion:reduce){.hero-scroll::after{animation:none;top:14px;opacity:1}}
+/* Custom site cursor — circular "Scroll Down" follower (ASICS-style) */
+.site-cursor{position:fixed;top:0;left:0;width:84px;height:84px;border-radius:50%;background:rgba(10,10,10,.55);backdrop-filter:blur(6px);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;pointer-events:none;z-index:10000;border:1.5px solid rgba(255,255,255,.7);will-change:transform;transition:width .2s ease,height .2s ease,background .2s ease,border-color .2s ease}
+.site-cursor span{line-height:1.15;display:inline-block}
+.site-cursor.on-clickable{width:46px;height:46px;background:#233dff;border-color:#233dff}
+.site-cursor.on-clickable span{display:none}
+.site-cursor.on-clickable::after{content:'';width:6px;height:6px;border-radius:50%;background:#fff}
+.has-custom-cursor body,.has-custom-cursor a,.has-custom-cursor button,.has-custom-cursor [role=button],.has-custom-cursor .hero,.has-custom-cursor .mission,.has-custom-cursor .intro-stories,.has-custom-cursor .stories,.has-custom-cursor .live-cta,.has-custom-cursor .share,.has-custom-cursor .resources,.has-custom-cursor .report,.has-custom-cursor .supporters,.has-custom-cursor .footer{cursor:none}
+@media (hover:none),(pointer:coarse){.site-cursor{display:none!important}.has-custom-cursor,.has-custom-cursor *{cursor:auto!important}}
 
 @media (max-width:880px){
   .hero{min-height:560px}
   .hero-content{padding:0 22px;justify-content:flex-end;padding-bottom:clamp(96px,18vw,130px)}
   .hero-title{font-size:clamp(60px,17vw,108px);line-height:.9;max-width:100%;margin-bottom:18px}
   .hero-tagline{max-width:100%;font-size:14.5px}
-  .hero-scroll{bottom:22px;width:26px;height:42px}
 }
 
-/* ===== B. SLIDER MISSION (lavender, right-side dots) ===== */
-.mission{position:relative;background:linear-gradient(135deg,#ece6f8 0%,#dcd1f0 55%,#cdbff0 100%);padding:clamp(80px,10vw,128px) clamp(60px,8vw,120px) clamp(80px,10vw,128px) clamp(22px,4vw,32px);overflow:hidden}
-.mission-eyebrow{display:block;text-align:center;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:#1a1633;margin-bottom:clamp(28px,4vw,40px)}
+/* ===== B. SLIDER MISSION (HMC brand soft radial gradient, blue + orange emphasis) ===== */
+.mission{position:relative;background:
+  radial-gradient(ellipse 60% 50% at 18% 28%, rgba(35,61,255,.22) 0%, transparent 60%),
+  radial-gradient(ellipse 60% 55% at 82% 72%, rgba(255,110,64,.22) 0%, transparent 60%),
+  radial-gradient(ellipse 50% 40% at 70% 18%, rgba(255,111,145,.13) 0%, transparent 60%),
+  radial-gradient(ellipse 50% 40% at 28% 88%, rgba(249,199,79,.13) 0%, transparent 60%),
+  #fdf9f1;padding:clamp(80px,10vw,128px) clamp(60px,8vw,120px) clamp(80px,10vw,128px) clamp(22px,4vw,32px);overflow:hidden}
+.mission-eyebrow{display:block;text-align:center;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:#0a0a0a;margin-bottom:clamp(28px,4vw,40px)}
 .mission-track{position:relative;max-width:1100px;margin:0 auto;min-height:320px}
 .mission-slide{position:absolute;inset:0;opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease;display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:center}
 .mission-slide.active{opacity:1;transform:translateY(0);position:relative}
 .mission-slide:not(.active){pointer-events:none}
-.mission-slide h2{font-style:italic;font-weight:900;font-size:clamp(34px,6.2vw,76px);line-height:1;letter-spacing:-.02em;color:#1a1633;margin-bottom:28px;max-width:1000px}
-.mission-slide p{max-width:720px;font-size:clamp(15px,1.6vw,17px);line-height:1.65;color:#2a2540;font-weight:400}
+.mission-slide h2{font-style:italic;font-weight:900;font-size:clamp(34px,6.2vw,76px);line-height:1;letter-spacing:-.02em;color:#0a0a0a;margin-bottom:28px;max-width:1000px}
+.mission-slide p{max-width:720px;font-size:clamp(15px,1.6vw,17px);line-height:1.65;color:#1f1a2e;font-weight:400}
 .mission-dots{position:absolute;top:50%;right:max(20px,env(safe-area-inset-right));transform:translateY(-50%);display:flex;flex-direction:column;gap:14px;z-index:3}
 .mission-dot{width:44px;height:44px;border-radius:50%;cursor:pointer;padding:0;display:inline-flex;align-items:center;justify-content:center;background:transparent;border:none}
-.mission-dot::before{content:'';width:10px;height:10px;border-radius:50%;background:rgba(26,22,51,.3);transition:background .25s,transform .25s}
+.mission-dot::before{content:'';width:10px;height:10px;border-radius:50%;background:rgba(10,10,10,.3);transition:background .25s,transform .25s}
 .mission-dot:hover::before{transform:scale(1.25)}
 .mission-dot.active::before{background:#233dff;transform:scale(1.2)}
 @media (max-width:760px){
@@ -111,7 +117,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .case-study-block{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,72px);align-items:center}
 .case-study-block.reverse .case-study-image{order:2}
 .case-study-image{position:relative;aspect-ratio:4/5;border-radius:18px;overflow:hidden;background:#222}
-.case-study-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(0.16,1,0.3,1)}
+.case-study-image img{width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block;transition:transform .8s cubic-bezier(0.16,1,0.3,1)}
 .case-study-block:hover .case-study-image img{transform:scale(1.04)}
 .case-study-tag{position:absolute;top:18px;left:18px;background:rgba(255,255,255,.95);color:#0a0a0a;padding:8px 14px;border-radius:100px;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;z-index:2}
 .case-study-content{display:flex;flex-direction:column;gap:clamp(20px,2.4vw,28px)}
@@ -128,11 +134,16 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   .case-study-quote{font-size:clamp(26px,7vw,40px)}
 }
 
-/* ===== D3. PULL QUOTE DIVIDER ===== */
-.pull-quote-divider{background:#0a0a0a;color:#fff;padding:clamp(80px,10vw,140px) clamp(22px,4vw,40px);text-align:center}
-.pull-quote-divider-inner{max-width:1100px;margin:0 auto}
-.pull-quote-divider-text{font-style:italic;font-weight:900;font-size:clamp(30px,5.2vw,68px);line-height:1.08;letter-spacing:-.02em;color:#fff;margin:0}
-.pull-quote-divider-text em{color:#9faaff;font-style:italic;font-weight:900}
+/* ===== D3. LIVE UNSTOPPABLE CTA (hero treatment with photo background) ===== */
+.live-cta{position:relative;min-height:clamp(460px,68vh,780px);overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:clamp(80px,10vw,140px) clamp(22px,4vw,40px)}
+.live-cta-bg{position:absolute;inset:0;background:url('./photos/DSC_2867.jpg') center/cover no-repeat;z-index:0;animation:liveCtaKenBurns 20s ease-in-out infinite alternate}
+@keyframes liveCtaKenBurns{from{transform:scale(1.04)}to{transform:scale(1.12)}}
+@media (prefers-reduced-motion:reduce){.live-cta-bg{animation:none;transform:scale(1.04)}}
+.live-cta-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.35) 50%,rgba(0,0,0,.7) 100%);z-index:1}
+.live-cta-inner{position:relative;z-index:2;max-width:1100px;margin:0 auto}
+.live-cta-title{font-style:italic;font-weight:900;text-transform:uppercase;font-size:clamp(64px,12vw,180px);line-height:.88;letter-spacing:-.025em;color:#fff;text-shadow:0 4px 30px rgba(0,0,0,.5);margin:0}
+.live-cta-sub{margin:clamp(20px,2.4vw,32px) auto 0;font-style:italic;font-weight:900;font-size:clamp(20px,2.6vw,32px);line-height:1.15;letter-spacing:-.01em;color:#fff;max-width:780px;text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.live-cta-sub em{color:#ff9b6e;font-style:italic;font-weight:900}
 
 /* ===== STORY ARTICLE OVERLAY ===== */
 .story-overlay{position:fixed;inset:0;background:#fff;z-index:1100;display:none;overflow-y:auto;-webkit-overflow-scrolling:touch}
@@ -312,9 +323,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 
   <div class="hero-content">
     <h1 class="hero-title">Unstoppable.</h1>
-    <p class="hero-tagline">A community-built mental health program for Black and underserved Los Angeles. Movement, healing, and conversations that make us well.</p>
+    <p class="hero-tagline">A community-built mental health program for Black and underserved Los&nbsp;Angeles. Movement, healing, and conversations that make us well.</p>
   </div>
-  <a class="hero-scroll" href="#mission" aria-label="Scroll to next section"></a>
 </section>
 
 <!-- ================ B. SLIDER MISSION (2 slides, lavender, right-side dots) ================ -->
@@ -417,10 +427,13 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   </div>
 </div>
 
-<!-- ================ D2. PULL QUOTE DIVIDER ================ -->
-<section class="pull-quote-divider" aria-label="Pull quote">
-  <div class="pull-quote-divider-inner rise-on-scroll">
-    <p class="pull-quote-divider-text">When we heal ourselves, we heal <em>generations before us</em> and <em>generations to come</em>.</p>
+<!-- ================ D2. LIVE UNSTOPPABLE CTA ================ -->
+<section class="live-cta" aria-label="Live Unstoppable">
+  <div class="live-cta-bg" aria-hidden="true"></div>
+  <div class="live-cta-scrim" aria-hidden="true"></div>
+  <div class="live-cta-inner rise-on-scroll">
+    <h2 class="live-cta-title">Live<br>Unstoppable.</h2>
+    <p class="live-cta-sub">When we heal ourselves, we heal <em>generations before us</em> and <em>generations to come</em>.</p>
   </div>
 </section>
 
@@ -1073,6 +1086,38 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && overlay.cl
       form.reset();
     }
   });
+})();
+
+// ==================== CUSTOM SITE CURSOR ====================
+(function(){
+  if (!matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  const c = document.createElement('div');
+  c.className = 'site-cursor';
+  c.setAttribute('aria-hidden', 'true');
+  c.innerHTML = '<span>Scroll<br>Down</span>';
+  document.body.appendChild(c);
+  document.documentElement.classList.add('has-custom-cursor');
+
+  let tx = window.innerWidth / 2, ty = window.innerHeight / 2;
+  let x = tx, y = ty;
+  window.addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; }, {passive:true});
+  (function loop(){
+    x += (tx - x) * 0.18;
+    y += (ty - y) * 0.18;
+    c.style.transform = 'translate3d(' + (x - 42) + 'px,' + (y - 42) + 'px,0)';
+    requestAnimationFrame(loop);
+  })();
+
+  function bind(el){
+    el.addEventListener('mouseenter', () => c.classList.add('on-clickable'));
+    el.addEventListener('mouseleave', () => c.classList.remove('on-clickable'));
+  }
+  document.querySelectorAll('a, button, [role=button], input[type=submit], input[type=button], summary').forEach(bind);
+  // Re-bind for dynamically inserted nodes (case-study CTAs, etc.) — runs once after build
+  setTimeout(() => document.querySelectorAll('a, button, [role=button], summary').forEach(bind), 200);
+
+  window.addEventListener('mouseleave', () => { c.style.opacity = '0'; });
+  window.addEventListener('mouseenter', () => { c.style.opacity = '1'; });
 })();
 
 // ==================== SCROLL-RISE ====================
