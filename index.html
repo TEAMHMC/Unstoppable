@@ -50,6 +50,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .has-custom-cursor body,.has-custom-cursor a,.has-custom-cursor button,.has-custom-cursor [role=button],.has-custom-cursor .hero,.has-custom-cursor .mission,.has-custom-cursor .intro-stories,.has-custom-cursor .stories,.has-custom-cursor .live-cta,.has-custom-cursor .share,.has-custom-cursor .resources,.has-custom-cursor .report,.has-custom-cursor .supporters,.has-custom-cursor .footer{cursor:none}
 @media (hover:none),(pointer:coarse){.site-cursor{display:none!important}.has-custom-cursor,.has-custom-cursor *{cursor:auto!important}}
 
+/* Embed mode — footer + FAQ live in the wrapping Webflow page */
+html.is-embedded .footer{display:none}
+html.is-embedded body{background:transparent}
+
 @media (max-width:880px){
   .hero{min-height:560px}
   .hero-content{padding:0 22px;justify-content:flex-end;padding-bottom:clamp(96px,18vw,130px)}
@@ -1085,6 +1089,47 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && overlay.cl
       status.textContent = 'Thanks for sharing. We received your submission and will be in touch.';
       form.reset();
     }
+  });
+})();
+
+// ==================== EMBED MODE + AUTO-HEIGHT POSTMESSAGE ====================
+// When this page is loaded inside an iframe (e.g. on the Webflow Mental Health
+// Education program page), hide the footer/FAQ (the parent page provides them)
+// and tell the parent how tall the iframe content is, so Webflow can size the
+// iframe to match and avoid nested scroll.
+(function(){
+  if (window.parent === window) return; // not embedded
+  document.documentElement.classList.add('is-embedded');
+
+  var lastH = 0;
+  function postHeight(){
+    var h = Math.max(
+      document.documentElement.scrollHeight,
+      document.body.scrollHeight
+    );
+    if (h === lastH) return;
+    lastH = h;
+    window.parent.postMessage({ type: 'hmcEmbedHeight', source: 'unstoppable', height: h }, '*');
+  }
+
+  // Throttle so we don't flood the parent during animations.
+  var pending = false;
+  function schedule(){
+    if (pending) return;
+    pending = true;
+    requestAnimationFrame(function(){ pending = false; postHeight(); });
+  }
+
+  window.addEventListener('load', schedule);
+  window.addEventListener('resize', schedule, {passive:true});
+  if ('ResizeObserver' in window) new ResizeObserver(schedule).observe(document.body);
+  // Catch DOM mutations from JS-built case-study blocks, modal opens, etc.
+  if ('MutationObserver' in window) new MutationObserver(schedule).observe(document.body, {childList:true, subtree:true});
+  // Belt-and-suspenders: post after images load (they change layout height).
+  document.querySelectorAll('img').forEach(function(img){
+    if (img.complete) return;
+    img.addEventListener('load', schedule);
+    img.addEventListener('error', schedule);
   });
 })();
 
