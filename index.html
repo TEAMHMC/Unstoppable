@@ -254,6 +254,36 @@ html.is-embedded body{background:transparent}
 .report-cover-foot{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;opacity:.9;position:relative;z-index:2}
 @media (max-width:760px){.report-inner{grid-template-columns:1fr;gap:40px}.report-cover-wrap{order:-1;height:auto;padding:20px 0}}
 
+/* ===== G2. REPORT STATS (ASICS-style data section) ===== */
+.report-stats{max-width:1200px;margin:clamp(64px,9vw,112px) auto 0;padding:0}
+.report-stat-hero{background:#0a0a0a;border-radius:20px;padding:clamp(48px,7vw,88px) clamp(32px,5vw,72px);text-align:center;margin-bottom:clamp(40px,5vw,64px);overflow:hidden;position:relative}
+.report-stat-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 110%,rgba(35,61,255,.35) 0%,transparent 65%);pointer-events:none}
+.report-hero-num{font-style:italic;font-weight:900;font-size:clamp(96px,20vw,220px);line-height:.85;letter-spacing:-.04em;color:#fff;display:block;position:relative;z-index:1}
+.report-hero-label{font-size:clamp(16px,2vw,22px);line-height:1.4;color:rgba(255,255,255,.9);max-width:580px;margin:clamp(16px,2vw,24px) auto 0;font-weight:500;position:relative;z-index:1}
+.report-hero-sub{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.5);margin-top:14px;position:relative;z-index:1}
+.report-bars{background:#fff;border-radius:20px;padding:clamp(40px,5vw,64px) clamp(32px,5vw,64px);margin-bottom:clamp(40px,5vw,64px)}
+.report-bars-title{font-style:italic;font-weight:900;font-size:clamp(26px,3.8vw,42px);line-height:1;letter-spacing:-.02em;color:#0a0a0a;margin-bottom:clamp(32px,4vw,48px)}
+.report-bar-row{display:grid;grid-template-columns:1fr 2.6fr auto;gap:clamp(12px,2vw,24px);align-items:center;padding:clamp(14px,1.8vw,20px) 0;border-bottom:1px solid rgba(10,10,10,.07)}
+.report-bar-row:last-child{border-bottom:none}
+.report-bar-label{font-size:clamp(13px,1.3vw,15px);font-weight:600;color:#0a0a0a;line-height:1.35}
+.report-bar-track{position:relative;height:36px;background:rgba(10,10,10,.06);border-radius:100px;overflow:hidden}
+.report-bar-fill{position:absolute;left:0;top:0;height:100%;border-radius:100px;width:0;transition:width 1.2s cubic-bezier(0.16,1,0.3,1)}
+.report-bar-before{font-size:11px;font-weight:600;color:#6b6480;margin-top:5px}
+.report-bar-pct{font-style:italic;font-weight:900;font-size:clamp(28px,3.4vw,40px);letter-spacing:-.025em;color:#0a0a0a;white-space:nowrap;min-width:60px;text-align:right}
+.report-bar-pct-inner{display:block}
+.report-callout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px)}
+.report-callout-card{background:#fff;border-radius:20px;padding:clamp(32px,4vw,52px) clamp(28px,4vw,48px);display:flex;flex-direction:column;gap:14px}
+.report-callout-card:first-child{background:#233dff;color:#fff}
+.report-callout-card:first-child .report-callout-num{color:#fff}
+.report-callout-card:first-child .report-callout-text{color:rgba(255,255,255,.85)}
+.report-callout-num{font-style:italic;font-weight:900;font-size:clamp(64px,10vw,120px);line-height:.85;letter-spacing:-.04em;color:#0a0a0a;display:block}
+.report-callout-text{font-size:clamp(14.5px,1.6vw,17px);line-height:1.5;color:#2a2540;font-weight:500;max-width:340px}
+@media (max-width:760px){
+  .report-bar-row{grid-template-columns:1fr;gap:6px}
+  .report-bar-pct{text-align:left;font-size:28px}
+  .report-callout{grid-template-columns:1fr}
+}
+
 /* ===== H. SUPPORTERS ===== */
 .supporters{background:#fff;color:#0a0a0a;padding:clamp(72px,9vw,128px) clamp(22px,4vw,40px)}
 .supporters-inner{max-width:1200px;margin:0 auto}
@@ -261,12 +291,12 @@ html.is-embedded body{background:transparent}
 .supporters-eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:#233dff;margin-bottom:18px;display:block}
 .supporters-title{font-style:italic;font-weight:900;font-size:clamp(48px,8vw,116px);line-height:.9;letter-spacing:-.02em;color:#0a0a0a;margin-bottom:18px}
 .supporters-sub{font-size:clamp(14.5px,1.5vw,16.5px);line-height:1.55;color:#6b6480;max-width:560px;margin:0 auto}
-.supporters-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,3vw,40px);align-items:center}
-.supporter-logo{aspect-ratio:3/2;display:flex;align-items:center;justify-content:center;background:#f5efe3;border-radius:14px;padding:24px;transition:transform .35s,box-shadow .35s}
+.supporters-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,3vw,40px);align-items:stretch}
+.supporter-logo{height:140px;display:flex;align-items:center;justify-content:center;background:#f5efe3;border-radius:14px;padding:24px;transition:transform .35s,box-shadow .35s;overflow:hidden}
 .supporter-logo:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.08)}
 .supporter-logo img{max-width:80%;max-height:80%;width:auto;height:auto;object-fit:contain;display:block}
 .supporter-name{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#6b6480;text-align:center;margin-top:10px}
-.supporter-cell{display:flex;flex-direction:column;align-items:center;gap:6px}
+.supporter-cell{display:flex;flex-direction:column;align-items:center;gap:6px;height:100%}
 @media (max-width:880px){.supporters-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:480px){.supporters-grid{grid-template-columns:1fr 1fr}}
 
@@ -373,6 +403,91 @@ html.is-embedded body{background:transparent}
       </div>
     </div>
   </div>
+
+  <!-- ASICS-style animated stats section -->
+  <div class="report-stats">
+
+    <!-- 1. Hero stat block -->
+    <div class="report-stat-hero">
+      <span class="report-hero-num" data-count="69">0</span>
+      <p class="report-hero-label">reported greater comfort discussing mental health after the workshop</p>
+      <p class="report-hero-sub">Up from 28% before &mdash; across 5 key measures</p>
+    </div>
+
+    <!-- 2. Horizontal bar chart -->
+    <div class="report-bars">
+      <h3 class="report-bars-title">Knowledge grew across every measure.</h3>
+
+      <div class="report-bar-row">
+        <div class="report-bar-label">Comfort discussing mental health</div>
+        <div>
+          <div class="report-bar-track">
+            <div class="report-bar-fill" data-pct="69" style="background:#233dff"></div>
+          </div>
+          <div class="report-bar-before">Before: 28%</div>
+        </div>
+        <div class="report-bar-pct"><span class="report-bar-pct-inner" data-count="69">0</span>%</div>
+      </div>
+
+      <div class="report-bar-row">
+        <div class="report-bar-label">Understanding systemic challenges</div>
+        <div>
+          <div class="report-bar-track">
+            <div class="report-bar-fill" data-pct="69" style="background:#ff6e40"></div>
+          </div>
+          <div class="report-bar-before">Before: 28%</div>
+        </div>
+        <div class="report-bar-pct"><span class="report-bar-pct-inner" data-count="69">0</span>%</div>
+      </div>
+
+      <div class="report-bar-row">
+        <div class="report-bar-label">Awareness of community resources</div>
+        <div>
+          <div class="report-bar-track">
+            <div class="report-bar-fill" data-pct="58" style="background:#ff6f91"></div>
+          </div>
+          <div class="report-bar-before">Before: 21%</div>
+        </div>
+        <div class="report-bar-pct"><span class="report-bar-pct-inner" data-count="58">0</span>%</div>
+      </div>
+
+      <div class="report-bar-row">
+        <div class="report-bar-label">Feeling equipped to support others</div>
+        <div>
+          <div class="report-bar-track">
+            <div class="report-bar-fill" data-pct="53" style="background:#f9c74f"></div>
+          </div>
+          <div class="report-bar-before">Before: 22%</div>
+        </div>
+        <div class="report-bar-pct"><span class="report-bar-pct-inner" data-count="53">0</span>%</div>
+      </div>
+
+      <div class="report-bar-row">
+        <div class="report-bar-label">Identifying symptoms in Black youth and adults</div>
+        <div>
+          <div class="report-bar-track">
+            <div class="report-bar-fill" data-pct="57" style="background:#233dff"></div>
+          </div>
+          <div class="report-bar-before">Before: 15%</div>
+        </div>
+        <div class="report-bar-pct"><span class="report-bar-pct-inner" data-count="57">0</span>%</div>
+      </div>
+
+    </div><!-- /.report-bars -->
+
+    <!-- 3. Two-column big-number callout -->
+    <div class="report-callout">
+      <div class="report-callout-card">
+        <span class="report-callout-num" data-count="57">0</span>
+        <p class="report-callout-text">can now identify mental health symptoms in Black youth and adults, up from just 15%</p>
+      </div>
+      <div class="report-callout-card">
+        <span class="report-callout-num">2x</span>
+        <p class="report-callout-text">doubled their confidence in supporting others through mental health conversations</p>
+      </div>
+    </div><!-- /.report-callout -->
+
+  </div><!-- /.report-stats -->
 </section>
 
 <!-- ================ C. INTROSTORIES (3-slide carousel, right-side dots) ================ -->
@@ -1163,6 +1278,54 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && overlay.cl
 
   window.addEventListener('mouseleave', () => { c.style.opacity = '0'; });
   window.addEventListener('mouseenter', () => { c.style.opacity = '1'; });
+})();
+
+// ==================== REPORT STATS: COUNT-UP + BAR FILL ====================
+(function(){
+  if (!('IntersectionObserver' in window)) {
+    // Fallback: set to final values immediately
+    document.querySelectorAll('[data-count]').forEach(el => { el.textContent = el.dataset.count; });
+    document.querySelectorAll('.report-bar-fill[data-pct]').forEach(el => { el.style.width = el.dataset.pct + '%'; });
+    return;
+  }
+
+  function countUp(el, target, duration) {
+    const start = performance.now();
+    function step(now) {
+      const t = Math.min((now - start) / duration, 1);
+      // Ease out cubic
+      const ease = 1 - Math.pow(1 - t, 3);
+      el.textContent = Math.round(ease * target);
+      if (t < 1) requestAnimationFrame(step);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(step);
+  }
+
+  // Count-up observer
+  const countIO = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (!en.isIntersecting || en.target.classList.contains('counted')) return;
+      en.target.classList.add('counted');
+      const target = parseInt(en.target.dataset.count, 10);
+      countUp(en.target, target, 1200);
+      countIO.unobserve(en.target);
+    });
+  }, {threshold: 0.5});
+
+  document.querySelectorAll('[data-count]').forEach(el => countIO.observe(el));
+
+  // Bar fill observer
+  const barIO = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (!en.isIntersecting || en.target.classList.contains('counted')) return;
+      en.target.classList.add('counted');
+      en.target.style.width = en.target.dataset.pct + '%';
+      barIO.unobserve(en.target);
+    });
+  }, {threshold: 0.3});
+
+  document.querySelectorAll('.report-bar-fill[data-pct]').forEach(el => barIO.observe(el));
 })();
 
 // ==================== SCROLL-RISE ====================
