@@ -272,6 +272,54 @@ html.is-embedded body{background:transparent}
 @media (max-width:640px){.digital-companion-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:420px){.digital-companion-grid{grid-template-columns:1fr}}
 
+/* ===== FACILITATOR / CEU STRIP (hero bottom) ===== */
+.hero-cta-strip{position:absolute;bottom:0;left:0;right:0;z-index:5;background:rgba(10,10,10,.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,.08);padding:18px clamp(22px,5vw,80px);display:flex;align-items:center;gap:clamp(12px,2vw,24px);flex-wrap:wrap}
+.hero-cta-strip-label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.4);margin-right:8px;white-space:nowrap}
+.hero-cta-pill{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:100px;font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;transition:all .25s;white-space:nowrap;min-height:44px}
+.hero-cta-pill.facilitator{background:#233dff;color:#fff;border:1.5px solid #233dff}
+.hero-cta-pill.facilitator:hover{background:#1a2bcc;transform:translateY(-2px)}
+.hero-cta-pill.ceu{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35)}
+.hero-cta-pill.ceu:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.7);transform:translateY(-2px)}
+.hero-cta-pill-dot{width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0}
+.hero-cta-badge{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:800;background:#12c06b;color:#fff;border-radius:100px;padding:2px 7px;margin-left:4px}
+@media (max-width:640px){.hero-cta-strip{padding:14px 20px;gap:10px}.hero-cta-strip-label{display:none}}
+
+/* ===== FACILITATOR SECTION ===== */
+.facilitator{background:#0a0a0a;color:#fff;padding:clamp(72px,9vw,120px) clamp(22px,4vw,40px)}
+.facilitator-inner{max-width:1200px;margin:0 auto}
+.facilitator-head{text-align:center;margin-bottom:clamp(48px,6vw,80px)}
+.facilitator-eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:#233dff;margin-bottom:14px;display:block}
+.facilitator-title{font-style:italic;font-weight:900;font-size:clamp(42px,7vw,96px);line-height:.9;letter-spacing:-.03em;color:#fff;margin-bottom:clamp(16px,2vw,22px)}
+.facilitator-sub{font-size:clamp(14.5px,1.5vw,17px);line-height:1.6;color:rgba(255,255,255,.55);max-width:600px;margin:0 auto}
+.facilitator-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.5vw,32px)}
+.facilitator-card{border-radius:20px;padding:clamp(32px,4vw,52px);display:flex;flex-direction:column;gap:20px;position:relative;overflow:hidden}
+.facilitator-card.community{background:#1a1a2e;border:1px solid rgba(35,61,255,.3)}
+.facilitator-card.community::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 0% 100%,rgba(35,61,255,.2) 0%,transparent 65%);pointer-events:none}
+.facilitator-card.professional{background:#111;border:1px solid rgba(18,192,107,.25)}
+.facilitator-card.professional::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 100% 0%,rgba(18,192,107,.15) 0%,transparent 65%);pointer-events:none}
+.facilitator-card-tag{font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;padding:5px 14px;border-radius:100px;display:inline-flex;align-items:center;gap:6px;width:fit-content;position:relative;z-index:1}
+.facilitator-card.community .facilitator-card-tag{background:rgba(35,61,255,.2);color:#7b9fff;border:1px solid rgba(35,61,255,.3)}
+.facilitator-card.professional .facilitator-card-tag{background:rgba(18,192,107,.15);color:#12c06b;border:1px solid rgba(18,192,107,.3)}
+.facilitator-card-tag-dot{width:5px;height:5px;border-radius:50%;background:currentColor}
+.facilitator-card-title{font-style:italic;font-weight:900;font-size:clamp(28px,3.5vw,44px);line-height:.95;letter-spacing:-.02em;color:#fff;position:relative;z-index:1}
+.facilitator-card-body{font-size:clamp(14px,1.4vw,15.5px);line-height:1.65;color:rgba(255,255,255,.6);position:relative;z-index:1;flex:1}
+.facilitator-card-details{display:flex;flex-direction:column;gap:8px;position:relative;z-index:1}
+.facilitator-card-detail{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:rgba(255,255,255,.55)}
+.facilitator-card-detail-icon{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:9px;font-weight:900;margin-top:1px}
+.facilitator-card.community .facilitator-card-detail-icon{background:rgba(35,61,255,.3);color:#7b9fff}
+.facilitator-card.professional .facilitator-card-detail-icon{background:rgba(18,192,107,.2);color:#12c06b}
+.facilitator-card-cta{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:100px;font-weight:800;font-size:12px;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;transition:all .3s;min-height:48px;position:relative;z-index:1;width:fit-content}
+.facilitator-card.community .facilitator-card-cta{background:#233dff;color:#fff;border:1.5px solid #233dff}
+.facilitator-card.community .facilitator-card-cta:hover{background:#1a2bcc;transform:translateY(-3px);box-shadow:0 12px 32px rgba(35,61,255,.4)}
+.facilitator-card.professional .facilitator-card-cta{background:#12c06b;color:#0a0a0a;border:1.5px solid #12c06b}
+.facilitator-card.professional .facilitator-card-cta:hover{background:#0fa85e;transform:translateY(-3px);box-shadow:0 12px 32px rgba(18,192,107,.35)}
+.facilitator-approval{margin-top:clamp(40px,5vw,64px);text-align:center;padding:clamp(24px,3vw,36px);background:rgba(18,192,107,.06);border:1px solid rgba(18,192,107,.15);border-radius:16px}
+.facilitator-approval-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:#12c06b;margin-bottom:10px;display:block}
+.facilitator-approval-text{font-size:clamp(13px,1.3vw,14.5px);color:rgba(255,255,255,.5);line-height:1.6}
+.facilitator-approval-badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px}
+.facilitator-approval-badge{font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;padding:5px 12px;border-radius:100px;background:rgba(18,192,107,.1);color:#12c06b;border:1px solid rgba(18,192,107,.2)}
+@media (max-width:720px){.facilitator-grid{grid-template-columns:1fr}}
+
 /* ===== H. SUPPORTERS ===== */
 .supporters{background:#fff;color:#0a0a0a;padding:clamp(72px,9vw,128px) clamp(22px,4vw,40px)}
 .supporters-inner{max-width:1200px;margin:0 auto}
@@ -346,6 +394,19 @@ html.is-embedded body{background:transparent}
   <div class="hero-content">
     <h1 class="hero-title">Unstoppable.</h1>
     <p class="hero-tagline">A community-built mental health program for Black and underserved Los&nbsp;Angeles. Movement, healing, and conversations that make us well.</p>
+  </div>
+
+  <div class="hero-cta-strip">
+    <span class="hero-cta-strip-label">Join the movement</span>
+    <a class="hero-cta-pill facilitator" href="#facilitator">
+      <span class="hero-cta-pill-dot"></span>
+      Become a Facilitator
+    </a>
+    <a class="hero-cta-pill ceu" href="#facilitator">
+      <span class="hero-cta-pill-dot"></span>
+      Earn 1.0 CEUs
+      <span class="hero-cta-badge">Approved</span>
+    </a>
   </div>
 </section>
 
@@ -474,6 +535,91 @@ html.is-embedded body{background:transparent}
     </a>
   </div>
 </div>
+
+<!-- ================ D3. FACILITATOR / CEU SECTION ================ -->
+<section class="facilitator" id="facilitator">
+  <div class="facilitator-inner">
+    <div class="facilitator-head rise-on-scroll">
+      <span class="facilitator-eyebrow">Train with Unstoppable</span>
+      <h2 class="facilitator-title">Teach it.<br>Lead it.<br>Own it.</h2>
+      <p class="facilitator-sub">Two pathways to deepen your impact — whether you're building a career in community health or renewing your professional license.</p>
+    </div>
+
+    <div class="facilitator-grid">
+
+      <!-- Community Facilitator Card -->
+      <div class="facilitator-card community rise-on-scroll">
+        <span class="facilitator-card-tag"><span class="facilitator-card-tag-dot"></span>Community Pathway</span>
+        <h3 class="facilitator-card-title">Become a Certified Facilitator</h3>
+        <p class="facilitator-card-body">The Unstoppable Facilitator Certification trains community health workers, educators, social workers, and advocates to lead mental health workshops using the Unstoppable curriculum. Co-developed with UCI's Sue &amp; Bill Gross School of Nursing and Dr. Dawn Bounds, PhD, PMHNP-BC, FAAN.</p>
+        <div class="facilitator-card-details">
+          <div class="facilitator-card-detail">
+            <span class="facilitator-card-detail-icon">✓</span>
+            <span>Trauma-informed facilitation training</span>
+          </div>
+          <div class="facilitator-card-detail">
+            <span class="facilitator-card-detail-icon">✓</span>
+            <span>Culturally responsive engagement techniques</span>
+          </div>
+          <div class="facilitator-card-detail">
+            <span class="facilitator-card-detail-icon">✓</span>
+            <span>Official certificate of completion</span>
+          </div>
+          <div class="facilitator-card-detail">
+            <span class="facilitator-card-detail-icon">✓</span>
+            <span>Open to CHWs, educators, social workers, volunteers</span>
+          </div>
+        </div>
+        <a class="facilitator-card-cta" href="mailto:education@healthmatters.clinic?subject=Facilitator Certification Interest">
+          <span>Apply for the Next Cohort</span>
+          <span>&#8594;</span>
+        </a>
+      </div>
+
+      <!-- CEU Professional Card -->
+      <div class="facilitator-card professional rise-on-scroll">
+        <span class="facilitator-card-tag"><span class="facilitator-card-tag-dot"></span>Licensed Professional Pathway</span>
+        <h3 class="facilitator-card-title">Earn 1.0 Approved CE/CEU Hours</h3>
+        <p class="facilitator-card-body">A 1.0 CE/CEU approved training on disability-inclusive, culturally affirming mental health frameworks. Approved by the Los Angeles County Department of Mental Health, Quality, Outcomes &amp; Training Division. Applicable to license renewal across four boards.</p>
+        <div class="facilitator-card-details">
+          <div class="facilitator-card-detail">
+            <span class="facilitator-card-detail-icon">✓</span>
+            <span>BBS — LCSW, LMFT, LPCC, LEP license renewal</span>
+          </div>
+          <div class="facilitator-card-detail">
+            <span class="facilitator-card-detail-icon">✓</span>
+            <span>BRN — Registered Nurse license renewal</span>
+          </div>
+          <div class="facilitator-card-detail">
+            <span class="facilitator-card-detail-icon">✓</span>
+            <span>CCAPP — Addiction counselor CE hours</span>
+          </div>
+          <div class="facilitator-card-detail">
+            <span class="facilitator-card-detail-icon">✓</span>
+            <span>Psychology board approved</span>
+          </div>
+        </div>
+        <a class="facilitator-card-cta" href="mailto:education@healthmatters.clinic?subject=CEU Training Registration">
+          <span>Register for the Next Session</span>
+          <span>&#8594;</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="facilitator-approval rise-on-scroll">
+      <span class="facilitator-approval-label">Official Approval</span>
+      <p class="facilitator-approval-text">CE/CEU training approved by the Los Angeles County Department of Mental Health, Quality, Outcomes &amp; Training Division. Course: <em>Unstoppable: The Power of Healing &amp; Growth — A Disability-Inclusive, Culturally Affirming Framework for Mental Wellness.</em> Approval valid through February 2027.</p>
+      <div class="facilitator-approval-badges">
+        <span class="facilitator-approval-badge">LACDMH Approved</span>
+        <span class="facilitator-approval-badge">BBS</span>
+        <span class="facilitator-approval-badge">BRN</span>
+        <span class="facilitator-approval-badge">CCAPP</span>
+        <span class="facilitator-approval-badge">Psychology</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ================ D2. LIVE UNSTOPPABLE CTA ================ -->
 <section class="live-cta" aria-label="Live Unstoppable">
