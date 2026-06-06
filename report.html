@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Report | Unstoppable | Health Matters Clinic</title>
+<meta name="description" content="Participant Evaluation Summary for the Unstoppable workshop. Key findings on mental health literacy gains in Black communities across Los Angeles, presented to LACDMH.">
+<meta property="og:title" content="The Unstoppable Report | Health Matters Clinic">
+<meta property="og:description" content="Participant Evaluation Summary presented to LACDMH. Unstoppable moved the needle on every measure of mental health literacy.">
+<meta property="og:image" content="./photos/DSC_2963.jpg">
+<link rel="icon" href="/icon-192.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Questrial&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',sans-serif;background:#fff;color:#0a0a0a;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+
+/* Scroll-rise animation */
+.rise-on-scroll{opacity:0;transform:translateY(28px);transition:opacity 700ms cubic-bezier(0.16,1,0.3,1),transform 700ms cubic-bezier(0.16,1,0.3,1)}
+.rise-on-scroll.is-visible{opacity:1;transform:translateY(0)}
+@media (prefers-reduced-motion:reduce){
+  .rise-on-scroll{opacity:1;transform:none;transition:none}
+  *{animation:none!important;transition:none!important}
+}
+
+/* ===== TOP NAV ===== */
+.report-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px clamp(22px,4vw,48px);display:flex;align-items:center;justify-content:space-between;pointer-events:none}
+.report-nav-back{pointer-events:auto;display:inline-flex;align-items:center;gap:10px;background:rgba(10,10,10,.55);backdrop-filter:blur(8px);color:#fff;padding:10px 18px;border-radius:100px;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .25s,transform .25s;border:1.5px solid rgba(255,255,255,.2)}
+.report-nav-back:hover{background:rgba(10,10,10,.85);transform:translateX(-3px)}
+.report-nav-back::before{content:'\2190';font-size:14px;letter-spacing:0}
+
+/* ===== HERO ===== */
+.rpt-hero{position:relative;height:100vh;height:100dvh;min-height:640px;width:100%;overflow:hidden;background:#0a0a0a;color:#fff}
+.rpt-hero-bg{position:absolute;inset:0;background:url('./photos/DSC_2963.jpg') center 30%/cover no-repeat;animation:rptHeroKenBurns 14s ease-out forwards}
+@keyframes rptHeroKenBurns{from{transform:scale(1.04)}to{transform:scale(1.1)}}
+@media (prefers-reduced-motion:reduce){.rpt-hero-bg{animation:none;transform:none}}
+.rpt-hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,.2) 40%,rgba(0,0,0,.5) 70%,rgba(0,0,0,.82) 100%);z-index:1}
+.rpt-hero-content{position:absolute;inset:0;z-index:2;padding:0 clamp(22px,5vw,80px);display:flex;flex-direction:column;justify-content:center;max-width:1400px;margin:0 auto;left:0;right:0}
+.rpt-hero-eyebrow{font-size:12px;letter-spacing:.26em;text-transform:uppercase;font-weight:800;color:rgba(255,255,255,.75);margin-bottom:clamp(18px,2vw,28px);display:block}
+.rpt-hero-title{color:#fff;font-style:italic;font-weight:900;letter-spacing:-.035em;line-height:.86;font-size:clamp(80px,16vw,230px);text-shadow:0 4px 30px rgba(0,0,0,.45);max-width:12ch;margin-bottom:0}
+.rpt-hero-foot{position:absolute;bottom:clamp(36px,5vw,60px);left:clamp(22px,5vw,80px);right:clamp(22px,5vw,80px);z-index:2;display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
+.rpt-hero-byline{color:rgba(255,255,255,.7);font-size:clamp(13px,1.2vw,15px);line-height:1.5;max-width:480px;font-weight:400}
+
+/* Rotating scroll indicator (ASICS-style) */
+.rpt-scroll-indicator{flex-shrink:0;width:88px;height:88px;position:relative}
+.rpt-scroll-indicator svg{position:absolute;inset:0;width:100%;height:100%;animation:rptScrollRotate 9s linear infinite}
+@keyframes rptScrollRotate{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.rpt-scroll-indicator svg{animation:none}}
+.rpt-scroll-indicator-dot{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.rpt-scroll-indicator-dot::after{content:'';width:10px;height:10px;border-radius:50%;background:#fff;display:block}
+
+@media (max-width:760px){
+  .rpt-hero-content{justify-content:flex-end;padding-bottom:clamp(130px,22vw,180px)}
+  .rpt-scroll-indicator{width:68px;height:68px}
+}
+
+/* ===== SHARED SECTION SHELL ===== */
+.rpt-section{padding:clamp(80px,10vw,128px) clamp(22px,5vw,80px)}
+.rpt-section--cream{background:#f5efe3}
+.rpt-section--white{background:#fff}
+.rpt-section--dark{background:#0a0a0a;color:#fff}
+.rpt-inner{max-width:1200px;margin:0 auto}
+
+/* Shared eyebrow */
+.rpt-eyebrow{font-size:12px;letter-spacing:.26em;text-transform:uppercase;font-weight:800;color:#233dff;margin-bottom:clamp(16px,2vw,22px);display:block}
+.rpt-section--dark .rpt-eyebrow{color:#9faaff}
+
+/* ===== INTRO SECTION ===== */
+.rpt-intro-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(40px,6vw,88px);align-items:start}
+.rpt-intro-lede{font-style:italic;font-weight:900;font-size:clamp(22px,3.2vw,36px);line-height:1.15;letter-spacing:-.02em;color:#0a0a0a;margin-bottom:clamp(28px,3vw,40px)}
+.rpt-intro-body{font-size:clamp(15px,1.5vw,17px);line-height:1.65;color:#2a2540;margin-bottom:clamp(28px,3vw,40px)}
+.rpt-dl-btn{display:inline-flex;align-items:center;gap:10px;background:#0a0a0a;color:#fff;padding:15px 28px;border-radius:100px;font-weight:700;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;transition:background .25s,transform .25s;min-height:48px}
+.rpt-dl-btn:hover{background:#233dff;transform:translateY(-2px)}
+.rpt-team-cards{display:flex;flex-direction:column;gap:16px}
+.rpt-team-card{background:#fff;border-radius:16px;padding:clamp(20px,2.5vw,28px);box-shadow:0 4px 20px rgba(10,10,10,.07);display:flex;flex-direction:column;gap:10px}
+.rpt-team-card-name{font-weight:800;font-size:15px;color:#0a0a0a;letter-spacing:-.005em}
+.rpt-team-card-role{font-size:13px;color:#6b6480;line-height:1.5;font-weight:400}
+.rpt-team-card-badge{align-self:flex-start;background:#f5efe3;color:#0a0a0a;padding:5px 12px;border-radius:100px;font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+@media (max-width:880px){.rpt-intro-grid{grid-template-columns:1fr;gap:40px}}
+
+/* ===== BIG STAT SECTION (left text, right animated number + concentric arcs) ===== */
+.rpt-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center}
+.rpt-stat-lede{font-style:italic;font-weight:900;font-size:clamp(28px,4vw,52px);line-height:1.05;letter-spacing:-.02em;color:#0a0a0a;margin-bottom:0}
+.rpt-stat-right{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:clamp(260px,32vw,420px)}
+.rpt-stat-arcs{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.rpt-stat-num-wrap{position:relative;z-index:2;line-height:1}
+.rpt-stat-num{font-style:italic;font-weight:900;font-size:clamp(100px,18vw,210px);letter-spacing:-.04em;color:#0a0a0a;line-height:.85;display:block}
+.rpt-stat-num sup{font-size:0.42em;vertical-align:super;letter-spacing:0;font-style:normal}
+.rpt-stat-label{position:relative;z-index:2;margin-top:clamp(12px,1.5vw,20px);font-size:clamp(14px,1.5vw,17px);line-height:1.5;color:#2a2540;font-weight:500;max-width:320px;text-align:center}
+@media (max-width:760px){
+  .rpt-stat-grid{grid-template-columns:1fr;gap:32px}
+  .rpt-stat-right{min-height:240px}
+}
+
+/* ===== BAR CHART SECTION ===== */
+.rpt-bars-card{background:#fff;border-radius:20px;padding:clamp(36px,5vw,64px);box-shadow:0 8px 36px rgba(10,10,10,.07)}
+.rpt-bars-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(32px,5vw,72px);align-items:start}
+.rpt-bars-headline{font-style:italic;font-weight:900;font-size:clamp(28px,3.8vw,46px);line-height:1;letter-spacing:-.025em;color:#0a0a0a;margin-bottom:clamp(18px,2vw,24px)}
+.rpt-bars-sub{font-size:clamp(14px,1.4vw,16px);line-height:1.6;color:#2a2540;margin-bottom:clamp(24px,3vw,36px)}
+.rpt-bars-list{display:flex;flex-direction:column;gap:clamp(18px,2.2vw,26px)}
+.rpt-bar-row{}
+.rpt-bar-label{font-size:clamp(12.5px,1.2vw,14px);font-weight:600;color:#0a0a0a;line-height:1.35;margin-bottom:8px}
+.rpt-bar-track{position:relative;height:34px;background:rgba(10,10,10,.07);border-radius:100px;overflow:hidden;margin-bottom:6px}
+.rpt-bar-fill{position:absolute;left:0;top:0;height:100%;border-radius:100px;width:0;transition:width 1.3s cubic-bezier(0.16,1,0.3,1);display:flex;align-items:center;justify-content:flex-end;padding-right:12px}
+.rpt-bar-pct-inline{font-style:italic;font-weight:900;font-size:15px;color:#fff;letter-spacing:-.01em;white-space:nowrap}
+.rpt-bar-before{font-size:11px;font-weight:600;color:#6b6480}
+.rpt-bars-cta{display:inline-flex;align-items:center;gap:10px;background:#0a0a0a;color:#fff;padding:14px 24px;border-radius:100px;font-weight:700;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;transition:background .25s,transform .25s;min-height:48px;margin-top:clamp(24px,3vw,36px)}
+.rpt-bars-cta:hover{background:#233dff;transform:translateY(-2px)}
+@media (max-width:880px){.rpt-bars-grid{grid-template-columns:1fr;gap:32px}}
+
+/* ===== CALLOUT PAIR (57% and 2x) ===== */
+.rpt-callout-pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px)}
+.rpt-callout-card{background:#fff;border-radius:20px;padding:clamp(32px,4vw,52px) clamp(28px,4vw,48px);display:flex;flex-direction:column;gap:16px}
+.rpt-callout-card--blue{background:#233dff;color:#fff}
+.rpt-callout-num{font-style:italic;font-weight:900;font-size:clamp(72px,11vw,130px);line-height:.85;letter-spacing:-.04em;color:#0a0a0a;display:block}
+.rpt-callout-card--blue .rpt-callout-num{color:#fff}
+.rpt-callout-text{font-size:clamp(14.5px,1.6vw,17px);line-height:1.5;color:#2a2540;font-weight:500;max-width:340px}
+.rpt-callout-card--blue .rpt-callout-text{color:rgba(255,255,255,.85)}
+@media (max-width:640px){.rpt-callout-pair{grid-template-columns:1fr}}
+
+/* ===== PARTICIPANT REFLECTIONS ===== */
+.rpt-quotes-title{font-style:italic;font-weight:900;font-size:clamp(48px,9vw,120px);line-height:.9;letter-spacing:-.025em;color:#fff;margin-bottom:clamp(40px,5vw,64px)}
+.rpt-quotes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px)}
+.rpt-quote-card{background:#1a1633;border-radius:16px;padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:16px}
+.rpt-quote-accent{height:3px;border-radius:2px;width:40px}
+.rpt-quote-text{font-style:italic;font-weight:700;font-size:clamp(15px,1.6vw,18px);line-height:1.5;color:#fff;letter-spacing:-.005em}
+.rpt-quote-text::before{content:'\201C';color:inherit;margin-right:.04em;opacity:.7}
+.rpt-quote-text::after{content:'\201D';color:inherit;margin-left:.04em;opacity:.7}
+.rpt-quote-attr{font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:auto}
+@media (max-width:760px){.rpt-quotes-grid{grid-template-columns:1fr;gap:14px}}
+@media (min-width:761px) and (max-width:1000px){.rpt-quotes-grid{grid-template-columns:1fr 1fr}}
+
+/* ===== DOWNLOAD CTA ===== */
+.rpt-dl-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center}
+.rpt-dl-eyebrow{font-size:12px;letter-spacing:.26em;text-transform:uppercase;font-weight:800;color:#233dff;margin-bottom:clamp(14px,1.5vw,18px);display:block}
+.rpt-dl-headline{font-style:italic;font-weight:900;font-size:clamp(56px,9vw,120px);line-height:.88;letter-spacing:-.03em;color:#0a0a0a;margin-bottom:clamp(18px,2vw,24px)}
+.rpt-dl-body{font-size:clamp(15px,1.5vw,17px);line-height:1.6;color:#2a2540;max-width:540px;margin-bottom:clamp(28px,3vw,36px)}
+.rpt-dl-buttons{display:flex;flex-wrap:wrap;gap:12px}
+.rpt-dl-btn-primary{display:inline-flex;align-items:center;gap:10px;background:#0a0a0a;color:#fff;padding:16px 28px;border-radius:100px;font-weight:700;font-size:13px;letter-spacing:.05em;text-transform:uppercase;transition:background .25s,transform .25s;min-height:50px}
+.rpt-dl-btn-primary:hover{background:#233dff;transform:translateY(-2px)}
+.rpt-dl-btn-outline{display:inline-flex;align-items:center;gap:10px;background:transparent;color:#0a0a0a;border:1.5px solid #0a0a0a;padding:15px 26px;border-radius:100px;font-weight:700;font-size:13px;letter-spacing:.05em;text-transform:uppercase;transition:background .25s,color .25s,border-color .25s,transform .25s;min-height:50px}
+.rpt-dl-btn-outline:hover{background:#0a0a0a;color:#fff;transform:translateY(-2px)}
+
+/* Report cover mockup (same as index.html) */
+.report-cover-wrap{position:relative;height:clamp(380px,46vw,520px);display:flex;align-items:center;justify-content:center}
+.report-cover{width:min(320px,80vw);height:clamp(380px,48vw,500px);background:linear-gradient(135deg,#233dff 0%,#1a2bcc 100%);border-radius:10px;box-shadow:0 30px 80px rgba(15,15,40,.3),0 12px 28px rgba(35,61,255,.25);transform:rotate(7deg);position:relative;overflow:hidden;padding:clamp(24px,3vw,36px);color:#fff;display:flex;flex-direction:column;justify-content:space-between;transition:transform 1s cubic-bezier(0.16,1,0.3,1)}
+.report-cover:hover{transform:rotate(4deg) translateY(-6px)}
+.report-cover-eyebrow{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;opacity:.85}
+.report-cover-h{font-style:italic;font-weight:900;font-size:38px;line-height:.95;letter-spacing:-.01em;margin-top:10px;position:relative;z-index:2}
+.report-cover-photo{position:absolute;inset:auto 0 0 0;height:60%;opacity:.4;mix-blend-mode:luminosity;background-size:cover;background-position:center}
+.report-cover-foot{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;opacity:.9;position:relative;z-index:2}
+@media (max-width:760px){
+  .rpt-dl-grid{grid-template-columns:1fr;gap:36px}
+  .report-cover-wrap{order:-1;height:auto;padding:20px 0}
+}
+
+/* ===== SITE CURSOR ===== */
+.site-cursor{position:fixed;top:0;left:0;width:84px;height:84px;border-radius:50%;background:rgba(10,10,10,.55);backdrop-filter:blur(6px);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;pointer-events:none;z-index:10000;border:1.5px solid rgba(255,255,255,.7);will-change:transform;transition:width .2s ease,height .2s ease,background .2s ease,border-color .2s ease}
+.site-cursor span{line-height:1.15;display:inline-block}
+.site-cursor.on-clickable{width:46px;height:46px;background:#233dff;border-color:#233dff}
+.site-cursor.on-clickable span{display:none}
+.site-cursor.on-clickable::after{content:'';width:6px;height:6px;border-radius:50%;background:#fff}
+.has-custom-cursor body,.has-custom-cursor a,.has-custom-cursor button,.has-custom-cursor [role=button]{cursor:none}
+@media (hover:none),(pointer:coarse){.site-cursor{display:none!important}.has-custom-cursor,.has-custom-cursor *{cursor:auto!important}}
+</style>
+</head>
+<body>
+
+<!-- ===== TOP NAV ===== -->
+<nav class="report-nav" aria-label="Page navigation">
+  <a class="report-nav-back" href="./index.html">Back to Unstoppable</a>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="rpt-hero" aria-label="Report hero">
+  <div class="rpt-hero-bg" aria-hidden="true"></div>
+  <div class="rpt-hero-scrim" aria-hidden="true"></div>
+  <div class="rpt-hero-content">
+    <span class="rpt-hero-eyebrow">Participant Evaluation Summary</span>
+    <h1 class="rpt-hero-title">The Report.</h1>
+  </div>
+  <div class="rpt-hero-foot">
+    <p class="rpt-hero-byline">Presented to the Los Angeles County Department of Mental Health by Health Matters Clinic, 2025</p>
+    <div class="rpt-scroll-indicator" aria-hidden="true">
+      <svg viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="rptScrollTextPath" d="M 44,44 m -32,0 a 32,32 0 1,1 64,0 a 32,32 0 1,1 -64,0"/>
+        <text font-family="Inter,sans-serif" font-size="10.5" font-weight="800" letter-spacing="3.2" text-transform="uppercase" fill="white">
+          <textPath href="#rptScrollTextPath">SCROLL DOWN &bull; SCROLL DOWN &bull; </textPath>
+        </text>
+      </svg>
+      <div class="rpt-scroll-indicator-dot"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INTRODUCTION ===== -->
+<section class="rpt-section rpt-section--cream" id="introduction">
+  <div class="rpt-inner">
+    <span class="rpt-eyebrow rise-on-scroll">Introduction</span>
+    <div class="rpt-intro-grid">
+      <div class="rise-on-scroll">
+        <p class="rpt-intro-lede">A five-module, healing-centered workshop rooted in the lived experiences of Black communities impacted by disability. Using a retrospective post-then-pre evaluation method, this report assesses shifts in knowledge, attitudes, and confidence.</p>
+        <p class="rpt-intro-body">Unstoppable was designed with and for South LA, Gateway Cities, and the Antelope Valley. Funded through the Mental Health Services Act (Proposition 63) and delivered by Health Matters Clinic across SPA 6, the program reaches residents where existing mental health services have historically failed to show up.</p>
+        <a class="rpt-dl-btn" href="./the-unstoppable-workshop-final-report.pdf" target="_blank" rel="noopener">Download Report (PDF)</a>
+      </div>
+      <div class="rise-on-scroll">
+        <div class="rpt-team-cards">
+          <div class="rpt-team-card">
+            <span class="rpt-team-card-badge">Program Delivery</span>
+            <span class="rpt-team-card-name">Health Matters Clinic</span>
+            <span class="rpt-team-card-role">Program delivery and community engagement across SPA 6. Five healing-centered modules built on lived experience, peer facilitation, and culturally rooted mental health practice.</span>
+          </div>
+          <div class="rpt-team-card">
+            <span class="rpt-team-card-badge">Funder</span>
+            <span class="rpt-team-card-name">LACDMH</span>
+            <span class="rpt-team-card-role">Funded through the Mental Health Services Act, Proposition 63. Los Angeles County Department of Mental Health partnership enabling community-level mental health literacy across underserved service areas.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BIG STAT 1: 69% ===== -->
+<section class="rpt-section rpt-section--cream" id="stat-comfort" style="padding-top:0">
+  <div class="rpt-inner">
+    <div class="rpt-stat-grid">
+      <div class="rise-on-scroll">
+        <p class="rpt-stat-lede">Unstoppable moved the needle on every measure of mental health literacy.</p>
+      </div>
+      <div class="rpt-stat-right rise-on-scroll">
+        <!-- Concentric decorative arcs (SVG) -->
+        <svg class="rpt-stat-arcs" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="200" cy="200" r="188" stroke="#233dff" stroke-width="1.5" stroke-dasharray="6 10" opacity="0.18"/>
+          <circle cx="200" cy="200" r="158" stroke="#ff6f91" stroke-width="1.5" stroke-dasharray="4 12" opacity="0.14"/>
+          <circle cx="200" cy="200" r="130" stroke="#233dff" stroke-width="2" stroke-dasharray="10 8" opacity="0.12"/>
+          <circle cx="200" cy="200" r="104" stroke="#ff6e40" stroke-width="1.5" stroke-dasharray="5 9" opacity="0.10"/>
+          <circle cx="200" cy="200" r="80" stroke="#f9c74f" stroke-width="1.5" stroke-dasharray="3 7" opacity="0.10"/>
+        </svg>
+        <div class="rpt-stat-num-wrap">
+          <span class="rpt-stat-num" data-count="69">0</span><sup></sup>
+        </div>
+        <p class="rpt-stat-label">reported greater comfort discussing mental health within the Black community&nbsp;&#8212; up from 28%</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BAR CHART ===== -->
+<section class="rpt-section rpt-section--cream" id="bar-chart" style="padding-top:0">
+  <div class="rpt-inner">
+    <div class="rpt-bars-card rise-on-scroll">
+      <div class="rpt-bars-grid">
+        <div>
+          <h2 class="rpt-bars-headline">Knowledge grew across every measure.</h2>
+          <p class="rpt-bars-sub">Participants in Unstoppable showed significant gains in all five key mental health literacy indicators.</p>
+          <a class="rpt-bars-cta" href="./the-unstoppable-workshop-final-report.pdf" target="_blank" rel="noopener">Read the report</a>
+        </div>
+        <div class="rpt-bars-list">
+
+          <div class="rpt-bar-row">
+            <div class="rpt-bar-label">Comfort discussing mental health</div>
+            <div class="rpt-bar-track">
+              <div class="rpt-bar-fill" data-pct="69" style="background:#233dff">
+                <span class="rpt-bar-pct-inline">69%</span>
+              </div>
+            </div>
+            <div class="rpt-bar-before">Before: 28%</div>
+          </div>
+
+          <div class="rpt-bar-row">
+            <div class="rpt-bar-label">Understanding systemic challenges</div>
+            <div class="rpt-bar-track">
+              <div class="rpt-bar-fill" data-pct="69" style="background:#ff6e40">
+                <span class="rpt-bar-pct-inline">69%</span>
+              </div>
+            </div>
+            <div class="rpt-bar-before">Before: 28%</div>
+          </div>
+
+          <div class="rpt-bar-row">
+            <div class="rpt-bar-label">Awareness of community resources</div>
+            <div class="rpt-bar-track">
+              <div class="rpt-bar-fill" data-pct="58" style="background:#ff6f91">
+                <span class="rpt-bar-pct-inline">58%</span>
+              </div>
+            </div>
+            <div class="rpt-bar-before">Before: 21%</div>
+          </div>
+
+          <div class="rpt-bar-row">
+            <div class="rpt-bar-label">Feeling equipped to support others</div>
+            <div class="rpt-bar-track">
+              <div class="rpt-bar-fill" data-pct="53" style="background:#f9c74f">
+                <span class="rpt-bar-pct-inline">53%</span>
+              </div>
+            </div>
+            <div class="rpt-bar-before">Before: 22%</div>
+          </div>
+
+          <div class="rpt-bar-row">
+            <div class="rpt-bar-label">Identifying symptoms in Black youth and adults</div>
+            <div class="rpt-bar-track">
+              <div class="rpt-bar-fill" data-pct="57" style="background:#233dff">
+                <span class="rpt-bar-pct-inline">57%</span>
+              </div>
+            </div>
+            <div class="rpt-bar-before">Before: 15%</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CALLOUT PAIR: 57% and 2x ===== -->
+<section class="rpt-section rpt-section--cream" id="callout-pair" style="padding-top:clamp(24px,4vw,48px)">
+  <div class="rpt-inner">
+    <div class="rpt-callout-pair">
+      <div class="rpt-callout-card rpt-callout-card--blue rise-on-scroll">
+        <span class="rpt-callout-num" data-count="57">0</span>
+        <p class="rpt-callout-text">can now identify mental health symptoms in Black youth and adults&nbsp;&#8212; up from just 15%</p>
+      </div>
+      <div class="rpt-callout-card rise-on-scroll">
+        <span class="rpt-callout-num">2x</span>
+        <p class="rpt-callout-text">more than doubled their confidence in helping others navigate mental health conversations</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PARTICIPANT REFLECTIONS ===== -->
+<section class="rpt-section rpt-section--dark" id="reflections">
+  <div class="rpt-inner">
+    <h2 class="rpt-quotes-title rise-on-scroll">What they<br>said.</h2>
+    <div class="rpt-quotes-grid">
+
+      <div class="rpt-quote-card rise-on-scroll">
+        <div class="rpt-quote-accent" style="background:#233dff"></div>
+        <p class="rpt-quote-text">Recognizing and challenging stigmas... creating supportive communities.</p>
+        <span class="rpt-quote-attr">Workshop participant</span>
+      </div>
+
+      <div class="rpt-quote-card rise-on-scroll">
+        <div class="rpt-quote-accent" style="background:#ff6f91"></div>
+        <p class="rpt-quote-text">Understanding symptoms of major depression in Black women.</p>
+        <span class="rpt-quote-attr">Workshop participant</span>
+      </div>
+
+      <div class="rpt-quote-card rise-on-scroll">
+        <div class="rpt-quote-accent" style="background:#f9c74f"></div>
+        <p class="rpt-quote-text">I'll recommend therapy to loved ones without judgment.</p>
+        <span class="rpt-quote-attr">Workshop participant</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== DOWNLOAD CTA ===== -->
+<section class="rpt-section rpt-section--cream" id="download">
+  <div class="rpt-inner">
+    <div class="rpt-dl-grid">
+      <div class="rise-on-scroll">
+        <span class="rpt-dl-eyebrow">Read the full evaluation</span>
+        <h2 class="rpt-dl-headline">Read the full evaluation.</h2>
+        <p class="rpt-dl-body">Download the complete Unstoppable Participant Evaluation Summary presented to LACDMH. Includes methodology, all five indicators, demographic breakdown, and recommendations for program replication.</p>
+        <div class="rpt-dl-buttons">
+          <a class="rpt-dl-btn-primary" href="./the-unstoppable-workshop-final-report.pdf" target="_blank" rel="noopener">Download the Full Report (PDF)</a>
+          <a class="rpt-dl-btn-outline" href="./the-unstoppable-workshop-digital-companion-guide.pdf" target="_blank" rel="noopener">Download the Workshop Guide</a>
+        </div>
+      </div>
+      <div class="report-cover-wrap rise-on-scroll" aria-hidden="true">
+        <div class="report-cover">
+          <div>
+            <span class="report-cover-eyebrow">Health Matters Clinic</span>
+            <h3 class="report-cover-h">The Unstoppable Report</h3>
+          </div>
+          <div class="report-cover-photo" style="background-image:url('./photos/DSC_2675.jpg')"></div>
+          <span class="report-cover-foot">2026 &middot; LACDMH SPA 6</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// ==================== COUNT-UP ====================
+(function(){
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('[data-count]').forEach(el => { el.textContent = el.dataset.count; });
+    return;
+  }
+  function countUp(el, target, duration) {
+    const start = performance.now();
+    function step(now) {
+      const t = Math.min((now - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - t, 3);
+      el.textContent = Math.round(ease * target);
+      if (t < 1) requestAnimationFrame(step);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(step);
+  }
+  const countIO = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (!en.isIntersecting || en.target.classList.contains('counted')) return;
+      en.target.classList.add('counted');
+      countUp(en.target, parseInt(en.target.dataset.count, 10), 1300);
+      countIO.unobserve(en.target);
+    });
+  }, {threshold: 0.5});
+  document.querySelectorAll('[data-count]').forEach(el => countIO.observe(el));
+})();
+
+// ==================== BAR FILL ====================
+(function(){
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.rpt-bar-fill[data-pct]').forEach(el => { el.style.width = el.dataset.pct + '%'; });
+    return;
+  }
+  const barIO = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (!en.isIntersecting || en.target.classList.contains('counted')) return;
+      en.target.classList.add('counted');
+      en.target.style.width = en.target.dataset.pct + '%';
+      barIO.unobserve(en.target);
+    });
+  }, {threshold: 0.3});
+  document.querySelectorAll('.rpt-bar-fill[data-pct]').forEach(el => barIO.observe(el));
+})();
+
+// ==================== SCROLL-RISE ====================
+(function(){
+  const els = document.querySelectorAll('.rise-on-scroll');
+  if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('is-visible')); return; }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        en.target.classList.add('is-visible');
+        io.unobserve(en.target);
+      }
+    });
+  }, {threshold: 0.15});
+  els.forEach(e => io.observe(e));
+})();
+
+// ==================== CUSTOM SITE CURSOR ====================
+(function(){
+  if (!matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  const c = document.createElement('div');
+  c.className = 'site-cursor';
+  c.setAttribute('aria-hidden', 'true');
+  c.innerHTML = '<span>Scroll<br>Down</span>';
+  document.body.appendChild(c);
+  document.documentElement.classList.add('has-custom-cursor');
+  let tx = window.innerWidth / 2, ty = window.innerHeight / 2;
+  let x = tx, y = ty;
+  window.addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; }, {passive:true});
+  (function loop(){
+    x += (tx - x) * 0.18;
+    y += (ty - y) * 0.18;
+    c.style.transform = 'translate3d(' + (x - 42) + 'px,' + (y - 42) + 'px,0)';
+    requestAnimationFrame(loop);
+  })();
+  function bind(el){
+    el.addEventListener('mouseenter', () => c.classList.add('on-clickable'));
+    el.addEventListener('mouseleave', () => c.classList.remove('on-clickable'));
+  }
+  document.querySelectorAll('a, button, [role=button], summary').forEach(bind);
+  window.addEventListener('mouseleave', () => { c.style.opacity = '0'; });
+  window.addEventListener('mouseenter', () => { c.style.opacity = '1'; });
+})();
+</script>
+
+</body>
+</html>
