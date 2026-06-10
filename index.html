@@ -1501,7 +1501,7 @@ function buildCaseStudyBlock(story, index) {
   const block = document.createElement('div');
   block.className = 'case-study-block rise-on-scroll' + (index % 2 === 1 ? ' reverse' : '');
   // Strip wrapping quote characters from the power statement since CSS adds curly quotes
-  const cleanQuote = story.body.quote.replace(/^["“‘]+|["”’]+$/g, '');
+  const cleanQuote = (story.body.pullquote || story.body.quote || '').replace(/^["\u201c']+|["\u201d']+$/g, '');
   block.innerHTML = `
     <div class="case-study-image">
       <span class="case-study-tag">${story.tag}</span>
