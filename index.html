@@ -719,6 +719,13 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
 .share-portrait .lbl{z-index:2;left:18px!important;bottom:18px!important;background:#fff!important;color:var(--hmc-text)!important;border:1px solid rgba(0,0,0,.08)!important;padding:9px 16px!important;font-size:13px!important;letter-spacing:.06em!important;border-radius:999px!important;}
 .share-portrait .video-play{position:absolute;z-index:2;top:50%;left:50%;transform:translate(-50%,-50%);transition:transform .25s;pointer-events:none;}
 .share-portrait:hover .video-play{transform:translate(-50%,-50%) scale(1.1);}
+
+/* Video modal */
+#videoModal{position:fixed;inset:0;z-index:50000;background:rgba(0,0,0,.95);display:none;align-items:center;justify-content:center;padding:20px;}
+#videoModal.open{display:flex;}
+#videoModal iframe{width:100%;max-width:90vw;aspect-ratio:16/9;border:none;border-radius:8px;}
+#videoModal .video-close{position:absolute;top:20px;right:20px;width:44px;height:44px;background:#fff;border:none;border-radius:50%;cursor:pointer;font-size:24px;color:#000;display:flex;align-items:center;justify-content:center;z-index:50001;}
+#videoModal .video-close:hover{background:#ccc;}
 .share-portrait img{object-position:center top;}
 
 /* Resources: no copied ASICS headline, HMC text black */
@@ -752,10 +759,12 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
 
 <!-- ================ A. HERO (ASICS-inspired editorial layout) ================ -->
 <section class="hero" id="top">
-  <video class="hero-carousel" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;object-position:center 30%;">
-    <source src="https://res.cloudinary.com/dh88btcdz/video/upload/v1781118879/56F6DB22-7780-4E8A-9DCC-C0CF23D48BC0_3_dhhghe.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <div class="hero-carousel" aria-hidden="true">
+    <div class="hero-slide active" style="background-image:url('./photos/DSC_3084.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('./photos/DSC_3421.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('./photos/DSC_3070.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('./photos/DSC_2867.jpg')"></div>
+  </div>
   <div class="hero-scrim"></div>
 
   <a class="hero-brand" href="#top" aria-label="Unstoppable by Health Matters Clinic">
@@ -900,21 +909,27 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
       </div>
     </div>
     <div class="share-portraits rise-on-scroll">
-      <a class="share-portrait" href="https://youtube.com/shorts/rqvXX6dCviM" target="_blank" rel="noopener" aria-label="Watch Dave Helem and Chelley Chelle on YouTube">
-        <img src="https://img.youtube.com/vi/rqvXX6dCviM/mqdefault.jpg" alt="Dave Helem and Chelley Chelle" loading="lazy">
+      <a class="share-portrait" href="#" data-video-id="rqvXX6dCviM" aria-label="Watch Dave Helem and Chelley Chelle on YouTube">
+        <img src="https://img.youtube.com/vi/rqvXX6dCviM/hqdefault.jpg" alt="Dave Helem and Chelley Chelle" loading="lazy">
         <span class="video-play" aria-hidden="true"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.92)"/><polygon points="19,16 36,24 19,32" fill="#0a0a0a"/></svg></span>
         <span class="lbl">Dave Helem &amp; Chelley Chelle</span>
       </a>
-      <a class="share-portrait" href="https://youtube.com/shorts/8hcPxXhJlH8" target="_blank" rel="noopener" aria-label="Watch Kaiya on YouTube">
+      <a class="share-portrait" href="#" data-video-id="8hcPxXhJlH8" aria-label="Watch Kaiya on YouTube">
         <img src="https://img.youtube.com/vi/8hcPxXhJlH8/hqdefault.jpg" alt="Kaiya" loading="lazy">
         <span class="video-play" aria-hidden="true"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.92)"/><polygon points="19,16 36,24 19,32" fill="#0a0a0a"/></svg></span>
         <span class="lbl">Kaiya</span>
       </a>
-      <a class="share-portrait" href="https://youtube.com/shorts/h1zZodWz4uo" target="_blank" rel="noopener" aria-label="Watch Issa Rae and Spencer Paysinger on YouTube">
+      <a class="share-portrait" href="#" data-video-id="h1zZodWz4uo" aria-label="Watch Issa Rae and Spencer Paysinger on YouTube">
         <img src="https://img.youtube.com/vi/h1zZodWz4uo/hqdefault.jpg" alt="Issa Rae and Spencer Paysinger" loading="lazy">
         <span class="video-play" aria-hidden="true"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.92)"/><polygon points="19,16 36,24 19,32" fill="#0a0a0a"/></svg></span>
         <span class="lbl">Issa Rae &amp; Spencer Paysinger</span>
       </a>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="videoModal">
+      <button class="video-close">&times;</button>
+      <iframe id="videoFrame" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <div class="submit-block rise-on-scroll" id="submit-form">
@@ -1559,7 +1574,17 @@ function closeStory() {
 document.querySelectorAll('[data-close-story]').forEach(el => el.addEventListener('click', closeStory));
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && overlay.classList.contains('open')) closeStory(); });
 
-// Hero carousel: now using native video element
+// ==================== HERO CAROUSEL ====================
+(function(){
+  const slides = document.querySelectorAll('.hero-slide');
+  if (slides.length < 2) return;
+  let i = 0;
+  setInterval(() => {
+    slides[i].classList.remove('active');
+    i = (i + 1) % slides.length;
+    slides[i].classList.add('active');
+  }, 5500);
+})();
 
 // ==================== MISSION CAROUSEL ====================
 (function(){
@@ -1631,6 +1656,34 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && overlay.cl
     update();
   }
   // Both mission and intro-stories now use auto-advance timers (scroll-driven was broken with 100vh sections).
+})();
+
+// ==================== VIDEO MODAL ====================
+(function(){
+  const modal = document.getElementById('videoModal');
+  const videoFrame = document.getElementById('videoFrame');
+  const closeBtn = document.querySelector('.video-close');
+
+  document.querySelectorAll('[data-video-id]').forEach(card => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+      const videoId = card.getAttribute('data-video-id');
+      videoFrame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      modal.classList.add('open');
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('open');
+    videoFrame.src = '';
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('open');
+      videoFrame.src = '';
+    }
+  });
 })();
 
 // ==================== RESOURCES FILTER ====================
