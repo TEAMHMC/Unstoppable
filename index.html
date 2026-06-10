@@ -155,7 +155,7 @@ html.is-embedded body{background:transparent}
 @keyframes overlayIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 .story-overlay-close{position:fixed;top:20px;right:20px;width:48px;height:48px;border-radius:50%;background:#0a0a0a;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:22px;font-weight:300;line-height:1;z-index:1102;box-shadow:0 6px 20px rgba(0,0,0,.25);transition:background .2s,transform .25s;border:none;cursor:pointer}
 .story-overlay-close:hover{background:#233dff;transform:scale(1.05)}
-.story-feature{position:relative;height:60vh;min-height:380px;background:#222 center/cover no-repeat}
+.story-feature{position:relative;height:60vh;min-height:380px;background:#222 center 20%/cover no-repeat}
 .story-feature::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.2) 0%,rgba(0,0,0,.65) 100%)}
 .story-feature .story-feature-inner{position:absolute;left:0;right:0;bottom:0;padding:clamp(28px,5vw,60px);z-index:2;color:#fff;max-width:1200px;margin:0 auto;display:block}
 .story-feature .eyebrow{display:block;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:rgba(255,255,255,.85);margin-bottom:14px}
@@ -166,7 +166,10 @@ html.is-embedded body{background:transparent}
 .story-article .inline-image{margin:clamp(32px,4vw,48px) 0;border-radius:12px;overflow:hidden;background:#222;aspect-ratio:16/9}
 .story-article .inline-image img{width:100%;height:100%;object-fit:cover}
 .story-article .pullquote{font-style:italic;font-weight:900;font-size:clamp(24px,3.4vw,38px);line-height:1.15;letter-spacing:-.02em;color:#233dff;border-left:4px solid #233dff;padding:10px 0 10px 24px;margin:clamp(36px,5vw,56px) 0;max-width:600px}
-.story-article .citation{margin:clamp(36px,5vw,56px) 0 0;padding-top:24px;border-top:1px solid #ebe7f0;font-size:13px;line-height:1.55;color:#6b6480}
+.story-article .citation{margin:0;padding:0;border-top:none;font-size:13px;line-height:1.55;color:#6b6480}
+.story-section-label{display:block;font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:#233dff;margin:clamp(32px,4vw,48px) 0 10px}
+.story-article .intro+p,.story-article #storyP2,.story-article #storyP3{margin-top:16px}
+.story-divider{height:1px;background:#ebe7f0;margin:clamp(28px,3.5vw,40px) 0}
 .story-article .scholar-link{display:inline-flex;align-items:center;gap:10px;margin-top:18px;background:#0a0a0a;color:#fff;padding:14px 22px;border-radius:100px;font-weight:700;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;transition:background .25s,transform .25s;min-height:44px}
 .story-article .scholar-link:hover{background:#233dff;transform:translateY(-2px)}
 .story-article .scholar-link::after{content:'\2197';font-size:14px;letter-spacing:0}
@@ -371,11 +374,11 @@ html.is-embedded body{background:transparent}
 
 /* ===== FINAL UX PATCH: Hero, scroll story flow, resources, sponsors ===== */
 .hero{min-height:100vh;height:100svh;background:#0a0a0a;}
-.hero-slide{background-position:center 35%;filter:saturate(.95) contrast(1.03);}
-.hero-slide:nth-child(1){background-position:center 42%;}
-.hero-slide:nth-child(2){background-position:center 38%;}
-.hero-slide:nth-child(3){background-position:center 42%;}
-.hero-slide:nth-child(4){background-position:center 40%;}
+.hero-slide{background-position:center 25%;filter:saturate(.95) contrast(1.03);}
+.hero-slide:nth-child(1){background-position:center 28%;}
+.hero-slide:nth-child(2){background-position:center 22%;}
+.hero-slide:nth-child(3){background-position:center 28%;}
+.hero-slide:nth-child(4){background-position:center 25%;}
 .hero-scrim{background:linear-gradient(90deg,rgba(0,0,0,.74) 0%,rgba(0,0,0,.42) 42%,rgba(0,0,0,.18) 72%),linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,.12) 44%,rgba(0,0,0,.72) 100%);}
 .hero-brand{position:absolute;z-index:8;left:clamp(20px,4vw,64px);top:clamp(20px,4vw,52px);display:block;width:clamp(120px,16vw,220px);height:auto;filter:drop-shadow(0 6px 18px rgba(0,0,0,.45));}
 .hero-brand img{width:100%;height:auto;display:block;}
@@ -855,15 +858,24 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
     </div>
   </div>
   <article class="story-article">
-    <p class="intro" id="storyIntro"></p>
-    <p id="storyText1"></p>
-    <div class="inline-image"><img id="storyImage1" src="" alt=""></div>
-    <p id="storyText2"></p>
+    <p class="story-section-label">What the Research Shows</p>
+    <p class="intro" id="storyP1"></p>
+    <p id="storyP2"></p>
+    <p id="storyP3"></p>
+    <div class="story-divider"></div>
+    <p class="story-section-label">Takeaway</p>
+    <p id="storyTakeaway"></p>
+    <div class="story-divider"></div>
+    <p class="story-section-label">Food For Thought</p>
+    <p id="storyFood"></p>
     <blockquote class="pullquote" id="storyQuote"></blockquote>
-    <p id="storyText3"></p>
-    <div class="inline-image"><img id="storyImage2" src="" alt=""></div>
+    <div class="story-divider"></div>
+    <p class="story-section-label">Take Action</p>
+    <p id="storyAction"></p>
+    <div class="story-divider"></div>
+    <p class="story-section-label">Explore the Research</p>
     <p class="citation" id="storyCitation"></p>
-    <a class="scholar-link" id="storyScholar" href="#" target="_blank" rel="noopener">Read more about this research</a>
+    <a class="scholar-link" id="storyScholar" href="#" target="_blank" rel="noopener">Read the full study</a>
   </article>
   <div class="story-next">
     <span class="label">Next story</span>
@@ -1394,93 +1406,93 @@ const stories = [
     name: 'The Silent Weight of Stigma',
     author: 'Alang, S. M. (2019)',
     thumbnail: './photos/cs-alang.png',
-    citation: 'Alang, S. M. (2019). Mental health care among Blacks in America: Confronting racism and constructing solutions. Health Services Research, 54(2), 346–355. https://doi.org/10.1111/1475-6773.13115',
+    citation: 'Alang, S. M. (2019). Mental health care among Blacks in America: Confronting racism and constructing solutions. Health Services Research, 54(2), 346–355.',
     scholarUrl: 'https://doi.org/10.1111/1475-6773.13115',
     body: {
       featureImage: './photos/cs-alang.png',
-      intro: "Even with more people talking about mental health, many Black folks still feel scared to reach out. Especially when you've been taught to keep it together—no cracks, no breaks. There's fear of being judged. Fear of being misunderstood. And after too many bad experiences with the system, trust doesn't come easy.",
-      text1: "Takeaway: Access isn't the finish line. Real change means breaking stigma, rebuilding trust, and honoring lived experience. That means providers who understand us. Language that sounds like us. Care that feels safe.",
-      text2: "Food For Thought: What's something you've held back because you were worried about being judged? How could we make it easier for people to speak up?",
-      text3: "Act On It: Ready to break the silence? Tap into our wellness events and Unboxed podcast—where stigma ends and real stories begin.",
-      quote: '"Access isn\'t the finish line. Real change means breaking stigma, rebuilding trust, and honoring lived experience."',
-      image1: './photos/DSC_2675.jpg',
-      image2: './photos/DSC_2935.jpg'
+      p1: 'Many Black adults who need mental health support never receive it. A 2019 study found that about 10 percent of Black adults reported unmet mental health needs, nearly double the rate of the general population.',
+      p2: 'Cost and lack of insurance were the most commonly cited reasons for going without care. But the research also uncovered something deeper: fear of being judged, distrust of healthcare systems rooted in historical harm, and the experience of discrimination in clinical settings all kept people from asking for help even when they could afford to.',
+      p3: 'One of the study\'s most striking findings was that Black adults with higher levels of education were more likely to report stigma as a barrier, not less. The pressure to appear strong and self-sufficient does not ease with education. For many, it intensifies.',
+      takeaway: 'Access matters. Trust matters too.\n\nMental health support works best when people feel respected, understood, and safe enough to ask for help. Reducing barriers means more than opening doors. It means making sure care is worth walking through.',
+      food: 'What would make it easier for you or someone you care about to reach out when support is needed?',
+      pullquote: 'Access isn\'t the finish line. Trust is.',
+      action: 'Find <a href="https://www.healthmatters.clinic/resources/resourcedirectory" target="_blank" rel="noopener" style="color:#233dff;font-weight:700">mental health resources</a>, <a href="https://www.healthmatters.clinic/resources/eventfinder" target="_blank" rel="noopener" style="color:#233dff;font-weight:700">upcoming wellness events</a>, and <a href="https://www.healthmatters.clinic/resources/checkyourself" target="_blank" rel="noopener" style="color:#233dff;font-weight:700">tools to help you check in with yourself</a> designed for our community.'
     }
   },
   {
     id: 'ayon',
     tag: 'Case Study 02',
-    name: 'The Hidden Toll of Moving While Black',
+    name: 'When the Move Happens Young',
     author: 'Andleeb, H., et al. (2024)',
     thumbnail: './photos/cs-ayon.png',
-    citation: 'Andleeb, H., Moltrecht, B., Gayer-Anderson, C., et al. (2024). Age-at-migration, ethnicity and psychosis risk. PLOS Mental Health, 1(5), e0000134. https://doi.org/10.1371/journal.pmen.0000134',
+    citation: 'Andleeb, H., Moltrecht, B., Gayer-Anderson, C., et al. (2024). Age-at-migration, ethnicity and psychosis risk: Findings from the EU-GEI case-control study. PLOS Mental Health, 1(5), e0000134.',
     scholarUrl: 'https://doi.org/10.1371/journal.pmen.0000134',
     body: {
       featureImage: './photos/cs-ayon.png',
-      intro: "Moving is not just about a new address—it can shake who you are. For Black and North African teens, research shows migration during adolescence may raise the risk of psychosis. Because teens may be learning a new culture, facing racism, dealing with language barriers, and trying to fit in—all while still figuring out who they are.",
-      text1: "Takeaway: Mental health care can't be one-size-fits-all. Black and North African youth need support that is culturally rooted, trauma-aware, and built for their journey.",
-      text2: "Food For Thought: What messages did you get—or never get—about mental health during a big change in your life?",
-      text3: "Act On It: Tough transitions? Fuel growth. Tap into youth-powered programs.",
-      quote: '"Moving isn\'t just about a new address. It can shake who you are."',
-      image1: './photos/DSC_3084.jpg',
-      image2: './photos/DSC_3070.jpg'
+      p1: 'Moving to a new country is hard at any age. But the timing of that move appears to matter for long-term mental health in ways that go beyond initial adjustment.',
+      p2: 'A 2024 study followed more than 2,000 adults across six countries and found that people from ethnic minority backgrounds who migrated during adolescence faced significantly higher odds of experiencing a first psychotic episode compared to White non-migrants. Among Black migrants who moved during their teenage years, the risk was more than six times higher.',
+      p3: 'The study also found that ethnic minority individuals who were born in the destination country and never migrated still showed elevated risk. This points to something beyond the act of moving: the ongoing experience of racism, social exclusion, and not belonging creates its own lasting mental health burden.',
+      takeaway: 'Mental health risk does not only come from a single event. It builds over time through repeated exposure to stress, discrimination, and environments that do not feel safe or affirming.',
+      food: 'If you or someone you love moved during childhood or adolescence, what supports were in place, and what was missing?',
+      pullquote: 'It is not just the move. It is what you carry after.',
+      action: 'Connect with <a href="https://www.healthmatters.clinic/resources/resourcedirectory" target="_blank" rel="noopener" style="color:#233dff;font-weight:700">mental health resources built for our community</a> and find <a href="https://www.healthmatters.clinic/resources/eventfinder" target="_blank" rel="noopener" style="color:#233dff;font-weight:700">free wellness events near you</a>.'
     }
   },
   {
     id: 'lindsey',
     tag: 'Case Study 03',
-    name: 'Barriers Beyond the Clinic',
+    name: 'The Long Road to Getting Help',
     author: 'Planey, A. M., et al. (2019)',
     thumbnail: './photos/cs-lindsey.png',
-    citation: 'Planey, A. M., Smith, S. M. N., Moore, S., & Walker, T. D. (2019). Barriers and facilitators to mental health help-seeking among African American youth and their families. Children and Youth Services Review, 101, 190–200. https://doi.org/10.1016/j.childyouth.2019.04.001',
+    citation: 'Planey, A. M., Smith, S. M. N., Moore, S., & Walker, T. D. (2019). Barriers and facilitators to mental health help-seeking among African American youth and their families: A systematic review study. Children and Youth Services Review, 101, 190–200.',
     scholarUrl: 'https://doi.org/10.1016/j.childyouth.2019.04.001',
     body: {
       featureImage: './photos/cs-lindsey.png',
-      intro: "Three walls block the way: stigma, no trust, and no easy way to get there. Research shows Black youth often need mental health support but may not use services because care can feel unsafe, hard to reach, too expensive, or disconnected from their real lives.",
-      text1: "Takeaway: To reach Black youth, care has to show up where they are—with support that feels safe, real, and rooted in community.",
-      text2: "Food For Thought: If the system is not working, how do we build one that does? If you could redesign mental health support in your neighborhood, what would it look like?",
-      text3: "Act On It: Are you a caregiver—or know a youth facing tough challenges? Explore the THRIVE Study for support, resources, and stipend opportunities.",
-      quote: '"Three walls block the way: stigma, no trust, and no easy way to get there."',
-      image1: './photos/DSC_3421.jpg',
-      image2: './photos/DSC_2596.jpg'
+      p1: 'Black youth need mental health support at rates equal to or higher than their peers. Yet they use mental health services at significantly lower rates. A 2019 systematic review drew on two decades of published studies to understand why.',
+      p2: 'The research identified barriers at every level. Youth reported fear of being labeled, distrust of providers who did not share or understand their experience, and concern about what asking for help would mean in their community. At the family and system level, barriers included cost, limited insurance, transportation gaps, and providers with little cultural awareness.',
+      p3: 'But the research also documented what opens doors. Black youth were more likely to seek and stay in care when providers shared their cultural background, when trusted adults helped connect them to support, and when the relationship with their provider felt respectful and genuine. Trust and community connection were as important as location and cost.',
+      takeaway: 'Getting help is not just about knowing where to go. It depends on whether the door feels safe to walk through.\n\nWhen care is built on trust and community, it works.',
+      food: 'What would mental health support need to look like in your community for people to actually use it?',
+      pullquote: 'Care works best when it feels like it belongs to you.',
+      action: 'Explore <a href="https://www.healthmatters.clinic/resources/resourcedirectory" target="_blank" rel="noopener" style="color:#233dff;font-weight:700">mental health resources</a>, <a href="https://www.healthmatters.clinic/resources/eventfinder" target="_blank" rel="noopener" style="color:#233dff;font-weight:700">free community wellness events</a>, and <a href="https://www.healthmatters.clinic/programming/wellness" target="_blank" rel="noopener" style="color:#233dff;font-weight:700">tools designed around your experience</a>.'
     }
   },
   {
     id: 'abrams',
     tag: 'Case Study 04',
     name: 'Strength at a Cost',
-    author: 'Jones, M. K., Hill-Jarrett, T. G., & Jean-Ceide, C. (2025)',
+    author: 'Jones, M. K., et al. (2025)',
     thumbnail: './photos/cs-abrams.png',
-    citation: 'Jones, M. K., Hill-Jarrett, T. G., & Jean-Ceide, C. (2025). The Strong Black Woman Schema and Mental Health. Journal of Black Psychology, 51(5), 617–641. https://doi.org/10.1177/00957984241308778',
+    citation: 'Jones, M. K., Hill-Jarrett, T. G., & Jean-Ceide, C. (2025). The Strong Black Woman Schema and mental health: Examining the role of personal mastery. Journal of Black Psychology, 51(5), 617–641.',
     scholarUrl: 'https://doi.org/10.1177/00957984241308778',
     body: {
       featureImage: './photos/cs-abrams.png',
-      intro: 'Being strong has helped many Black women survive—but it can come at a cost. Research shows that always holding it together, caring for everyone else, and hiding pain can be linked to stress, anxiety, depression, and burnout.',
-      text1: 'Takeaway: Vulnerability is not weakness. Rest is not weakness. Black women deserve spaces to let go, speak freely, and heal without judgment.',
-      text2: 'Food For Thought: What would it look like to lay the cape down—for a day, a moment, or just a breath?',
-      text3: 'Act On It: Tap into our wellness events and pop-up wellness spaces—for us, by us.',
-      quote: '"Vulnerability is not weakness. Rest is not weakness. Black women deserve spaces to let go and heal without judgment."',
-      image1: './photos/DSC_2867.jpg',
-      image2: './photos/DSC_2589.jpg'
+      p1: 'The image of the Strong Black Woman is familiar: always capable, always holding things together, rarely asking for help. But research is beginning to document what that image can cost.',
+      p2: 'A 2025 study examined how strongly endorsing the Strong Black Woman schema affects mental health in a sample of 135 Black women. Researchers found that the more a woman identified with this framework, the less she felt in control of her own life. That reduced sense of personal control was directly linked to higher levels of anxiety and depressive symptoms.',
+      p3: 'The study looked at three parts of the schema that drove this pattern: emotional strength, independence, and caretaking. Each one, when taken to an extreme, created distance from the kind of internal confidence and support that promotes genuine wellbeing. The research suggests that strength, as it is often defined for Black women, can work against mental health rather than protect it.',
+      takeaway: 'Strength is real. But it was never meant to replace care.\n\nBlack women deserve support that does not require them to hold everything together before asking for help.',
+      food: 'What does strength look like for you when no one else is watching?',
+      pullquote: 'Strength was never meant to be carried alone.',
+      action: 'Find <a href="https://www.healthmatters.clinic/programming/wellness" target="_blank" rel="noopener" style="color:#233dff;font-weight:700">wellness resources, events, and community spaces</a> built around rest, honesty, and real support.'
     }
   },
   {
     id: 'williams',
     tag: 'Case Study 05',
-    name: 'Unspoken Struggles',
+    name: 'The Weight of Staying Silent',
     author: 'American Psychological Association (2021)',
     thumbnail: './photos/cs-williams.png',
-    citation: 'American Psychological Association. (2021, September). Improving the mental health of Black men. Monitor on Psychology. https://www.apa.org/monitor/2021/09/ce-black-mental-health',
+    citation: 'American Psychological Association. (2021, September). Improving the mental health of Black men. Monitor on Psychology.',
     scholarUrl: 'https://www.apa.org/monitor/2021/09/ce-black-mental-health',
     body: {
       featureImage: './photos/cs-williams.png',
-      intro: 'Black men often carry invisible weight. Pressure to stay silent and push through can make it hard to ask for help. Add racism, stress, economic pressure, and limited access to care—and the burden gets even heavier.',
-      text1: 'Takeaway: Change starts by flipping the script on strength. Feeling is not weakness. Talking is not weakness. Healing is power.',
-      text2: 'Food For Thought: What messages did you grow up hearing about what it means to be a strong man? Are they still serving you—or holding you back?',
-      text3: 'Act On It: Know a Black man carrying too much alone? Tap into Unboxed—real stories, real healing, made for us.',
-      quote: '"Feeling is not weakness. Talking is not weakness. Healing is power."',
-      image1: './photos/DSC_3954.jpg',
-      image2: './photos/DSC_3613.jpg'
+      p1: 'Black men experience mental health challenges at significant rates but seek professional support far less often than their peers. Research cited by the American Psychological Association shows that only about 26 percent of Black and Hispanic men experiencing daily anxiety sought mental health care, compared to more than 45 percent of White men.',
+      p2: 'Multiple factors drive this gap. Cultural expectations around what it means to be strong, distrust of healthcare systems, economic pressure, and limited access to providers who understand the specifics of Black men\'s lives all create real obstacles. The pressure to handle things internally can make asking for help feel like something to be avoided rather than something powerful.',
+      p3: 'The data on suicide makes this urgent. Black men die by suicide at four times the rate of Black women. The gap between the challenges Black men carry and the care they receive is not a personal failure. It reflects systems that have not made support accessible or culturally meaningful.',
+      takeaway: 'Healing is not weakness. It is one of the hardest and most courageous things a person can choose.\n\nChanging what is possible for Black men\'s mental health starts with making space for the conversation.',
+      food: 'What messages have shaped how the men in your life think about asking for support?',
+      pullquote: 'Getting help is not giving up. It is showing up.',
+      action: 'Explore <a href="https://www.healthmatters.clinic/resources/checkyourself" target="_blank" rel="noopener" style="color:#233dff;font-weight:700">free mental health screenings</a>, <a href="https://www.healthmatters.clinic/resources/eventfinder" target="_blank" rel="noopener" style="color:#233dff;font-weight:700">community wellness events</a>, and <a href="https://www.healthmatters.clinic/resources/resourcedirectory" target="_blank" rel="noopener" style="color:#233dff;font-weight:700">resources built with your experience in mind</a>.'
     }
   }
 ];
@@ -1518,11 +1530,13 @@ function openStory(id) {
   document.getElementById('storyTag').textContent = s.tag;
   document.getElementById('storyName').textContent = s.name;
   document.getElementById('storyFeature').style.backgroundImage = `url('${s.body.featureImage}')`;
-  document.getElementById('storyIntro').textContent = s.body.intro;
-  document.getElementById('storyText1').textContent = s.body.text1;
-  document.getElementById('storyText2').textContent = s.body.text2;
-  document.getElementById('storyText3').textContent = s.body.text3;
-  document.getElementById('storyQuote').textContent = s.body.quote;
+  document.getElementById('storyP1').textContent = s.body.p1;
+  document.getElementById('storyP2').textContent = s.body.p2;
+  document.getElementById('storyP3').textContent = s.body.p3;
+  document.getElementById('storyTakeaway').innerHTML = (s.body.takeaway||'').replace(/\n\n/g,'<br><br>');
+  document.getElementById('storyFood').textContent = s.body.food;
+  document.getElementById('storyQuote').textContent = s.body.pullquote;
+  document.getElementById('storyAction').innerHTML = s.body.action;
   document.getElementById('storyImage1').src = s.body.image1;
   document.getElementById('storyImage2').src = s.body.image2;
   document.getElementById('storyCitation').textContent = s.citation;
