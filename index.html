@@ -125,6 +125,7 @@ html.is-embedded body{background:transparent}
 .case-study-block:hover .case-study-image img{transform:scale(1.04)}
 .case-study-tag{position:absolute;top:18px;left:18px;background:rgba(255,255,255,.95);color:#0a0a0a;padding:8px 14px;border-radius:100px;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;z-index:2}
 .case-study-content{display:flex;flex-direction:column;gap:clamp(20px,2.4vw,28px)}
+.case-study-title{font-size:clamp(22px,2.8vw,32px);font-weight:700;line-height:1.2;letter-spacing:-.01em;color:#0a0a0a;margin:0;margin-bottom:8px}
 .case-study-quote{font-style:italic;font-weight:900;font-size:clamp(28px,4.4vw,56px);line-height:1.05;letter-spacing:-.02em;color:#0a0a0a;margin:0}
 .case-study-quote::before{content:'\201C';color:#233dff;margin-right:.04em}
 .case-study-quote::after{content:'\201D';color:#233dff;margin-left:.04em}
@@ -1508,6 +1509,7 @@ function buildCaseStudyBlock(story, index) {
       <img src="${story.thumbnail}" alt="${story.name}">
     </div>
     <div class="case-study-content">
+      <h3 class="case-study-title">${story.name}</h3>
       <blockquote class="case-study-quote">${cleanQuote}</blockquote>
       <span class="case-study-author">${story.author}</span>
       <button class="case-study-cta" type="button" data-story-id="${story.id}">Read the full study</button>
@@ -1535,8 +1537,6 @@ function openStory(id) {
   document.getElementById('storyFood').textContent = s.body.food;
   document.getElementById('storyQuote').textContent = s.body.pullquote;
   document.getElementById('storyAction').innerHTML = s.body.action;
-  document.getElementById('storyImage1').src = s.body.image1;
-  document.getElementById('storyImage2').src = s.body.image2;
   document.getElementById('storyCitation').textContent = s.citation;
   document.getElementById('storyScholar').href = s.scholarUrl;
 
