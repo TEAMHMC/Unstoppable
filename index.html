@@ -792,7 +792,7 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
   <div class="intro-stories-track">
     <!-- Slide 0: textStyle heading, no overlay -->
     <div class="intro-stories-slide active" data-slide="0">
-      <div class="bg" style="background-image:url('./photos/DSC_3070.jpg')"></div>
+      <div class="bg" style="background-image:url('./photos/DSC_2935.jpg')"></div>
       <div class="scrim"></div>
       <div class="intro-stories-content">
         <h2 class="heading">Live Unstoppable.</h2>
@@ -1575,7 +1575,8 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && overlay.cl
     dots[idx].classList.add('active');
   }
   dots.forEach(d => d.addEventListener('click', () => go(+d.dataset.slide)));
-  // Scroll-driven sequencing controls this section; no auto-advance.
+  // Auto-advance every 5.5 seconds
+  setInterval(() => go((idx + 1) % slides.length), 5500);
 })();
 
 // ==================== INTROSTORIES CAROUSEL ====================
@@ -1584,6 +1585,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && overlay.cl
   const dots = document.querySelectorAll('.intro-stories-dot');
   if (!slides.length) return;
   let idx = 0;
+  let timer;
   function go(n){
     slides[idx].classList.remove('active');
     dots[idx].classList.remove('active');
@@ -1591,8 +1593,8 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && overlay.cl
     slides[idx].classList.add('active');
     dots[idx].classList.add('active');
   }
-  dots.forEach(d => d.addEventListener('click', () => go(+d.dataset.introSlide)));
-  // Scroll-driven sequencing controls this section; no auto-advance.
+  function resetTimer(){ clearInterval(timer); timer = setInterval(() => go((idx + 1) % slides.length), 6000); }
+  dots.forEach(d => d.addEventListener('click', () => { go(+d.dataset.introSlide); resetTimer(); }));
   // Touch swipe
   let touchStartX = null;
   const wrap = document.getElementById('intro-stories');
@@ -1600,9 +1602,11 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && overlay.cl
   wrap.addEventListener('touchend', e => {
     if (touchStartX === null) return;
     const dx = e.changedTouches[0].clientX - touchStartX;
-    if (Math.abs(dx) > 50) go(dx < 0 ? (idx + 1) % slides.length : (idx - 1 + slides.length) % slides.length);
+    if (Math.abs(dx) > 50) { go(dx < 0 ? (idx + 1) % slides.length : (idx - 1 + slides.length) % slides.length); resetTimer(); }
     touchStartX = null;
   }, {passive:true});
+  // Auto-advance every 6 seconds
+  resetTimer();
 })();
 
 
@@ -1630,8 +1634,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && overlay.cl
     window.addEventListener('resize', update, {passive:true});
     update();
   }
-  // Mission uses dots/click controls only; Live Unstoppable keeps scroll-driven reveal.
-  bindScrollSequence('.intro-stories','.intro-stories-slide','.intro-stories-dot');
+  // Both mission and intro-stories now use auto-advance timers (scroll-driven was broken with 100vh sections).
 })();
 
 // ==================== RESOURCES FILTER ====================
