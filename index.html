@@ -240,7 +240,7 @@ html.is-embedded body{background:transparent}
 .report-eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:#233dff;margin-bottom:18px;display:block}
 .report-title{font-style:italic;font-weight:900;font-size:clamp(72px,11vw,160px);line-height:.85;letter-spacing:-.03em;color:#0a0a0a;margin-bottom:24px}
 .report-text{font-size:clamp(15.5px,1.7vw,18px);line-height:1.55;color:#2a2540;max-width:540px;margin-bottom:32px}
-.report-buttons{display:flex;flex-wrap:wrap;gap:12px}
+.report-buttons{display:flex;flex-wrap:wrap;gap:12px;width:fit-content}
 .report-btn{display:inline-flex;align-items:center;background:#0a0a0a;color:#fff;padding:15px 26px;border-radius:100px;font-weight:700;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;transition:background .25s,transform .25s;min-height:48px}
 .report-btn:hover{background:#233dff;transform:translateY(-2px)}
 .report-btn.outline{background:transparent;color:#0a0a0a;border:1.5px solid #0a0a0a}
@@ -1023,9 +1023,9 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
 <section class="digital-companion" id="digital-companion">
   <div class="digital-companion-inner">
     <div class="digital-companion-head">
-      <span class="digital-companion-eyebrow rise-on-scroll">The Digital Companion</span>
+      <span class="digital-companion-eyebrow rise-on-scroll">The Digital Tools</span>
       <h2 class="digital-companion-title rise-on-scroll">Unstoppable,<br>wherever you are.</h2>
-      <p class="digital-companion-body rise-on-scroll">For residents who face barriers to in-person participation, HMC built the Unstoppable Digital Companion, a suite of free tools that extend the program's reach across South LA, Gateway Cities, and the Antelope Valley.</p>
+      <p class="digital-companion-body rise-on-scroll">For residents who face barriers to in-person participation, HMC built a suite of free Digital Tools that extend the program's reach across South LA, Gateway Cities, and the Antelope Valley.</p>
     </div>
     <div class="digital-companion-grid">
       <a class="dc-card rise-on-scroll" href="https://www.healthmatters.clinic/resources/checkyourself" target="_blank" rel="noopener">
@@ -1033,20 +1033,20 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
         <span class="dc-card-desc">Validated mental health screenings. Know where you stand.</span>
       </a>
       <a class="dc-card rise-on-scroll" href="https://www.healthmatters.clinic/resources/resourcedirectory" target="_blank" rel="noopener">
-        <span class="dc-card-name" style="color:#ff9b6e">Sunny</span>
-        <span class="dc-card-desc">AI-powered resource navigator. Find the right support, fast.</span>
-      </a>
-      <a class="dc-card rise-on-scroll" href="https://www.healthmatters.clinic/resources/resourcedirectory" target="_blank" rel="noopener">
         <span class="dc-card-name" style="color:#ff6f91">Resource Directory</span>
         <span class="dc-card-desc">500+ vetted community resources across LA County.</span>
       </a>
-      <a class="dc-card rise-on-scroll" href="https://calmkit.healthmatters.clinic" target="_blank" rel="noopener">
-        <span class="dc-card-name" style="color:#f9c74f">CalmKit</span>
-        <span class="dc-card-desc">Guided walks, breathwork, and wellness coaching. Free.</span>
+      <a class="dc-card rise-on-scroll" href="https://www.healthmatters.clinic/resources/resourcedirectory" target="_blank" rel="noopener">
+        <span class="dc-card-name" style="color:#ff9b6e">Sunny</span>
+        <span class="dc-card-desc">AI-powered resource navigator. Find the right support, fast.</span>
       </a>
       <a class="dc-card rise-on-scroll" href="https://www.healthmatters.clinic/resources/eventfinder" target="_blank" rel="noopener">
         <span class="dc-card-name" style="color:#7de8c8">Event Finder</span>
         <span class="dc-card-desc">Free Unstoppable events near you. No signup required.</span>
+      </a>
+      <a class="dc-card rise-on-scroll" href="https://calmkit.healthmatters.clinic" target="_blank" rel="noopener">
+        <span class="dc-card-name" style="color:#f9c74f">CalmKit</span>
+        <span class="dc-card-desc">Guided walks, breathwork, and wellness coaching. Free.</span>
       </a>
     </div>
   </div>
@@ -1084,7 +1084,7 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
     <div class="supporters-head">
       <span class="supporters-eyebrow rise-on-scroll">Sponsors &amp; Supporters</span>
       <h2 class="supporters-title rise-on-scroll">Stronger<br>together.</h2>
-      <p class="supporters-sub rise-on-scroll">The sponsors, partners, funders, and community organizations standing alongside Health Matters Clinic to make Unstoppable possible.</p>
+      <p class="supporters-sub rise-on-scroll">The sponsors, partners, funders, and community organizations standing alongside Health Matters Clinic to make Unstoppable possible. Unstoppable Season is presented as part of the <a href="https://www.healthmatters.clinic/takeactionla" style="color:#233dff;text-decoration:underline;text-underline-offset:3px;font-weight:600">Take Action LA initiative</a>.</p>
     </div>
     <div class="supporters-grid">
       <div class="supporter-cell rise-on-scroll">
@@ -1100,8 +1100,10 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
         <span class="supporter-name">Take Action LA</span>
       </div>
       <div class="supporter-cell rise-on-scroll">
-        <div class="supporter-logo"><img src="./partner-mhsa.png" alt="MHSA"></div>
-        <span class="supporter-name">MHSA</span>
+        <div class="supporter-logo" style="background:#f5efe3;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px">
+          <span style="font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#001e63;line-height:1.4">MHSA<br>Capacity Building</span>
+        </div>
+        <span class="supporter-name">BAH UsCC Award</span>
       </div>
       <div class="supporter-cell rise-on-scroll">
         <div class="supporter-logo"><img src="./partner-cyfer.png" alt="UCI CYFER Lab"></div>
