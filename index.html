@@ -555,14 +555,15 @@ html.is-embedded body{background:transparent}
 
 /* Revert intro slides to one clean viewport; dots stay on the right side */
 .intro-stories{
-  height:100vh!important;
+  height:300vh!important;
   min-height:620px!important;
-  overflow:hidden!important;
+  overflow:visible!important;
 }
 .intro-stories-track{
-  position:absolute!important;
-  inset:0!important;
-  height:100%!important;
+  position:sticky!important;
+  top:0!important;
+  height:100vh!important;
+  overflow:hidden!important;
 }
 .intro-stories-dots{
   position:absolute!important;
@@ -1033,11 +1034,11 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
         <div class="resource-meta"><span class="resource-cat">Events</span><div class="resource-title">Wellness Meetups</div></div>
       </a>
       <!-- TODO Erica: replace # with the actual shop URLs when ready -->
-      <a class="resource-card" data-cat="merch" href="#" rel="noopener">
+      <a class="resource-card" data-cat="merch" href="https://www.healthmatters.clinic/shop" target="_blank" rel="noopener">
         <div class="resource-image" style="background-image:url('./photos/DSC_3421.jpg')"></div>
         <div class="resource-meta"><span class="resource-cat">Merch</span><div class="resource-title">Unstoppable T-Shirt</div></div>
       </a>
-      <a class="resource-card" data-cat="merch" href="#" rel="noopener">
+      <a class="resource-card" data-cat="merch" href="https://www.healthmatters.clinic/shop" target="_blank" rel="noopener">
         <div class="resource-image" style="background-image:url('./photos/DSC_3954.jpg')"></div>
         <div class="resource-meta"><span class="resource-cat">Merch</span><div class="resource-title">Unstoppable Hoodie</div></div>
       </a>
@@ -1628,11 +1629,12 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && overlay.cl
   }
   function resetTimer(){ clearInterval(timer); timer = setInterval(() => go((idx + 1) % slides.length), 6000); }
   dots.forEach(d => d.addEventListener('click', () => go(+d.dataset.introSlide)));
-  // Scroll-driven dots: update active dot based on viewport scroll position
+  // Scroll-driven: section is 300vh tall, sticky track pins at top
   const section = document.getElementById('intro-stories');
   window.addEventListener('scroll', () => {
     const rect = section.getBoundingClientRect();
-    const progress = Math.max(0, Math.min(1, (window.innerHeight - rect.top) / (window.innerHeight + rect.height)));
+    const scrollable = rect.height - window.innerHeight;
+    const progress = Math.max(0, Math.min(1, -rect.top / scrollable));
     const slideIdx = Math.min(slides.length - 1, Math.floor(progress * slides.length));
     if (slideIdx !== idx) go(slideIdx);
   }, {passive:true});
