@@ -910,17 +910,17 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
     </div>
     <div class="share-portraits rise-on-scroll">
       <a class="share-portrait" href="#" data-video-id="rqvXX6dCviM" aria-label="Watch Dave Helem and Chelley Chelle on YouTube">
-        <img src="https://img.youtube.com/vi/rqvXX6dCviM/hqdefault.jpg?v=2" alt="Dave Helem and Chelley Chelle" loading="lazy">
+        <img src="https://img.youtube.com/vi/rqvXX6dCviM/hqdefault.jpg?v=2" alt="Dave Helem and Chelley Chelle" loading="lazy" decoding="async">
         <span class="video-play" aria-hidden="true"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.92)"/><polygon points="19,16 36,24 19,32" fill="#0a0a0a"/></svg></span>
         <span class="lbl">Dave Helem &amp; Chelley Chelle</span>
       </a>
       <a class="share-portrait" href="#" data-video-id="8hcPxXhJlH8" aria-label="Watch Kaiya on YouTube">
-        <img src="https://img.youtube.com/vi/8hcPxXhJlH8/hqdefault.jpg" alt="Kaiya" loading="lazy">
+        <img src="https://img.youtube.com/vi/8hcPxXhJlH8/hqdefault.jpg" alt="Kaiya" loading="lazy" decoding="async">
         <span class="video-play" aria-hidden="true"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.92)"/><polygon points="19,16 36,24 19,32" fill="#0a0a0a"/></svg></span>
         <span class="lbl">Kaiya</span>
       </a>
       <a class="share-portrait" href="#" data-video-id="h1zZodWz4uo" aria-label="Watch Issa Rae and Spencer Paysinger on YouTube">
-        <img src="https://img.youtube.com/vi/h1zZodWz4uo/hqdefault.jpg" alt="Issa Rae and Spencer Paysinger" loading="lazy">
+        <img src="https://img.youtube.com/vi/h1zZodWz4uo/hqdefault.jpg" alt="Issa Rae and Spencer Paysinger" loading="lazy" decoding="async">
         <span class="video-play" aria-hidden="true"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.92)"/><polygon points="19,16 36,24 19,32" fill="#0a0a0a"/></svg></span>
         <span class="lbl">Issa Rae &amp; Spencer Paysinger</span>
       </a>
@@ -1579,11 +1579,19 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && overlay.cl
   const slides = document.querySelectorAll('.hero-slide');
   if (slides.length < 2) return;
   let i = 0;
-  setInterval(() => {
-    slides[i].classList.remove('active');
-    i = (i + 1) % slides.length;
-    slides[i].classList.add('active');
-  }, 5500);
+  // Defer carousel until page load completes for faster initial render
+  const startCarousel = () => {
+    setInterval(() => {
+      slides[i].classList.remove('active');
+      i = (i + 1) % slides.length;
+      slides[i].classList.add('active');
+    }, 5500);
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startCarousel);
+  } else {
+    startCarousel();
+  }
 })();
 
 // ==================== MISSION CAROUSEL ====================
