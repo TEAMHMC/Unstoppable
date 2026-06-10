@@ -3,12 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Unstoppable | Health Matters Clinic</title>
-<meta name="description" content="Unstoppable is a community-built mental health program for Black and underserved Los Angeles. Stories, resources, products, and the report.">
-<meta property="og:title" content="Unstoppable | Health Matters Clinic">
-<meta property="og:description" content="Unstoppable is a community-built mental health program for Black and underserved Los Angeles.">
-<meta property="og:image" content="./photos/DSC_3421.jpg">
+<title>Unstoppable | Free Mental Health Workshops, Wellness Events & Community Support | Health Matters Clinic</title>
+<meta name="description" content="Unstoppable is a free community movement for mental health in Black and underserved Los Angeles. Free workshops, wellness events, digital tools, and culturally rooted support to help you heal, grow, and keep moving forward.">
+<link rel="canonical" href="https://teamhmc.github.io/Unstoppable/">
+<meta property="og:title" content="Unstoppable | Free Mental Health Workshops & Community Wellness | Health Matters Clinic">
+<meta property="og:description" content="Free workshops, wellness events, digital tools, and community support for Black and underserved Los Angeles. Join the Unstoppable movement.">
+<meta property="og:image" content="https://res.cloudinary.com/dh88btcdz/image/upload/v1781122067/DSC_3421_nzsg0y.jpg">
+<meta property="og:url" content="https://teamhmc.github.io/Unstoppable/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Unstoppable | Free Mental Health Workshops & Community Wellness">
+<meta name="twitter:description" content="Free workshops, wellness events, and digital tools for Black and underserved Los Angeles.">
+<meta name="twitter:image" content="https://res.cloudinary.com/dh88btcdz/image/upload/v1781122067/DSC_3421_nzsg0y.jpg">
 <link rel="icon" href="/icon-192.png" type="image/png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HealthAndBeautyBusiness",
+  "name": "Unstoppable by Health Matters Clinic",
+  "description": "Free community mental health workshops, wellness events, and digital tools for Black and underserved Los Angeles.",
+  "url": "https://teamhmc.github.io/Unstoppable/",
+  "logo": "https://res.cloudinary.com/dh88btcdz/image/upload/v1781122056/DSC_3084_praqo9.jpg",
+  "image": "https://res.cloudinary.com/dh88btcdz/image/upload/v1781122067/DSC_3421_nzsg0y.jpg",
+  "telephone": "+13239904325",
+  "email": "unstoppable@healthmatters.clinic",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Los Angeles",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+  },
+  "parentOrganization": {
+    "@type": "NGO",
+    "name": "Health Matters Clinic",
+    "url": "https://www.healthmatters.clinic"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free community mental health workshops and wellness events"
+  }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Questrial&family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -50,6 +87,40 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .has-custom-cursor body,.has-custom-cursor a,.has-custom-cursor button,.has-custom-cursor [role=button],.has-custom-cursor .hero,.has-custom-cursor .mission,.has-custom-cursor .intro-stories,.has-custom-cursor .stories,.has-custom-cursor .live-cta,.has-custom-cursor .share,.has-custom-cursor .resources,.has-custom-cursor .report,.has-custom-cursor .supporters,.has-custom-cursor .footer{cursor:none}
 @media (hover:none),(pointer:coarse){.site-cursor{display:none!important}.has-custom-cursor,.has-custom-cursor *{cursor:auto!important}}
 
+/* Skip nav */
+.skip-nav{position:absolute;top:-100px;left:16px;background:#233dff;color:#fff;padding:12px 20px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;z-index:99999;transition:top .2s;}
+.skip-nav:focus{top:16px;}
+
+/* Attend Workshop Banner */
+.attend-banner{background:#f5efe3;border-radius:16px;padding:clamp(28px,3vw,40px) clamp(24px,3vw,40px);display:flex;align-items:center;justify-content:space-between;gap:clamp(20px,3vw,40px);margin-bottom:clamp(40px,5vw,64px);flex-wrap:wrap;}
+.attend-eyebrow{display:block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:#233dff;margin-bottom:8px;}
+.attend-text p{font-size:clamp(15px,1.4vw,17px);color:#2a2540;max-width:560px;line-height:1.55;}
+.attend-cta{display:inline-flex;align-items:center;white-space:nowrap;padding:16px 28px;background:#0a0a0a;color:#fff;font-weight:800;font-size:14px;letter-spacing:.04em;border-radius:100px;text-decoration:none;transition:background .2s;flex-shrink:0;}
+.attend-cta:hover{background:#233dff;}
+@media(max-width:760px){.attend-banner{flex-direction:column;align-items:flex-start;}.attend-cta{width:100%;justify-content:center;}}
+
+/* Impact Metrics */
+.impact-metrics{background:#0a0a0a;color:#fff;padding:clamp(64px,8vw,110px) clamp(22px,4vw,40px);}
+.impact-inner{max-width:1200px;margin:0 auto;}
+.impact-eyebrow{display:block;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:#233dff;margin-bottom:clamp(32px,4vw,48px);}
+.impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,3vw,40px);margin-bottom:clamp(24px,3vw,32px);}
+.impact-stat{border-top:1px solid rgba(255,255,255,.15);padding-top:24px;}
+.impact-num{display:block;font-size:clamp(32px,4vw,52px);font-weight:900;font-style:italic;letter-spacing:-.03em;color:#fff;margin-bottom:12px;}
+.impact-label{display:block;font-size:clamp(13px,1.2vw,15px);line-height:1.5;color:rgba(255,255,255,.7);}
+.impact-source{font-size:13px;color:rgba(255,255,255,.45);}.impact-source a{color:#233dff;}
+@media(max-width:900px){.impact-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:520px){.impact-grid{grid-template-columns:1fr;}}
+
+/* Hero CTAs */
+.hero-right{display:flex;flex-direction:column;gap:10px;}
+.hero-free{color:rgba(255,255,255,.75);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-top:4px;}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;pointer-events:all;}
+.hero-cta-primary{display:inline-flex;align-items:center;padding:14px 28px;background:#233dff;color:#fff;font-weight:800;font-size:14px;letter-spacing:.04em;border-radius:100px;text-decoration:none;transition:background .2s,transform .2s;white-space:nowrap;}
+.hero-cta-primary:hover{background:#1a2ecc;transform:translateY(-2px);}
+.hero-cta-secondary{display:inline-flex;align-items:center;padding:13px 26px;background:transparent;color:#fff;font-weight:700;font-size:14px;letter-spacing:.04em;border-radius:100px;border:1.5px solid rgba(255,255,255,.75);text-decoration:none;transition:border-color .2s,background .2s;white-space:nowrap;}
+.hero-cta-secondary:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+@media(max-width:1040px){.hero-ctas{flex-direction:column;gap:10px;}.hero-cta-primary,.hero-cta-secondary{justify-content:center;text-align:center;}}
+
 /* Embed mode — footer + FAQ live in the wrapping Webflow page */
 html.is-embedded .footer{display:none}
 html.is-embedded body{background:transparent}
@@ -76,7 +147,7 @@ html.is-embedded body{background:transparent}
 .mission-slide h2{font-style:italic;font-weight:900;font-size:clamp(34px,6.2vw,76px);line-height:1;letter-spacing:-.02em;color:#0a0a0a;margin-bottom:28px;max-width:1000px}
 .mission-slide p{max-width:720px;font-size:clamp(15px,1.6vw,17px);line-height:1.65;color:#1f1a2e;font-weight:400}
 .mission-dots{position:absolute;top:50%;right:max(20px,env(safe-area-inset-right));transform:translateY(-50%);display:flex;flex-direction:column;gap:2px;z-index:3}
-.mission-dot{width:28px;height:28px;border-radius:50%;cursor:pointer;padding:0;display:inline-flex;align-items:center;justify-content:center;background:transparent;border:none}
+.mission-dot{width:44px;height:44px;border-radius:50%;cursor:pointer;padding:0;display:inline-flex;align-items:center;justify-content:center;background:transparent;border:none}
 .mission-dot::before{content:'';width:10px;height:10px;border-radius:50%;background:rgba(10,10,10,.3);transition:background .25s,transform .25s}
 .mission-dot:hover::before{transform:scale(1.25)}
 .mission-dot.active::before{background:#233dff;transform:scale(1.2)}
@@ -757,6 +828,7 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
 </style>
 </head>
 <body>
+<a class="skip-nav" href="#mission">Skip to main content</a>
 
 <!-- ================ A. HERO (ASICS-inspired editorial layout) ================ -->
 <section class="hero" id="top">
@@ -775,7 +847,14 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
   <div class="hero-content">
     <div class="hero-copy-grid">
       <h1 class="hero-title">Unstoppable</h1>
-      <p class="hero-tagline">Heal. Grow. Keep Moving Forward.</p>
+      <div class="hero-right">
+        <p class="hero-tagline">Heal. Grow. Keep Moving Forward.</p>
+        <p class="hero-free">Free and open to all &mdash; Los Angeles</p>
+        <div class="hero-ctas">
+          <a class="hero-cta-primary" href="https://events.healthmatters.clinic" target="_blank" rel="noopener">Find a Free Event</a>
+          <a class="hero-cta-secondary" href="./register.html">Join a Workshop</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -789,13 +868,13 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
       <p class="rise-on-scroll">Yet Black and underserved Angelenos still face deep stigma, distrust, and barriers to mental health that compound across a lifetime.</p>
     </div>
     <div class="mission-slide">
-      <h2 class="rise-on-scroll"></h2>
+      <h2 class="rise-on-scroll">Built with the community. Proven by the data.</h2>
       <p class="rise-on-scroll">Health Matters Clinic's flagship Unstoppable program, built with and for the community, explores the cultural realities that shape mental health and the grassroots support that drives healing.</p>
     </div>
   </div>
   <div class="mission-dots" role="tablist" aria-label="Mission slides">
-    <button type="button" class="mission-dot active" data-slide="0" aria-label="Slide 1"></button>
-    <button type="button" class="mission-dot" data-slide="1" aria-label="Slide 2"></button>
+    <button type="button" role="tab" class="mission-dot active" data-slide="0" aria-label="Slide 1" aria-selected="true"></button>
+    <button type="button" role="tab" class="mission-dot" data-slide="1" aria-label="Slide 2" aria-selected="false"></button>
   </div>
 </section>
 
@@ -828,9 +907,9 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
     </div>
   </div>
   <div class="intro-stories-dots" role="tablist" aria-label="Intro slides">
-    <button type="button" class="intro-stories-dot active" data-intro-slide="0" aria-label="Slide 1"></button>
-    <button type="button" class="intro-stories-dot" data-intro-slide="1" aria-label="Slide 2"></button>
-    <button type="button" class="intro-stories-dot" data-intro-slide="2" aria-label="Slide 3"></button>
+    <button type="button" role="tab" class="intro-stories-dot active" data-intro-slide="0" aria-label="Slide 1" aria-selected="true"></button>
+    <button type="button" role="tab" class="intro-stories-dot" data-intro-slide="1" aria-label="Slide 2" aria-selected="false"></button>
+    <button type="button" role="tab" class="intro-stories-dot" data-intro-slide="2" aria-label="Slide 3" aria-selected="false"></button>
   </div>
 </section>
 
@@ -991,10 +1070,11 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
       </div>
     </div>
     <div class="resources-filters" role="tablist" aria-label="Filter resources">
-      <button type="button" class="resources-filter active" data-filter="all">All</button>
-      <button type="button" class="resources-filter" data-filter="tools">Tools</button>
-      <button type="button" class="resources-filter" data-filter="events">Events</button>
-      <button type="button" class="resources-filter" data-filter="merch">Merch</button>
+      <button type="button" role="tab" class="resources-filter active" data-filter="all" aria-selected="true">All</button>
+      <button type="button" role="tab" class="resources-filter" data-filter="tools" aria-selected="false">Tools</button>
+      <button type="button" role="tab" class="resources-filter" data-filter="events" aria-selected="false">Events</button>
+      <button type="button" role="tab" class="resources-filter" data-filter="podcast" aria-selected="false">Podcast</button>
+      <button type="button" role="tab" class="resources-filter" data-filter="merch" aria-selected="false">Merch</button>
     </div>
     <div class="resources-grid" id="resourcesGrid">
       <a class="resource-card" data-cat="tools" href="https://events.healthmatters.clinic" target="_blank" rel="noopener">
@@ -1033,7 +1113,14 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
         <div class="resource-image" style="background-image:url('./photos/DSC_2867.jpg')"></div>
         <div class="resource-meta"><span class="resource-cat">Events</span><div class="resource-title">Wellness Meetups</div></div>
       </a>
-      <!-- TODO Erica: replace # with the actual shop URLs when ready -->
+      <a class="resource-card" data-cat="podcast" href="https://www.youtube.com/@healthmattersclinic" target="_blank" rel="noopener">
+        <div class="resource-image" style="background-image:url('./photos/DSC_3070.jpg')"></div>
+        <div class="resource-meta"><span class="resource-cat">Podcast</span><div class="resource-title">Unstoppable on YouTube</div></div>
+      </a>
+      <a class="resource-card" data-cat="podcast" href="https://www.youtube.com/@healthmattersclinic" target="_blank" rel="noopener">
+        <div class="resource-image" style="background-image:url('./photos/DSC_2935.jpg')"></div>
+        <div class="resource-meta"><span class="resource-cat">Podcast</span><div class="resource-title">Watch on Major Platforms</div></div>
+      </a>
       <a class="resource-card" data-cat="merch" href="https://www.healthmatters.clinic/product/unstoppable-tee" target="_blank" rel="noopener">
         <div class="resource-image" style="background-image:url('./photos/DSC_3421.jpg')"></div>
         <div class="resource-meta"><span class="resource-cat">Merch</span><div class="resource-title">Unstoppable T-Shirt</div></div>
@@ -1076,6 +1163,32 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
         <span class="dc-card-desc">Guided walks, breathwork, and wellness coaching. Free.</span>
       </a>
     </div>
+  </div>
+</section>
+
+<!-- ================ IMPACT METRICS ================ -->
+<section class="impact-metrics" id="impact">
+  <div class="impact-inner">
+    <span class="impact-eyebrow rise-on-scroll">By the Numbers</span>
+    <div class="impact-grid rise-on-scroll">
+      <div class="impact-stat">
+        <span class="impact-num">69%</span>
+        <span class="impact-label">of participants reported increased comfort discussing mental health — up from 28%</span>
+      </div>
+      <div class="impact-stat">
+        <span class="impact-num">58%</span>
+        <span class="impact-label">increased awareness of community mental health resources — up from 21%</span>
+      </div>
+      <div class="impact-stat">
+        <span class="impact-num">53%</span>
+        <span class="impact-label">felt better equipped to support others in their community — up from 22%</span>
+      </div>
+      <div class="impact-stat">
+        <span class="impact-num">LACDMH</span>
+        <span class="impact-label">Recognized evaluation partner. 1.0 CE/CEU approved for licensed professionals.</span>
+      </div>
+    </div>
+    <p class="impact-source rise-on-scroll">Source: Unstoppable Workshop Evaluation, presented to LACDMH 2025. <a href="./report.html">Read the full report.</a></p>
   </div>
 </section>
 
@@ -1157,6 +1270,15 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
       <span class="facilitator-eyebrow">Train with Unstoppable</span>
       <h2 class="facilitator-title">Teach it.<br>Lead it.<br>Own it.</h2>
       <p class="facilitator-sub">Two pathways to deepen your impact: whether you're building a career in community health or renewing your professional license.</p>
+    </div>
+
+    <!-- Attend a Workshop CTA -->
+    <div class="attend-banner rise-on-scroll">
+      <div class="attend-text">
+        <span class="attend-eyebrow">Not a professional? That's the point.</span>
+        <p>Unstoppable workshops are free and open to everyone in the community. No credentials required. Just show up.</p>
+      </div>
+      <a class="attend-cta" href="https://events.healthmatters.clinic" target="_blank" rel="noopener">Find a Free Workshop Near You &#8594;</a>
     </div>
 
     <div class="facilitator-grid">
@@ -1265,7 +1387,7 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
           <details class="footer-faq-item">
             <summary>How do I bring it to my community?</summary>
             <div class="footer-faq-answer">
-              <p>Two paths: partner organizations can request the Workshop through the HMC Partner Portal at <a href="https://partner.healthmatters.clinic" target="_blank">partner.healthmatters.clinic</a>. Or become a certified Unstoppable Facilitator yourself and bring it directly to your community. <a href="./register.html">Apply for facilitator certification here</a>.</p>
+              <p>Two paths: partner organizations can request the Workshop through the HMC Partner Portal at <a href="https://partners.healthmatters.clinic" target="_blank">partner.healthmatters.clinic</a>. Or become a certified Unstoppable Facilitator yourself and bring it directly to your community. <a href="./register.html">Apply for facilitator certification here</a>.</p>
             </div>
           </details>
         </div>
@@ -1343,7 +1465,7 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
           <details class="footer-faq-item">
             <summary>Can I be a guest?</summary>
             <div class="footer-faq-answer">
-              <p>Yes. Share your story through the form above or reach out at <a href="mailto:hello@healthmatters.clinic">hello@healthmatters.clinic</a>.</p>
+              <p>Yes. Share your story through the form above or reach out at <a href="mailto:unstoppable@healthmatters.clinic">unstoppable@healthmatters.clinic</a>.</p>
             </div>
           </details>
           <details class="footer-faq-item">
@@ -1387,7 +1509,7 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
       </div>
       <div class="footer-col">
         <h4>Connect</h4>
-        <a href="mailto:hello@healthmatters.clinic">Contact</a>
+        <a href="mailto:unstoppable@healthmatters.clinic">Contact</a>
         <a href="https://instagram.com/healthmattersclinic" target="_blank" rel="noopener">Instagram</a>
         <a href="https://linkedin.com/company/healthmattersclinic" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://www.youtube.com/@healthmattersclinic" target="_blank" rel="noopener">YouTube</a>
