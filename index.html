@@ -713,6 +713,9 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
 .share-portrait::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.62));z-index:1;}
 .share-portrait img{position:relative;z-index:0;}
 .share-portrait .lbl{z-index:2;left:18px!important;bottom:18px!important;background:#fff!important;color:var(--hmc-text)!important;border:1px solid rgba(0,0,0,.08)!important;padding:9px 16px!important;font-size:13px!important;letter-spacing:.06em!important;border-radius:999px!important;}
+.share-portrait .video-play{position:absolute;z-index:2;top:50%;left:50%;transform:translate(-50%,-50%);transition:transform .25s;pointer-events:none;}
+.share-portrait:hover .video-play{transform:translate(-50%,-50%) scale(1.1);}
+.share-portrait img{object-position:center top;}
 
 /* Resources: no copied ASICS headline, HMC text black */
 .resources{background:#fff!important;color:var(--hmc-text)!important;}
@@ -886,16 +889,19 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
       </div>
     </div>
     <div class="share-portraits rise-on-scroll">
-      <a class="share-portrait" href="https://youtube.com/shorts/rqvXX6dCviM?si=nPzw0Zxjna23RE2O" target="_blank" rel="noopener">
-        <img src="./photos/DSC_2596.jpg" alt="Dave Helem and Chelley Chelle" loading="lazy">
+      <a class="share-portrait" href="https://youtube.com/shorts/rqvXX6dCviM" target="_blank" rel="noopener" aria-label="Watch Dave Helem and Chelley Chelle on YouTube">
+        <img src="https://img.youtube.com/vi/rqvXX6dCviM/hqdefault.jpg" alt="Dave Helem and Chelley Chelle" loading="lazy">
+        <span class="video-play" aria-hidden="true"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.92)"/><polygon points="19,16 36,24 19,32" fill="#0a0a0a"/></svg></span>
         <span class="lbl">Dave Helem &amp; Chelley Chelle</span>
       </a>
-      <a class="share-portrait" href="https://youtube.com/shorts/8hcPxXhJlH8?si=TyD28bTwqH_kXdGI" target="_blank" rel="noopener">
-        <img src="./photos/DSC_2602.jpg" alt="Kaiya" loading="lazy">
+      <a class="share-portrait" href="https://youtube.com/shorts/8hcPxXhJlH8" target="_blank" rel="noopener" aria-label="Watch Kaiya on YouTube">
+        <img src="https://img.youtube.com/vi/8hcPxXhJlH8/hqdefault.jpg" alt="Kaiya" loading="lazy">
+        <span class="video-play" aria-hidden="true"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.92)"/><polygon points="19,16 36,24 19,32" fill="#0a0a0a"/></svg></span>
         <span class="lbl">Kaiya</span>
       </a>
-      <a class="share-portrait" href="https://youtube.com/shorts/h1zZodWz4uo?si=ahQTXIz05pmCJd9e" target="_blank" rel="noopener">
-        <img src="./photos/DSC_3214.jpg" alt="Issa Rae and Spencer Paysinger" loading="lazy">
+      <a class="share-portrait" href="https://youtube.com/shorts/h1zZodWz4uo" target="_blank" rel="noopener" aria-label="Watch Issa Rae and Spencer Paysinger on YouTube">
+        <img src="https://img.youtube.com/vi/h1zZodWz4uo/hqdefault.jpg" alt="Issa Rae and Spencer Paysinger" loading="lazy">
+        <span class="video-play" aria-hidden="true"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.92)"/><polygon points="19,16 36,24 19,32" fill="#0a0a0a"/></svg></span>
         <span class="lbl">Issa Rae &amp; Spencer Paysinger</span>
       </a>
     </div>
@@ -1019,7 +1025,7 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
     <div class="digital-companion-head">
       <span class="digital-companion-eyebrow rise-on-scroll">The Digital Companion</span>
       <h2 class="digital-companion-title rise-on-scroll">Unstoppable,<br>wherever you are.</h2>
-      <p class="digital-companion-body rise-on-scroll">For residents who face barriers to in-person participation, HMC built the Unstoppable Digital Companion — a suite of free tools that extend the program's reach across South LA, Gateway Cities, and the Antelope Valley.</p>
+      <p class="digital-companion-body rise-on-scroll">For residents who face barriers to in-person participation, HMC built the Unstoppable Digital Companion, a suite of free tools that extend the program's reach across South LA, Gateway Cities, and the Antelope Valley.</p>
     </div>
     <div class="digital-companion-grid">
       <a class="dc-card rise-on-scroll" href="https://www.healthmatters.clinic/resources/checkyourself" target="_blank" rel="noopener">
@@ -1102,15 +1108,15 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
         <span class="supporter-name">UCI CYFER Lab</span>
       </div>
       <div class="supporter-cell rise-on-scroll">
-        <div class="supporter-logo"><img src="./partner-lacare.png" alt="LA Care Health Plan"></div>
+        <div class="supporter-logo"><img src="./partner-lacare.png" alt="LA Care Health Plan" style="max-width:88%!important;max-height:70%!important;"></div>
         <span class="supporter-name">LA Care Health Plan</span>
       </div>
       <div class="supporter-cell rise-on-scroll">
-        <div class="supporter-logo" style="background:#0a0a0a"><img src="./partner-ctccw.png" alt="Curtis Tucker Center for Community Wellness"></div>
+        <div class="supporter-logo"><img src="./partner-ctccw.png" alt="Curtis Tucker Center for Community Wellness" style="mix-blend-mode:multiply;filter:contrast(1.1)"></div>
         <span class="supporter-name">CTCCW</span>
       </div>
       <div class="supporter-cell rise-on-scroll">
-        <div class="supporter-logo"><img src="./partner-lacdph.png" alt="LA County Department of Public Health"></div>
+        <div class="supporter-logo"><img src="./partner-lacdph.png" alt="LA County Department of Public Health" style="max-width:88%!important;max-height:70%!important;"></div>
         <span class="supporter-name">LACDPH</span>
       </div>
     </div>
@@ -1123,7 +1129,7 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
     <div class="facilitator-head rise-on-scroll">
       <span class="facilitator-eyebrow">Train with Unstoppable</span>
       <h2 class="facilitator-title">Teach it.<br>Lead it.<br>Own it.</h2>
-      <p class="facilitator-sub">Two pathways to deepen your impact — whether you're building a career in community health or renewing your professional license.</p>
+      <p class="facilitator-sub">Two pathways to deepen your impact: whether you're building a career in community health or renewing your professional license.</p>
     </div>
 
     <div class="facilitator-grid">
@@ -1165,15 +1171,15 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
         <div class="facilitator-card-details">
           <div class="facilitator-card-detail">
             <span class="facilitator-card-detail-icon">✓</span>
-            <span>BBS — LCSW, LMFT, LPCC, LEP license renewal</span>
+            <span>BBS: LCSW, LMFT, LPCC, LEP license renewal</span>
           </div>
           <div class="facilitator-card-detail">
             <span class="facilitator-card-detail-icon">✓</span>
-            <span>BRN — Registered Nurse license renewal</span>
+            <span>BRN: Registered Nurse license renewal</span>
           </div>
           <div class="facilitator-card-detail">
             <span class="facilitator-card-detail-icon">✓</span>
-            <span>CCAPP — Addiction counselor CE hours</span>
+            <span>CCAPP: Addiction counselor CE hours</span>
           </div>
           <div class="facilitator-card-detail">
             <span class="facilitator-card-detail-icon">✓</span>

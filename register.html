@@ -101,6 +101,60 @@
     /* FOOTER NOTE */
     .footer-note{text-align:center;padding:32px clamp(22px,5vw,64px);border-top:1px solid rgba(255,255,255,.06);font-size:12px;color:rgba(255,255,255,.2);line-height:1.6}
     .footer-note a{color:rgba(255,255,255,.35);text-decoration:underline;text-underline-offset:2px}
+
+    /* ===== LIGHT THEME OVERRIDE — match landing page ===== */
+    body{background:#f5f3ef;color:#0a0a0a;}
+    .nav{background:rgba(245,243,239,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(10,10,10,.08);}
+    .nav-back{color:rgba(10,10,10,.55);}
+    .nav-back:hover{color:#0a0a0a;}
+    .nav-brand{color:rgba(10,10,10,.35);}
+    .hero{background:transparent;}
+    .hero::before{background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(35,61,255,.08) 0%,transparent 70%);}
+    .hero-eyebrow{color:#233dff;}
+    .hero-title{color:#0a0a0a;}
+    .hero-sub{color:rgba(10,10,10,.55);font-size:clamp(15px,1.5vw,18px);}
+    .toggle{background:rgba(10,10,10,.06);border:1px solid rgba(10,10,10,.1);}
+    .toggle-btn{color:rgba(10,10,10,.45);background:transparent;}
+    .toggle-btn.active{background:#233dff;color:#fff;box-shadow:0 4px 20px rgba(35,61,255,.25);}
+    .toggle-btn.active.ceu{background:#0a6b3d;box-shadow:0 4px 20px rgba(10,107,61,.2);}
+    .pathway-info.community{background:rgba(35,61,255,.04);border:1px solid rgba(35,61,255,.14);}
+    .pathway-info.ceu{background:rgba(10,107,61,.04);border:1px solid rgba(10,107,61,.12);}
+    .pathway-info-title{color:#0a0a0a;}
+    .pathway-info-desc{color:#2a2540;}
+    .community .pathway-tag{background:rgba(35,61,255,.08);color:#233dff;border:1px solid rgba(35,61,255,.18);}
+    .ceu .pathway-tag{background:rgba(10,107,61,.08);color:#0a6b3d;border:1px solid rgba(10,107,61,.18);}
+    .pathway-info-price{border-top:1px solid rgba(10,10,10,.08);color:rgba(10,10,10,.45);}
+    .pathway-info-price strong{color:#0a0a0a;}
+    .form-label{color:rgba(10,10,10,.45);}
+    .form-label span{color:#e04060;}
+    .form-input,.form-select,.form-textarea{background:#fff;border:1px solid rgba(10,10,10,.14);color:#0a0a0a;}
+    .form-input::placeholder,.form-textarea::placeholder{color:rgba(10,10,10,.28);}
+    .form-input:focus,.form-select:focus,.form-textarea:focus{border-color:rgba(35,61,255,.5);background:#fff;}
+    .form-select{background-color:#fff;}
+    .form-select option{background:#fff;color:#0a0a0a;}
+    .form-check input{border:1.5px solid rgba(10,10,10,.18);background:#fff;}
+    .form-check-label{color:rgba(10,10,10,.6);}
+    .form-check-label a{color:#233dff;}
+    /* Restyled submit button — HMC pill, not full-width */
+    .submit-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:24px;}
+    .submit-btn{width:auto!important;padding:15px 40px!important;min-width:240px;font-size:14px!important;font-weight:700!important;letter-spacing:.01em!important;text-transform:none!important;background:#0a0a0a!important;color:#fff!important;border:1.5px solid #0a0a0a!important;transition:background .25s,transform .25s!important;}
+    .submit-btn::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;display:inline-block;margin-right:8px;flex-shrink:0;}
+    .submit-btn:hover:not(:disabled){background:#233dff!important;border-color:#233dff!important;transform:translateY(-2px)!important;}
+    .submit-btn:disabled{opacity:.35!important;}
+    /* PayPal button */
+    .paypal-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border-radius:999px;background:#fff;border:1.5px solid rgba(10,10,10,.15);color:#0a0a0a;font-weight:700;font-size:13px;letter-spacing:.01em;text-decoration:none;transition:background .25s,border-color .25s,transform .25s;}
+    .paypal-btn:hover{background:#f5f3ef;border-color:#0a0a0a;transform:translateY(-2px);}
+    .paypal-btn-note{font-size:11px;color:rgba(10,10,10,.38);letter-spacing:.02em;}
+    /* Success state light */
+    .success p{color:rgba(10,10,10,.55);}
+    .success h2{color:#0a0a0a;}
+    .success-icon.community{background:rgba(35,61,255,.1);color:#233dff;}
+    .success-icon.ceu{background:rgba(10,107,61,.1);color:#0a6b3d;}
+    .success-back.community{background:#233dff;color:#fff;border-radius:999px;padding:14px 28px;}
+    .success-back.ceu{background:#0a6b3d;color:#fff;border-radius:999px;padding:14px 28px;}
+    /* Footer */
+    .footer-note{border-top:1px solid rgba(10,10,10,.08);color:rgba(10,10,10,.35);}
+    .footer-note a{color:rgba(10,10,10,.5);}
   </style>
 </head>
 <body>
@@ -113,7 +167,7 @@
 <section class="hero">
   <span class="hero-eyebrow">Train with Unstoppable</span>
   <h1 class="hero-title">Register.</h1>
-  <p class="hero-sub">Choose your pathway below — community facilitator certification or 1.0 LACDMH-approved CE/CEU hours for licensed professionals.</p>
+  <p class="hero-sub">Choose your pathway below: community facilitator certification or 1.0 LACDMH-approved CE/CEU hours for licensed professionals.</p>
 
   <div class="toggle-wrap">
     <div class="toggle">
@@ -128,7 +182,7 @@
   <!-- Pathway info card -->
   <div class="pathway-info community" id="pathwayInfo">
     <h2 class="pathway-info-title" id="pathwayTitle">Facilitator Certification</h2>
-    <p class="pathway-info-desc" id="pathwayDesc">Co-developed with Dr. Dawn Bounds, PhD, PMHNP-BC, FAAN and UCI's Sue &amp; Bill Gross School of Nursing. Learn to lead Unstoppable workshops using trauma-informed, culturally responsive facilitation techniques. Upon completion you will receive an official certificate and join our facilitator network.</p>
+    <p class="pathway-info-desc" id="pathwayDesc">Co-developed with Dr. Dawn Bounds, PhD, PMHNP-BC, FAAN, Founding Director of the CYFER Lab at UC Irvine. Learn to lead Unstoppable workshops using trauma-informed, culturally responsive facilitation techniques. Upon completion you will receive an official certificate and join our facilitator network.</p>
     <div class="pathway-info-tags" id="pathwayTags">
       <span class="pathway-tag">CHWs</span>
       <span class="pathway-tag">Educators</span>
@@ -138,7 +192,7 @@
     </div>
     <div class="pathway-info-price">
       <strong id="pathwayPrice">$299</strong>
-      <span id="pathwayPriceNote">per person &mdash; HMC volunteers and current partners: $199</span>
+      <span id="pathwayPriceNote">per person (HMC volunteers and current partners: $199)</span>
     </div>
   </div>
 
@@ -197,18 +251,18 @@
         <label class="form-label" for="licenseType">License Type <span>*</span></label>
         <select class="form-select ceu-focus" id="licenseType" name="licenseType">
           <option value="" disabled selected>Select your license board</option>
-          <option>BBS — LCSW</option>
-          <option>BBS — LMFT</option>
-          <option>BBS — LPCC</option>
-          <option>BBS — LEP</option>
-          <option>BRN — Registered Nurse</option>
-          <option>CCAPP — Addiction Counselor</option>
+          <option>BBS: LCSW</option>
+          <option>BBS: LMFT</option>
+          <option>BBS: LPCC</option>
+          <option>BBS: LEP</option>
+          <option>BRN: Registered Nurse</option>
+          <option>CCAPP: Addiction Counselor</option>
           <option>Psychology Board</option>
           <option>Multiple / Other</option>
         </select>
       </div>
       <div class="form-field" style="margin-top:16px">
-        <label class="form-label" for="licenseNumber">License Number <span style="color:rgba(255,255,255,.3);font-weight:400">(optional — for your records)</span></label>
+        <label class="form-label" for="licenseNumber">License Number <span style="color:rgba(255,255,255,.3);font-weight:400">(optional, for your records)</span></label>
         <input class="form-input ceu-focus" type="text" id="licenseNumber" name="licenseNumber" placeholder="e.g. LCSW 12345">
       </div>
     </div>
@@ -242,9 +296,11 @@
       </label>
     </div>
 
-    <button class="submit-btn community" type="submit" id="submitBtn">
-      <span id="submitText">Submit Registration</span>
-    </button>
+    <div class="submit-wrap">
+      <button class="submit-btn community" type="submit" id="submitBtn">
+        <span id="submitText">Submit Registration</span>
+      </button>
+    </div>
   </form>
 
   <!-- Success state -->
@@ -252,13 +308,20 @@
     <div class="success-icon community" id="successIcon">&#10003;</div>
     <h2 id="successTitle">You're registered.</h2>
     <p id="successMsg">Thank you for registering. Our team will follow up at the email you provided with session details, next steps, and payment information. Questions? Email <a href="mailto:education@healthmatters.clinic">education@healthmatters.clinic</a>.</p>
-    <a class="success-back community" id="successBack" href="./index.html">Back to Unstoppable &#8594;</a>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:28px;">
+      <a class="paypal-btn" id="paypalBtn" href="https://www.paypal.com/paypalme/healthmattersclinic" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+        Complete Payment via PayPal
+      </a>
+      <span class="paypal-btn-note">Payment due before training begins</span>
+    </div>
+    <a class="success-back community" id="successBack" href="./index.html" style="margin-top:20px">Back to Unstoppable &#8594;</a>
   </div>
 
 </div>
 
 <footer class="footer-note">
-  <p>Health Matters Clinic &mdash; 501(c)(3) Nonprofit &mdash; <a href="mailto:education@healthmatters.clinic">education@healthmatters.clinic</a><br>
+  <p>Health Matters Clinic | 501(c)(3) Nonprofit | <a href="mailto:education@healthmatters.clinic">education@healthmatters.clinic</a><br>
   CE/CEU approval issued by LACDMH Quality, Outcomes &amp; Training Division. Valid through February 2027.<br>
   Approved for BBS, BRN, CCAPP, and Psychology. Course title must match approval exactly for CE credit to apply.</p>
 </footer>
@@ -290,16 +353,16 @@ function switchPathway(type) {
 
   if (isCEU) {
     document.getElementById('pathwayTitle').textContent = '1.0 CE/CEU Approved Training';
-    document.getElementById('pathwayDesc').innerHTML = 'A 1.0 CE/CEU approved training on disability-inclusive, culturally affirming mental health frameworks. Approved by the Los Angeles County Department of Mental Health for BBS, BRN, CCAPP, and Psychology license renewal. Delivered by Erica Robinson, BS and Dr. Leon Maultsby, DBH.';
+    document.getElementById('pathwayDesc').innerHTML = 'A 1.0 CE/CEU approved training on disability-inclusive, culturally affirming mental health frameworks. Approved by the Los Angeles County Department of Mental Health for BBS, BRN, CCAPP, and Psychology license renewal. Delivered by Erica Robinson, BBA and Dr. Leon Maultsby, DBH.';
     document.getElementById('pathwayTags').innerHTML = '<span class="pathway-tag">BBS</span><span class="pathway-tag">BRN</span><span class="pathway-tag">CCAPP</span><span class="pathway-tag">Psychology</span><span class="pathway-tag">LACDMH Approved</span>';
     document.getElementById('pathwayPrice').textContent = '$55';
-    document.getElementById('pathwayPriceNote').textContent = 'per CE hour — group rates available for 10+ staff';
+    document.getElementById('pathwayPriceNote').textContent = 'per CE hour, group rates available for 10+ staff';
   } else {
     document.getElementById('pathwayTitle').textContent = 'Facilitator Certification';
-    document.getElementById('pathwayDesc').innerHTML = 'Co-developed with Dr. Dawn Bounds, PhD, PMHNP-BC, FAAN and UCI\'s Sue &amp; Bill Gross School of Nursing. Learn to lead Unstoppable workshops using trauma-informed, culturally responsive facilitation techniques. Upon completion you will receive an official certificate and join our facilitator network.';
+    document.getElementById('pathwayDesc').innerHTML = 'Co-developed with Dr. Dawn Bounds, PhD, PMHNP-BC, FAAN, Founding Director of the CYFER Lab at UC Irvine. Learn to lead Unstoppable workshops using trauma-informed, culturally responsive facilitation techniques. Upon completion you will receive an official certificate and join our facilitator network.';
     document.getElementById('pathwayTags').innerHTML = '<span class="pathway-tag">CHWs</span><span class="pathway-tag">Educators</span><span class="pathway-tag">Social Workers</span><span class="pathway-tag">Volunteers</span><span class="pathway-tag">Medical Students</span>';
     document.getElementById('pathwayPrice').textContent = '$299';
-    document.getElementById('pathwayPriceNote').textContent = 'per person — HMC volunteers and current partners: $199';
+    document.getElementById('pathwayPriceNote').textContent = 'per person (HMC volunteers and current partners: $199)';
   }
 
   // Conditional fields
@@ -321,6 +384,11 @@ function switchPathway(type) {
 
   // Success button color
   document.getElementById('successIcon').className = 'success-icon ' + type;
+  // Update paypal button label
+  const paypalBtn = document.getElementById('paypalBtn');
+  if (paypalBtn) {
+    paypalBtn.title = isCEU ? 'Pay $55 per CE hour via PayPal' : 'Pay $299 ($199 HMC partners) via PayPal';
+  }
   document.getElementById('successBack').className = 'success-back ' + type;
 }
 
