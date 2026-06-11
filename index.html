@@ -112,14 +112,18 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 @media(max-width:520px){.impact-grid{grid-template-columns:1fr;}}
 
 /* Hero CTAs */
-.hero-right{display:flex;flex-direction:column;gap:10px;}
-.hero-free{color:rgba(255,255,255,.75);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-top:4px;}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;pointer-events:all;}
-.hero-cta-primary{display:inline-flex;align-items:center;padding:14px 28px;background:#233dff;color:#fff;font-weight:800;font-size:14px;letter-spacing:.04em;border-radius:100px;text-decoration:none;transition:background .2s,transform .2s;white-space:nowrap;}
+.hero-copy-grid{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:16px!important;width:100%!important;max-width:680px!important;}
+.hero-right{display:flex;flex-direction:column;gap:10px;pointer-events:all;}
+.hero-tagline{border-left:none!important;background:none!important;backdrop-filter:none!important;padding:0!important;margin:0!important;font-size:clamp(18px,2vw,26px)!important;font-weight:700!important;color:#fff!important;max-width:100%!important;}
+.hero-free{color:rgba(255,255,255,.75);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:4px;pointer-events:all;}
+.hero-cta-primary{display:inline-flex;align-items:center;padding:14px 28px;background:#233dff;color:#fff;font-weight:800;font-size:14px;letter-spacing:.04em;border-radius:100px;text-decoration:none;transition:background .2s,transform .2s;white-space:nowrap;pointer-events:all;}
 .hero-cta-primary:hover{background:#1a2ecc;transform:translateY(-2px);}
-.hero-cta-secondary{display:inline-flex;align-items:center;padding:13px 26px;background:transparent;color:#fff;font-weight:700;font-size:14px;letter-spacing:.04em;border-radius:100px;border:1.5px solid rgba(255,255,255,.75);text-decoration:none;transition:border-color .2s,background .2s;white-space:nowrap;}
+.hero-cta-secondary{display:inline-flex;align-items:center;padding:13px 26px;background:transparent;color:#fff;font-weight:700;font-size:14px;letter-spacing:.04em;border-radius:100px;border:1.5px solid rgba(255,255,255,.8);text-decoration:none;transition:border-color .2s,background .2s;white-space:nowrap;pointer-events:all;}
 .hero-cta-secondary:hover{border-color:#fff;background:rgba(255,255,255,.1);}
-@media(max-width:1040px){.hero-ctas{flex-direction:column;gap:10px;}.hero-cta-primary,.hero-cta-secondary{justify-content:center;text-align:center;}}
+.hero-content{pointer-events:none!important;}
+.hero-ctas,.hero-cta-primary,.hero-cta-secondary,.hero-right a{pointer-events:all!important;}
+@media(max-width:760px){.hero-ctas{flex-direction:column;gap:10px;}.hero-cta-primary,.hero-cta-secondary{width:100%;justify-content:center;}}
 
 /* Embed mode — footer + FAQ live in the wrapping Webflow page */
 html.is-embedded .footer{display:none}
@@ -761,7 +765,7 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
 .mission-slide{justify-content:center!important;align-items:center!important;text-align:center!important;width:100%!important;}
 .mission-slide h2{font-size:clamp(34px,5.1vw,72px)!important;line-height:.96!important;margin:0 0 26px!important;max-width:960px!important;color:var(--hmc-text)!important;}
 .mission-slide p{font-size:clamp(16px,1.5vw,20px)!important;line-height:1.55!important;color:var(--hmc-muted)!important;max-width:820px!important;margin:0 auto!important;}
-.mission-dots{position:absolute!important;right:clamp(20px,3vw,42px)!important;left:auto!important;top:50%!important;bottom:auto!important;transform:translateY(-50%)!important;display:flex!important;flex-direction:column!important;gap:6px!important;z-index:20!important;}
+.mission-dots{position:absolute!important;right:clamp(20px,3vw,42px)!important;left:auto!important;top:50%!important;bottom:auto!important;transform:translateY(-50%)!important;display:flex!important;flex-direction:column!important;gap:2px!important;z-index:20!important;}
 .mission-dot::before{background:rgba(10,10,10,.28)!important;}
 .mission-dot.active::before{background:var(--hmc-primary)!important;}
 @media(max-width:760px){.mission{width:calc(100% - 24px)!important;min-height:560px!important;padding:54px 24px 72px!important}.mission-dots{right:auto!important;top:auto!important;bottom:24px!important;left:50%!important;transform:translateX(-50%)!important;flex-direction:row!important}}
@@ -778,7 +782,7 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
 .intro-stories-content{max-width:min(1000px,84vw)!important;margin:0 auto!important;text-align:center!important;display:flex!important;align-items:center!important;justify-content:center!important;min-height:100%!important;}
 .intro-stories-slide .heading{font-size:clamp(54px,10vw,152px)!important;line-height:.86!important;text-align:center!important;text-shadow:0 8px 42px rgba(0,0,0,.45)!important;}
 .intro-stories-slide .body{font-size:clamp(22px,2.4vw,38px)!important;line-height:1.25!important;max-width:900px!important;margin:0 auto!important;text-align:center!important;color:#fff!important;text-shadow:0 4px 24px rgba(0,0,0,.6)!important;font-weight:500!important;}
-.intro-stories-dots{position:absolute!important;right:clamp(22px,3vw,46px)!important;left:auto!important;top:50%!important;bottom:auto!important;height:auto!important;transform:translateY(-50%)!important;display:flex!important;flex-direction:column!important;gap:7px!important;z-index:30!important;}
+.intro-stories-dots{position:absolute!important;right:clamp(22px,3vw,46px)!important;left:auto!important;top:50%!important;bottom:auto!important;height:auto!important;transform:translateY(-50%)!important;display:flex!important;flex-direction:column!important;gap:2px!important;z-index:30!important;}
 .intro-stories-dot::before{background:rgba(255,255,255,.48)!important;}
 .intro-stories-dot.active::before{background:#fff!important;}
 .live-cta{display:none!important;}
@@ -1113,13 +1117,13 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
         <div class="resource-image" style="background-image:url('./photos/DSC_2867.jpg')"></div>
         <div class="resource-meta"><span class="resource-cat">Events</span><div class="resource-title">Wellness Meetups</div></div>
       </a>
-      <a class="resource-card" data-cat="podcast" href="https://www.youtube.com/@healthmattersclinic" target="_blank" rel="noopener">
-        <div class="resource-image" style="background-image:url('./photos/DSC_3070.jpg')"></div>
-        <div class="resource-meta"><span class="resource-cat">Podcast</span><div class="resource-title">Unstoppable on YouTube</div></div>
+      <a class="resource-card" data-cat="podcast" href="https://youtu.be/PARzvt1vJQ4?si=fJ6gp0yLgkRAYqeW" target="_blank" rel="noopener">
+        <div class="resource-image" style="background-image:url('https://img.youtube.com/vi/PARzvt1vJQ4/hqdefault.jpg')"></div>
+        <div class="resource-meta"><span class="resource-cat">Podcast</span><div class="resource-title">Unstoppable Season Recap</div></div>
       </a>
-      <a class="resource-card" data-cat="podcast" href="https://www.youtube.com/@healthmattersclinic" target="_blank" rel="noopener">
+      <a class="resource-card" data-cat="podcast" href="https://www.healthmatters.clinic/podcast" target="_blank" rel="noopener">
         <div class="resource-image" style="background-image:url('./photos/DSC_2935.jpg')"></div>
-        <div class="resource-meta"><span class="resource-cat">Podcast</span><div class="resource-title">Watch on Major Platforms</div></div>
+        <div class="resource-meta"><span class="resource-cat">Podcast</span><div class="resource-title">Unboxed Podcast</div></div>
       </a>
       <a class="resource-card" data-cat="merch" href="https://www.healthmatters.clinic/product/unstoppable-tee" target="_blank" rel="noopener">
         <div class="resource-image" style="background-image:url('./photos/DSC_3421.jpg')"></div>
@@ -1151,11 +1155,11 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
         <span class="dc-card-desc">500+ vetted community resources across LA County.</span>
       </a>
       <a class="dc-card rise-on-scroll" href="https://www.healthmatters.clinic/resources/resource-directory" target="_blank" rel="noopener">
-        <span class="dc-card-name" style="color:#ff9b6e">Sunny</span>
+        <span class="dc-card-name" style="color:#ff6e40">Sunny</span>
         <span class="dc-card-desc">AI-powered resource navigator. Find the right support, fast.</span>
       </a>
       <a class="dc-card rise-on-scroll" href="https://www.healthmatters.clinic/resources/eventfinder" target="_blank" rel="noopener">
-        <span class="dc-card-name" style="color:#7de8c8">Event Finder</span>
+        <span class="dc-card-name" style="color:#FF6F91">Event Finder</span>
         <span class="dc-card-desc">Free Unstoppable events near you. No signup required.</span>
       </a>
       <a class="dc-card rise-on-scroll" href="https://calmkit.healthmatters.clinic" target="_blank" rel="noopener">
@@ -1459,7 +1463,7 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
           <details class="footer-faq-item">
             <summary>Where can I watch?</summary>
             <div class="footer-faq-answer">
-              <p>Watch episodes on <a href="https://www.youtube.com/@healthmattersclinic" target="_blank" rel="noopener">YouTube</a> and listen on major podcast platforms.</p>
+              <p>Watch episodes on <a href="https://www.youtube.com/@healthmatters.clinic" target="_blank" rel="noopener">YouTube</a> and listen on major podcast platforms.</p>
             </div>
           </details>
           <details class="footer-faq-item">
@@ -1510,9 +1514,9 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
       <div class="footer-col">
         <h4>Connect</h4>
         <a href="mailto:unstoppable@healthmatters.clinic">Contact</a>
-        <a href="https://instagram.com/healthmattersclinic" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.instagram.com/healthmatters.clinic" target="_blank" rel="noopener">Instagram</a>
         <a href="https://linkedin.com/company/healthmattersclinic" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://www.youtube.com/@healthmattersclinic" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.youtube.com/@healthmatters.clinic" target="_blank" rel="noopener">YouTube</a>
         <a href="https://donate.healthmatters.clinic" target="_blank" rel="noopener">Donate</a>
       </div>
     </div>
@@ -1537,7 +1541,7 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
 const stories = [
   {
     id: 'alang',
-    tag: 'Case Study 01',
+    tag: 'Case Study',
     name: 'The Silent Weight of Stigma',
     author: 'Alang, S. M. (2019)',
     thumbnail: './photos/cs-alang.png',
@@ -1556,7 +1560,7 @@ const stories = [
   },
   {
     id: 'ayon',
-    tag: 'Case Study 02',
+    tag: 'Research Spotlight',
     name: 'When the Move Happens Young',
     author: 'Andleeb, H., et al. (2024)',
     thumbnail: './photos/cs-ayon.png',
@@ -1575,7 +1579,7 @@ const stories = [
   },
   {
     id: 'lindsey',
-    tag: 'Case Study 03',
+    tag: 'Research Spotlight',
     name: 'The Long Road to Getting Help',
     author: 'Planey, A. M., et al. (2019)',
     thumbnail: './photos/cs-lindsey.png',
@@ -1594,7 +1598,7 @@ const stories = [
   },
   {
     id: 'abrams',
-    tag: 'Case Study 04',
+    tag: 'Research Spotlight',
     name: 'Strength at a Cost',
     author: 'Jones, M. K., et al. (2025)',
     thumbnail: './photos/cs-abrams.png',
@@ -1613,7 +1617,7 @@ const stories = [
   },
   {
     id: 'williams',
-    tag: 'Research Spotlight 05',
+    tag: 'Research Spotlight',
     name: 'The Weight of Staying Silent',
     author: 'American Psychological Association (2021)',
     thumbnail: './photos/cs-williams.png',
