@@ -115,7 +115,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 /* Hero CTAs */
 .hero-copy-grid{display:grid!important;grid-template-columns:1fr minmax(280px,420px)!important;align-items:end!important;gap:0 clamp(32px,6vw,80px)!important;width:100%!important;}
 .hero-title{grid-column:1/-1!important;grid-row:2!important;max-width:none!important;}
-.hero-right{display:flex;flex-direction:column;gap:12px;pointer-events:all;padding-bottom:4px;grid-column:2!important;grid-row:1!important;margin-bottom:clamp(18px,3vw,42px);}
+.hero-right{display:flex;flex-direction:column;gap:12px;pointer-events:all;padding-bottom:4px;grid-column:2!important;grid-row:1!important;margin-bottom:clamp(8px,1.4vw,18px);}
 .hero-tagline{border-left:none!important;background:none!important;backdrop-filter:none!important;padding:0!important;margin:0!important;font-size:clamp(16px,1.6vw,22px)!important;font-weight:700!important;color:#fff!important;max-width:100%!important;}
 @media(max-width:880px){.hero-copy-grid{grid-template-columns:1fr!important;}.hero-right{padding-bottom:0;grid-column:1!important;grid-row:1!important;margin-bottom:16px;}.hero-title{grid-column:1!important;grid-row:2!important;}}
 .hero-free{color:rgba(255,255,255,.85);font-size:clamp(14px,1.2vw,16px);letter-spacing:0;text-transform:none;font-weight:400;line-height:1.55;max-width:480px;}
@@ -864,9 +864,10 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
         <p class="hero-tagline">Heal. Grow. Keep Moving Forward.</p>
         <p class="hero-free">A community movement for mental health offering workshops, wellness events, digital tools, and community support to help people build resilience, strengthen wellbeing, and stay connected.</p>
         <div class="hero-ctas">
-          <a class="hero-cta-primary" href="https://events.healthmatters.clinic" target="_blank" rel="noopener"><span class="btn-dot"></span>Find a Free Event</a>
-          <a class="hero-cta-secondary" href="./register.html"><span class="btn-dot-outline"></span>Join a Workshop</a>
+          <a class="hero-cta-primary" href="https://eventfinder.healthmatters.clinic" target="_blank" rel="noopener"><span class="btn-dot"></span>Find a Free Event</a>
+          <a class="hero-cta-secondary" href="#facilitator"><span class="btn-dot-outline"></span>Get Trained</a>
         </div>
+        <p class="hero-free">Free walks, workshops, and wellness meetups across Los Angeles. No cost, no insurance, just show up.</p>
       </div>
     </div>
   </div>
@@ -1090,7 +1091,7 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
       <button type="button" role="tab" class="resources-filter" data-filter="merch" aria-selected="false">Merch</button>
     </div>
     <div class="resources-grid" id="resourcesGrid">
-      <a class="resource-card" data-cat="tools" href="https://events.healthmatters.clinic" target="_blank" rel="noopener">
+      <a class="resource-card" data-cat="tools" href="https://eventfinder.healthmatters.clinic" target="_blank" rel="noopener">
         <div class="resource-image" style="background-image:url('./photos/DSC_3084.jpg')"></div>
         <div class="resource-meta"><span class="resource-cat">Tool</span><div class="resource-title">Event Finder</div></div>
       </a>
@@ -1114,15 +1115,15 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
         <div class="resource-image" style="background-image:url('./photos/DSC_2596.jpg')"></div>
         <div class="resource-meta"><span class="resource-cat">Tool</span><div class="resource-title">Volunteer Portal</div></div>
       </a>
-      <a class="resource-card" data-cat="events" href="https://events.healthmatters.clinic" target="_blank" rel="noopener">
+      <a class="resource-card" data-cat="events" href="https://eventfinder.healthmatters.clinic" target="_blank" rel="noopener">
         <div class="resource-image" style="background-image:url('./photos/DSC_3070.jpg')"></div>
         <div class="resource-meta"><span class="resource-cat">Events</span><div class="resource-title">All HMC Events</div></div>
       </a>
-      <a class="resource-card" data-cat="events" href="https://events.healthmatters.clinic/?format=live" target="_blank" rel="noopener">
+      <a class="resource-card" data-cat="events" href="https://eventfinder.healthmatters.clinic/?format=live" target="_blank" rel="noopener">
         <div class="resource-image" style="background-image:url('./photos/DSC_3214.jpg')"></div>
         <div class="resource-meta"><span class="resource-cat">Events</span><div class="resource-title">Live Unstoppable</div></div>
       </a>
-      <a class="resource-card" data-cat="events" href="https://events.healthmatters.clinic/?format=meetup" target="_blank" rel="noopener">
+      <a class="resource-card" data-cat="events" href="https://eventfinder.healthmatters.clinic/?format=meetup" target="_blank" rel="noopener">
         <div class="resource-image" style="background-image:url('./photos/DSC_2867.jpg')"></div>
         <div class="resource-meta"><span class="resource-cat">Events</span><div class="resource-title">Wellness Meetups</div></div>
       </a>
@@ -1291,7 +1292,7 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
         <span class="attend-eyebrow">Not a professional? That's the point.</span>
         <p>Unstoppable workshops are free and open to everyone in the community. No credentials required. Just show up.</p>
       </div>
-      <a class="attend-cta" href="https://events.healthmatters.clinic" target="_blank" rel="noopener"><span class="btn-dot"></span>Find a Free Workshop Near You</a>
+      <a class="attend-cta" href="https://eventfinder.healthmatters.clinic" target="_blank" rel="noopener"><span class="btn-dot"></span>Find a Free Workshop Near You</a>
     </div>
 
     <div class="facilitator-grid">
@@ -1428,7 +1429,7 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
           <details class="footer-faq-item">
             <summary>How do I RSVP?</summary>
             <div class="footer-faq-answer">
-              <p>RSVP through the <a href="https://events.healthmatters.clinic" target="_blank" rel="noopener">HMC Event Finder</a>. Free and open to all.</p>
+              <p>RSVP through the <a href="https://eventfinder.healthmatters.clinic" target="_blank" rel="noopener">HMC Event Finder</a>. Free and open to all.</p>
             </div>
           </details>
         </div>
@@ -1513,7 +1514,7 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
       </div>
       <div class="footer-col">
         <h4>HMC Tools</h4>
-        <a href="https://events.healthmatters.clinic" target="_blank" rel="noopener">Event Finder</a>
+        <a href="https://eventfinder.healthmatters.clinic" target="_blank" rel="noopener">Event Finder</a>
         <a href="https://resources.healthmatters.clinic" target="_blank" rel="noopener">Resource Directory</a>
         <a href="https://checkyourself.healthmatters.clinic" target="_blank" rel="noopener">Check Yourself</a>
         <a href="https://calmkit.healthmatters.clinic" target="_blank" rel="noopener">CalmKit</a>
