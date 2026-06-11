@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Unstoppable Creator | Mental Health Course for Creators | Health Matters Clinic</title>
+<meta name="description" content="A mental health and resilience course built for online creators. Recognize burnout, manage pressure, and build a sustainable creator journey. Join the interest list for the first cohort.">
+<meta property="og:title" content="The Unstoppable Creator | Health Matters Clinic">
+<meta property="og:description" content="Success online should not cost you your wellbeing. Join the interest list for the first cohort.">
+<link rel="icon" href="https://teamhmc.github.io/Unstoppable/assets/site/hmc-icon-512.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,700;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+  :root{--blue:#233dff;--ink:#0a0a0a;--bg:#f5f1e8;--muted:#2a2540;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Inter',-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;}
+  a{color:inherit;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 clamp(22px,5vw,64px);}
+
+  .hero{background:#0a0a0a;color:#fff;padding:clamp(90px,12vw,150px) 0 clamp(70px,9vw,110px);}
+  .eyebrow{font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:22px;}
+  .hero h1{font-style:italic;font-weight:900;font-size:clamp(44px,8.5vw,110px);line-height:.92;letter-spacing:-.03em;text-transform:uppercase;max-width:12ch;}
+  .hero h1 span{color:var(--blue);-webkit-text-stroke:1px rgba(255,255,255,.25);}
+  .hero p.lead{max-width:640px;font-size:clamp(16px,1.6vw,19px);color:rgba(255,255,255,.78);margin:30px 0 38px;}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:100px;font-weight:800;font-size:14px;text-decoration:none;transition:transform .2s,background .2s;}
+  .btn-blue{background:var(--blue);color:#fff;border:2px solid #0a0a0a;}
+  .btn-blue:hover{transform:translateY(-2px);}
+  .dot{width:8px;height:8px;border-radius:50%;background:currentColor;flex:none;}
+  .cohort-note{font-size:13.5px;color:rgba(255,255,255,.55);}
+
+  section{padding:clamp(64px,8vw,104px) 0;}
+  .kicker{font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);margin-bottom:14px;}
+  h2{font-style:italic;font-weight:900;font-size:clamp(30px,4.6vw,54px);line-height:1;letter-spacing:-.02em;margin-bottom:18px;}
+  .sub{max-width:680px;color:var(--muted);font-size:clamp(15px,1.45vw,17.5px);}
+
+  .modules{display:grid;gap:0;margin-top:42px;border-top:1.5px solid rgba(10,10,10,.16);}
+  .module{display:grid;grid-template-columns:90px 1fr;gap:18px;align-items:baseline;padding:24px 0;border-bottom:1.5px solid rgba(10,10,10,.16);}
+  .module .num{font-style:italic;font-weight:900;font-size:clamp(22px,2.6vw,32px);color:var(--blue);}
+  .module .name{font-weight:800;font-size:clamp(18px,2.1vw,24px);letter-spacing:-.01em;}
+  .module .tag{display:inline-block;margin-left:12px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;background:#0a0a0a;color:#fff;border-radius:100px;padding:5px 12px;vertical-align:middle;}
+  .modules-note{margin-top:18px;font-size:13.5px;color:var(--muted);}
+
+  .outcomes{background:#0a0a0a;color:#fff;}
+  .outcomes h2{color:#fff;}
+  .outcome-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:38px;}
+  .outcome{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:26px 24px;}
+  .outcome b{display:block;font-size:16.5px;margin-bottom:8px;}
+  .outcome p{font-size:14.5px;color:rgba(255,255,255,.68);}
+
+  .form-section{background:var(--bg);}
+  .form-card{background:#fff;border:1.5px solid rgba(10,10,10,.14);border-radius:24px;box-shadow:0 18px 48px rgba(10,10,10,.07);padding:clamp(28px,4vw,48px);max-width:640px;margin:38px auto 0;}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .field{display:flex;flex-direction:column;gap:7px;}
+  .field.full{grid-column:1/-1;}
+  label{font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;}
+  input,select,textarea{font-family:inherit;font-size:15px;padding:13px 15px;border:1.5px solid rgba(10,10,10,.22);border-radius:11px;background:#fff;color:var(--ink);outline:none;transition:border .2s;}
+  input:focus,select:focus,textarea:focus{border-color:var(--blue);}
+  textarea{min-height:96px;resize:vertical;}
+  .submit-btn{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:#fff;border:2px solid #0a0a0a;border-radius:100px;padding:15px 32px;font-weight:800;font-size:14px;cursor:pointer;transition:transform .2s;}
+  .submit-btn:hover{transform:translateY(-2px);}
+  .form-fine{grid-column:1/-1;font-size:12.5px;color:var(--muted);}
+  .success{display:none;text-align:center;padding:30px 10px;}
+  .success h3{font-style:italic;font-weight:900;font-size:28px;margin-bottom:10px;}
+
+  footer{background:#0a0a0a;color:rgba(255,255,255,.6);padding:34px 0;font-size:13px;}
+  footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+  footer a{color:rgba(255,255,255,.85);text-decoration:none;}
+
+  @media(max-width:640px){
+    .module{grid-template-columns:64px 1fr;}
+    .form-grid{grid-template-columns:1fr;}
+    .module .tag{display:block;margin:8px 0 0;width:max-content;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">A Health Matters Clinic Course</p>
+    <h1>The Unstoppable <span>Creator</span></h1>
+    <p class="lead">Success online can bring opportunity, influence, and community. It can also bring burnout, anxiety, criticism, loneliness, and constant pressure to perform. This course equips creators with practical tools to protect their wellbeing and build a career that lasts, drawing from the evidence-informed Unstoppable curriculum developed alongside licensed behavioral health professionals.</p>
+    <div class="cta-row">
+      <a class="btn btn-blue" href="#interest"><span class="dot"></span>Join the Interest List</a>
+      <span class="cohort-note">First cohort forming now. Limited seats.</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">What's Inside</p>
+    <h2>Five modules. One final challenge.</h2>
+    <p class="sub">Full module content is shared with enrolled students.</p>
+    <div class="modules">
+      <div class="module"><span class="num">01</span><span class="name">The Hidden Side of Success</span></div>
+      <div class="module"><span class="num">02</span><span class="name">Recognizing Warning Signs</span></div>
+      <div class="module"><span class="num">03</span><span class="name">Building Resilience</span></div>
+      <div class="module"><span class="num">04</span><span class="name">Community, Relationships &amp; Support</span></div>
+      <div class="module"><span class="num">05</span><span class="name">Staying Unstoppable</span></div>
+      <div class="module"><span class="num">06</span><span class="name">Create Your Unstoppable Plan<span class="tag">Final Challenge</span></span></div>
+    </div>
+    <p class="modules-note">Built for aspiring and established creators on every platform.</p>
+  </div>
+</section>
+
+<section class="outcomes">
+  <div class="wrap">
+    <p class="kicker">Outcomes</p>
+    <h2>What you'll walk away with.</h2>
+    <div class="outcome-grid">
+      <div class="outcome"><b>Know the signs.</b><p>Recognize burnout, anxiety, depression, and chronic stress in yourself and the people you create with.</p></div>
+      <div class="outcome"><b>Handle the pressure.</b><p>Navigate criticism, rejection, and setbacks with practical resilience and coping strategies.</p></div>
+      <div class="outcome"><b>Build your people.</b><p>Strengthen support systems and set boundaries online and offline.</p></div>
+      <div class="outcome"><b>Last in the game.</b><p>Leave with a personalized plan for sustainable success and purpose beyond views and followers.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="form-section" id="interest">
+  <div class="wrap">
+    <p class="kicker" style="text-align:center">Interest List</p>
+    <h2 style="text-align:center">Be first in line.</h2>
+    <p class="sub" style="text-align:center;margin:0 auto">Drop your info and we will reach out with cohort dates, format, and enrollment details before anyone else.</p>
+    <div class="form-card">
+      <form id="interestForm" class="form-grid">
+        <div class="field"><label for="firstName">First Name</label><input id="firstName" required autocomplete="given-name"></div>
+        <div class="field"><label for="lastName">Last Name</label><input id="lastName" required autocomplete="family-name"></div>
+        <div class="field full"><label for="email">Email</label><input id="email" type="email" required autocomplete="email"></div>
+        <div class="field full"><label for="platform">Where do you create?</label>
+          <select id="platform">
+            <option value="">Select one</option>
+            <option>YouTube</option><option>TikTok</option><option>Instagram</option>
+            <option>Twitch</option><option>Podcast</option><option>Multiple platforms</option><option>Other</option>
+          </select>
+        </div>
+        <div class="field full"><label for="about">What do you create? (optional)</label><textarea id="about" placeholder="Tell us a little about your content and where you are in your creator journey."></textarea></div>
+        <button class="submit-btn" type="submit"><span class="dot"></span><span id="btnText">Join the List</span></button>
+        <p class="form-fine">We will only use your info to contact you about The Unstoppable Creator. No spam.</p>
+      </form>
+      <div class="success" id="successBox">
+        <h3>You're on the list.</h3>
+        <p>We will reach out with first cohort details soon. Keep creating.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Health Matters Clinic. 501(c)(3) Nonprofit.</span>
+    <a href="https://teamhmc.github.io/Unstoppable/">Unstoppable Home</a>
+  </div>
+</footer>
+
+<script>
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbzPUzjEIQhwEO5uD55EK1IHKKHh3RabUtAGyNcNkx_1KpefWm21_FOuRrZknDWyGU1J1g/exec';
+document.getElementById('interestForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  document.getElementById('btnText').textContent = 'Submitting...';
+  const data = {
+    action: 'training_registration',
+    pathway: 'creator-interest',
+    firstName: document.getElementById('firstName').value.trim(),
+    lastName: document.getElementById('lastName').value.trim(),
+    email: document.getElementById('email').value.trim(),
+    phone: '',
+    organization: document.getElementById('platform').value,
+    role: 'creator',
+    licenseType: '',
+    licenseNumber: '',
+    motivation: document.getElementById('about').value.trim(),
+    howHeard: 'creator-interest-page',
+    timestamp: new Date().toISOString()
+  };
+  try { fetch(GAS_URL, { method: 'POST', mode: 'no-cors', body: JSON.stringify(data) }); } catch(_){}
+  document.getElementById('interestForm').style.display = 'none';
+  document.getElementById('successBox').style.display = 'block';
+});
+</script>
+</body>
+</html>
