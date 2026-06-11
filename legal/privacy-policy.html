@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Health Matters Clinic</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #0a0a0a;
+      color: #e8e8e8;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      padding: 0 0 80px;
+    }
+
+    .header {
+      background-color: #111111;
+      border-bottom: 1px solid #222;
+      padding: 28px 40px;
+      text-align: center;
+    }
+
+    .header a {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .header-logo-text {
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.3px;
+    }
+
+    .header-logo-text span {
+      color: #ffffff;
+    }
+
+    .header-tagline {
+      font-size: 12px;
+      color: #888;
+      margin-top: 4px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    .doc-title {
+      font-size: 36px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .doc-meta {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid #1e1e1e;
+    }
+
+    .intro-block {
+      background-color: rgba(35,61,255,0.1);
+      border: 1px solid rgba(35,61,255,0.2);
+      border-left: 4px solid #233dff;
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+      font-size: 15px;
+      color: #ccc;
+      line-height: 1.8;
+    }
+
+    .intro-block strong {
+      color: #fff;
+    }
+
+    .toc {
+      background-color: #0f0f0f;
+      border: 1px solid #1e1e1e;
+      border-radius: 8px;
+      padding: 28px 32px;
+      margin-bottom: 56px;
+    }
+
+    .toc-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .toc ol {
+      padding-left: 20px;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: #233dff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 56px;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #1e1e1e;
+    }
+
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: #e0e0e0;
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: #c8c8c8;
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+
+    ul, ol {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+
+    li {
+      color: #c8c8c8;
+      font-size: 15px;
+      margin-bottom: 8px;
+      line-height: 1.7;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 14px;
+    }
+
+    th {
+      background-color: #141414;
+      color: #aaa;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #222;
+    }
+
+    td {
+      padding: 14px 16px;
+      color: #c8c8c8;
+      border-bottom: 1px solid #1a1a1a;
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background-color: #0f0f0f;
+    }
+
+    .highlight-box {
+      background-color: #111;
+      border: 1px solid #2a2a2a;
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    .ccpa-box {
+      background-color: rgba(35,61,255,0.1);
+      border: 1px solid rgba(35,61,255,0.2);
+      border-left: 4px solid #233dff;
+      border-radius: 6px;
+      padding: 24px 28px;
+      margin: 24px 0;
+    }
+
+    .ccpa-box h3 {
+      color: #ffffff;
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    .warning-box {
+      background-color: #1a1100;
+      border: 1px solid #3a2a00;
+      border-left: 4px solid #f59e0b;
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    .warning-box p {
+      color: #ddb96e;
+      margin-bottom: 0;
+    }
+
+    a {
+      color: #233dff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .section-number {
+      display: inline-block;
+      color: #233dff;
+      font-size: 14px;
+      font-weight: 700;
+      margin-right: 10px;
+      vertical-align: middle;
+      letter-spacing: 0.5px;
+    }
+
+    .contact-block {
+      background-color: #0f0f0f;
+      border: 1px solid #222;
+      border-radius: 8px;
+      padding: 28px 32px;
+      margin-top: 48px;
+    }
+
+    .contact-block h3 {
+      margin-top: 0;
+      color: #fff;
+    }
+
+    .contact-block p {
+      margin-bottom: 8px;
+    }
+
+    .platform-card {
+      background-color: #0f0f0f;
+      border: 1px solid #1e1e1e;
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+    }
+
+    .platform-card-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .platform-card-url {
+      font-size: 12px;
+      color: #233dff;
+      margin-bottom: 12px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      border-top: 1px solid #1a1a1a;
+      color: #555;
+      font-size: 13px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #233dff;
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 40px 20px; }
+      .header { padding: 20px; }
+      .doc-title { font-size: 26px; }
+      h2 { font-size: 19px; }
+      table { font-size: 13px; }
+      th, td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <a href="https://healthmatters.clinic">
+      <div class="header-logo-text">Health Matters <span>Clinic</span></div>
+    </a>
+    <div class="header-tagline">A 501(c)(3) Nonprofit Organization</div>
+  </div>
+
+  <div class="container">
+
+    <h1 class="doc-title">Privacy Policy</h1>
+    <div class="doc-meta">
+      Effective Date: June 1, 2026 &nbsp;&middot;&nbsp; Last Updated: June 1, 2026 &nbsp;&middot;&nbsp; Version 1.0
+    </div>
+
+    <div class="intro-block">
+      <strong>Your privacy matters to us.</strong> Health Matters Clinic is a nonprofit serving the Los Angeles community. We collect only the data we need to coordinate services, run events, support volunteers, and connect people to resources. We do not sell your personal information. This policy explains what we collect, how we use it, and the rights you have under California law.
+    </div>
+
+    <nav class="toc">
+      <div class="toc-title">Table of Contents</div>
+      <ol>
+        <li><a href="#p1">Who We Are</a></li>
+        <li><a href="#p2">Platforms This Policy Covers</a></li>
+        <li><a href="#p3">Data Collected Per Platform</a></li>
+        <li><a href="#p4">How We Use Your Data</a></li>
+        <li><a href="#p5">SMS and Text Message Consent</a></li>
+        <li><a href="#p6">Health-Adjacent Data: CalmKit Self-Screening</a></li>
+        <li><a href="#p7">Third-Party Service Providers</a></li>
+        <li><a href="#p8">Data Sharing and Disclosure</a></li>
+        <li><a href="#p9">Data Retention</a></li>
+        <li><a href="#p10">Security</a></li>
+        <li><a href="#p11">Children's Privacy</a></li>
+        <li><a href="#p12">California Privacy Rights (CCPA)</a></li>
+        <li><a href="#p13">Other California Privacy Laws</a></li>
+        <li><a href="#p14">Do Not Track</a></li>
+        <li><a href="#p15">Changes to This Policy</a></li>
+        <li><a href="#p16">Contact Our Privacy Team</a></li>
+      </ol>
+    </nav>
+
+    <!-- SECTION 1 -->
+    <section id="p1">
+      <h2><span class="section-number">01</span> Who We Are</h2>
+      <p>Health Matters Clinic ("HMC," "we," "us," or "our") is a 501(c)(3) nonprofit organization located in Los Angeles, California. We advance health equity by providing free community events, wellness tools, volunteer coordination, and resource navigation services to individuals throughout Los Angeles County and surrounding areas.</p>
+      <p>This Privacy Policy applies to personal information collected by HMC through our digital platforms, websites, forms, and communications. It does not apply to the personal health information of patients receiving in-person or telehealth clinical services, which is governed by separate HIPAA-compliant notices provided at the point of care.</p>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section id="p2">
+      <h2><span class="section-number">02</span> Platforms This Policy Covers</h2>
+      <p>This Privacy Policy applies to the following HMC digital platforms:</p>
+      <ul>
+        <li><strong>healthmatters.clinic</strong> — Main organizational website</li>
+        <li><strong>eventfinder.healthmatters.clinic</strong> — Community event discovery and RSVP tool</li>
+        <li><strong>volunteer.healthmatters.clinic</strong> — Volunteer application and management portal</li>
+        <li><strong>partner.healthmatters.clinic</strong> — Partner organization onboarding and coordination</li>
+        <li><strong>calmkit.healthmatters.clinic</strong> — Anonymous digital wellness coaching tool</li>
+        <li><strong>healthmatters.clinic/resources</strong> — Public resource directory</li>
+        <li><strong>HMC Gumroad listings</strong> — Digital product downloads</li>
+        <li>Any other HMC-operated web properties, email campaigns, or forms</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section id="p3">
+      <h2><span class="section-number">03</span> Data Collected Per Platform</h2>
+
+      <p>We are transparent about exactly what data each platform collects. The following describes what we collect from each service.</p>
+
+      <div class="platform-card">
+        <div class="platform-card-title">Main Website (healthmatters.clinic)</div>
+        <div class="platform-card-url">healthmatters.clinic</div>
+        <ul>
+          <li><strong>Automatically collected:</strong> IP address, browser type and version, operating system, pages visited, time and duration of visit, referring URL, device type</li>
+          <li><strong>Contact forms:</strong> Name, email address, and any message content submitted voluntarily</li>
+          <li><strong>Cookies and tracking:</strong> Google Analytics cookies, session cookies, reCAPTCHA data (see Section 7)</li>
+        </ul>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-card-title">Event Finder</div>
+        <div class="platform-card-url">eventfinder.healthmatters.clinic</div>
+        <ul>
+          <li><strong>RSVP forms:</strong> Full name, email address, mobile phone number</li>
+          <li><strong>Optional fields:</strong> Number of guests, accessibility needs, how you heard about the event</li>
+          <li><strong>Automatically collected:</strong> IP address, browser type, timestamp of submission</li>
+          <li><strong>RSVP data is stored in:</strong> Google Sheets via Google Apps Script and Firebase Firestore</li>
+        </ul>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-card-title">Volunteer Portal</div>
+        <div class="platform-card-url">volunteer.healthmatters.clinic</div>
+        <ul>
+          <li><strong>Application data:</strong> Full name, email address, phone number, mailing address, date of birth (for age verification), skills, interests, availability, emergency contact information</li>
+          <li><strong>Profile photos:</strong> Photos submitted voluntarily for identification within the portal</li>
+          <li><strong>Training records:</strong> HIPAA training completion status, quiz results, training timestamps</li>
+          <li><strong>Scheduling data:</strong> Shift assignments, attendance records, hours logged</li>
+          <li><strong>Authentication data:</strong> Google OAuth credentials (managed by Google; HMC stores only account identifiers and email)</li>
+          <li><strong>Communications:</strong> Messages sent through the portal, notification preferences</li>
+          <li><strong>Automatically collected:</strong> IP address, device information, login timestamps</li>
+          <li><strong>Stored in:</strong> Firebase Firestore on Google Cloud Platform (us-central1)</li>
+        </ul>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-card-title">Partner Portal</div>
+        <div class="platform-card-url">partner.healthmatters.clinic</div>
+        <ul>
+          <li><strong>Organizational information:</strong> Legal organization name, type (nonprofit, government agency, healthcare provider, etc.), tax ID if applicable, service area, programs and services offered</li>
+          <li><strong>Contact information:</strong> Primary contact name, title, email address, phone number, mailing address</li>
+          <li><strong>Agreement records:</strong> Signed data sharing agreements, memoranda of understanding, partnership confirmation dates</li>
+          <li><strong>Referral data:</strong> Anonymized or de-identified referral counts and outcomes as applicable under data sharing agreements</li>
+          <li><strong>Stored in:</strong> Firebase Firestore</li>
+        </ul>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-card-title">CalmKit</div>
+        <div class="platform-card-url">calmkit.healthmatters.clinic</div>
+        <ul>
+          <li><strong>Self-screening and coaching responses:</strong> NOT collected, stored, or transmitted. All inputs are processed within your browser session only and are discarded when you close or reset the session.</li>
+          <li><strong>Automatically collected:</strong> Anonymous session data, IP address, browser type, device type (for performance and error monitoring only)</li>
+          <li><strong>No account is required</strong> to use CalmKit. CalmKit is intentionally anonymous by design.</li>
+        </ul>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-card-title">Resource Directory</div>
+        <div class="platform-card-url">healthmatters.clinic/resources</div>
+        <ul>
+          <li><strong>No account required.</strong> The directory is publicly accessible without registration.</li>
+          <li><strong>Automatically collected:</strong> IP address, browser type, search queries (for improving directory relevance), pages visited</li>
+          <li>No personally identifiable information is required to search the directory</li>
+        </ul>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-card-title">Gumroad Digital Companion</div>
+        <ul>
+          <li><strong>Payment and checkout data</strong> is collected and processed exclusively by Gumroad, Inc. HMC does not receive or store payment card numbers.</li>
+          <li>HMC may receive your email address from Gumroad to send purchase confirmation and related communications.</li>
+          <li>Gumroad's privacy practices are governed by <a href="https://gumroad.com/privacy" target="_blank" rel="noopener">Gumroad's Privacy Policy</a>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section id="p4">
+      <h2><span class="section-number">04</span> How We Use Your Data</h2>
+
+      <p>We use personal information for the following purposes:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Purpose</th>
+            <th>Data Used</th>
+            <th>Legal Basis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Event coordination and RSVP management</td>
+            <td>Name, email, phone number</td>
+            <td>Consent (RSVP submission)</td>
+          </tr>
+          <tr>
+            <td>SMS event notifications and reminders</td>
+            <td>Phone number, event details</td>
+            <td>Consent (opt-in at RSVP)</td>
+          </tr>
+          <tr>
+            <td>Volunteer program management and scheduling</td>
+            <td>Name, email, phone, address, availability, skills</td>
+            <td>Consent (volunteer application)</td>
+          </tr>
+          <tr>
+            <td>Volunteer HIPAA training and compliance tracking</td>
+            <td>Training completion data, timestamps</td>
+            <td>Legal compliance obligation</td>
+          </tr>
+          <tr>
+            <td>Partner organization coordination and referral tracking</td>
+            <td>Org info, contact info, referral records</td>
+            <td>Contractual necessity</td>
+          </tr>
+          <tr>
+            <td>Platform security and fraud prevention</td>
+            <td>IP address, login activity, reCAPTCHA data</td>
+            <td>Legitimate interest</td>
+          </tr>
+          <tr>
+            <td>Website and platform analytics</td>
+            <td>Anonymized usage data via Google Analytics</td>
+            <td>Legitimate interest</td>
+          </tr>
+          <tr>
+            <td>Responding to inquiries and support requests</td>
+            <td>Contact form data, email address</td>
+            <td>Consent (inquiry submission)</td>
+          </tr>
+          <tr>
+            <td>Organizational communications and newsletters</td>
+            <td>Email address (opted-in subscribers only)</td>
+            <td>Consent (explicit opt-in)</td>
+          </tr>
+          <tr>
+            <td>Legal compliance and record-keeping</td>
+            <td>As required by applicable law</td>
+            <td>Legal obligation</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>We do not use your data for automated profiling or algorithmic decision-making that produces legal or similarly significant effects on you.</p>
+    </section>
+
+    <!-- SECTION 5 -->
+    <section id="p5">
+      <h2><span class="section-number">05</span> SMS and Text Message Consent</h2>
+
+      <h3>5.1 SMS Program Description</h3>
+      <p>HMC sends SMS text messages through Twilio for the following purposes:</p>
+      <ul>
+        <li>Event RSVP confirmations and logistics updates</li>
+        <li>Event reminders (sent 24-48 hours before an event)</li>
+        <li>Volunteer shift reminders and urgent communications</li>
+        <li>Follow-up messages after events you attended</li>
+        <li>Announcements about upcoming HMC community events (only if you opted in for general updates)</li>
+      </ul>
+
+      <h3>5.2 How to Consent</h3>
+      <p>You consent to SMS by providing your mobile phone number and submitting an RSVP or registration form on any HMC platform. Consent is required before we send any SMS messages. Your consent is not a condition of accessing any free HMC service or resource.</p>
+
+      <h3>5.3 How to Opt Out</h3>
+      <p>You may opt out of SMS communications at any time by:</p>
+      <ul>
+        <li>Replying STOP to any HMC text message</li>
+        <li>Emailing <a href="mailto:contact@healthmatters.clinic">contact@healthmatters.clinic</a> with the phone number you want removed</li>
+      </ul>
+      <p>After opting out, you will receive a single confirmation text confirming your opt-out. No further messages will be sent. If you opt back in later, the process starts fresh.</p>
+
+      <h3>5.4 Message Frequency and Costs</h3>
+      <p>Message frequency varies by event and activity. Message and data rates may apply based on your mobile carrier plan. HMC does not charge for SMS messages on our end. For help, reply HELP to any HMC text message or email <a href="mailto:contact@healthmatters.clinic">contact@healthmatters.clinic</a>.</p>
+
+      <h3>5.5 Twilio as SMS Provider</h3>
+      <p>SMS messages are delivered via Twilio Inc. Twilio processes phone numbers and message content as a service provider on behalf of HMC. Twilio does not use your phone number for its own marketing. HMC maintains a deduplication system to prevent repeated identical messages.</p>
+    </section>
+
+    <!-- SECTION 6 -->
+    <section id="p6">
+      <h2><span class="section-number">06</span> Health-Adjacent Data: CalmKit Self-Screening</h2>
+
+      <div class="ccpa-box">
+        <h3>CalmKit Is Intentionally Anonymous</h3>
+        <p>CalmKit self-screening responses, mood check-ins, coaching prompts, and any wellness inputs are processed entirely within your browser session. These responses are never transmitted to HMC's servers, never stored in any database, and never shared with any person or third party.</p>
+        <p>When you close your browser tab or reset the session, all inputs are permanently discarded. There is no account, no history, and no record of your CalmKit session in any HMC system.</p>
+      </div>
+
+      <p>CalmKit is designed this way intentionally. We recognize that wellness and mental health reflection is deeply personal. We built CalmKit to give you a private space without creating any data trail.</p>
+
+      <h3>6.1 What Is Collected in CalmKit</h3>
+      <p>The only data collected by HMC during a CalmKit session is anonymous technical data necessary for platform operation, including session duration, general device type, and error logs. This data cannot be linked back to any individual and is used only for debugging and performance monitoring.</p>
+
+      <h3>6.2 Not a HIPAA Covered Entity for Digital Tools</h3>
+      <p>HMC's digital wellness tools, including CalmKit, are not operated as a HIPAA-covered entity in the context of those tools. CalmKit does not create a provider-patient relationship and does not collect protected health information (PHI) as defined under HIPAA. If you receive in-person or telehealth clinical care from HMC directly, your PHI is handled under a separate HIPAA Notice of Privacy Practices provided to you at the time of care.</p>
+    </section>
+
+    <!-- SECTION 7 -->
+    <section id="p7">
+      <h2><span class="section-number">07</span> Third-Party Service Providers</h2>
+
+      <p>HMC uses the following third-party services to operate our platforms. Each provider acts as a service provider or data processor and is contractually prohibited from using your data for their own purposes beyond service delivery.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Provider</th>
+            <th>Purpose</th>
+            <th>Data Shared</th>
+            <th>Privacy Policy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Google Analytics</strong></td>
+            <td>Website usage analytics and traffic measurement</td>
+            <td>Anonymized browsing data, IP address (anonymized), device type</td>
+            <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Google Firebase &amp; Firestore</strong></td>
+            <td>Backend database, authentication, and cloud infrastructure</td>
+            <td>Volunteer profile data, RSVP data, partner data, authentication tokens</td>
+            <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Google Cloud Platform</strong></td>
+            <td>Cloud hosting and compute (Cloud Run, us-central1)</td>
+            <td>Application data processed through our hosted services</td>
+            <td><a href="https://cloud.google.com/privacy" target="_blank" rel="noopener">cloud.google.com/privacy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Twilio</strong></td>
+            <td>SMS delivery for event and volunteer notifications</td>
+            <td>Phone numbers and message content for opted-in users</td>
+            <td><a href="https://www.twilio.com/legal/privacy" target="_blank" rel="noopener">twilio.com/legal/privacy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Webflow</strong></td>
+            <td>Website hosting and content management for main site</td>
+            <td>Web traffic data, CMS content, form submissions on Webflow-hosted pages</td>
+            <td><a href="https://webflow.com/legal/privacy" target="_blank" rel="noopener">webflow.com/legal/privacy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Google reCAPTCHA</strong></td>
+            <td>Bot prevention and form spam protection</td>
+            <td>Browser and behavioral data to assess whether a submission is human</td>
+            <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Google OAuth</strong></td>
+            <td>Account authentication for Volunteer Portal</td>
+            <td>Google account email address and identifier (no password stored by HMC)</td>
+            <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Gumroad</strong></td>
+            <td>Digital product distribution and payment processing</td>
+            <td>Email address, payment data (handled by Gumroad; not shared with HMC)</td>
+            <td><a href="https://gumroad.com/privacy" target="_blank" rel="noopener">gumroad.com/privacy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Cloudflare</strong></td>
+            <td>DNS management and DDoS protection</td>
+            <td>IP addresses, network traffic metadata</td>
+            <td><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">cloudflare.com/privacypolicy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Google Apps Script</strong></td>
+            <td>Event RSVP processing and email notifications</td>
+            <td>RSVP form data (name, email, phone) processed via Google Workspace</td>
+            <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>We do not authorize these service providers to use, sell, retain, or disclose your personal information for any purpose other than performing services for HMC. We evaluate our service providers for privacy compliance and require contractual data processing protections where applicable.</p>
+    </section>
+
+    <!-- SECTION 8 -->
+    <section id="p8">
+      <h2><span class="section-number">08</span> Data Sharing and Disclosure</h2>
+
+      <h3>8.1 We Do Not Sell Your Data</h3>
+      <p>Health Matters Clinic does not sell, rent, trade, or lease your personal information to any third party for monetary or other valuable consideration. This applies to all categories of personal information we collect.</p>
+
+      <h3>8.2 When We Share Data</h3>
+      <p>We may share your information only in the following circumstances:</p>
+      <ul>
+        <li><strong>Service providers:</strong> As described in Section 7, with vendors who process data strictly on HMC's behalf</li>
+        <li><strong>Partner organizations (with consent):</strong> When you are referred to or express interest in a partner organization's services, with your knowledge and as described at the point of collection</li>
+        <li><strong>Legal requirements:</strong> When required by a valid court order, subpoena, law enforcement request, or applicable law. We will notify you of such requests where legally permissible.</li>
+        <li><strong>Protection of rights:</strong> When necessary to protect the safety of community members, prevent fraud, or enforce our Terms of Service</li>
+        <li><strong>Organizational successors:</strong> In the event of a merger, acquisition, or transfer of HMC's operations to another nonprofit or entity, your data would transfer subject to the same privacy protections described here</li>
+        <li><strong>With your explicit consent:</strong> For any other purpose, only with your specific prior consent</li>
+      </ul>
+
+      <h3>8.3 Aggregated and De-identified Data</h3>
+      <p>HMC may use and share aggregated, de-identified data that cannot reasonably be used to identify you (for example, "150 community members attended HMC events in May") for reporting, grant applications, public health research, and organizational communications. This data is not personal information.</p>
+
+      <h3>8.4 No Cross-Platform Data Combination for Marketing</h3>
+      <p>HMC does not combine data from different platforms to create marketing profiles or behavioral advertising segments. Data collected on the Event Finder is used for event coordination. Data collected on the Volunteer Portal is used for volunteer management. These datasets are kept functionally separate.</p>
+    </section>
+
+    <!-- SECTION 9 -->
+    <section id="p9">
+      <h2><span class="section-number">09</span> Data Retention</h2>
+
+      <p>We retain personal information only as long as necessary to fulfill the purpose for which it was collected, to comply with legal obligations, and to resolve any disputes.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>Retention Period</th>
+            <th>Reason</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Event RSVP data (name, email, phone)</td>
+            <td>24 months from event date</td>
+            <td>Follow-up outreach and event history</td>
+          </tr>
+          <tr>
+            <td>Volunteer application and profile data</td>
+            <td>Duration of active volunteer status + 3 years</td>
+            <td>Program records, training compliance, reference</td>
+          </tr>
+          <tr>
+            <td>Volunteer HIPAA training records</td>
+            <td>6 years from completion</td>
+            <td>HIPAA compliance requirement</td>
+          </tr>
+          <tr>
+            <td>Partner organization data</td>
+            <td>Duration of partnership + 5 years</td>
+            <td>Legal compliance, referral records</td>
+          </tr>
+          <tr>
+            <td>CalmKit session data</td>
+            <td>Not retained (session-only)</td>
+            <td>By design: anonymous tool</td>
+          </tr>
+          <tr>
+            <td>Website analytics data (Google Analytics)</td>
+            <td>26 months (Google default)</td>
+            <td>Trend analysis and platform improvement</td>
+          </tr>
+          <tr>
+            <td>Contact form submissions</td>
+            <td>24 months</td>
+            <td>Inquiry follow-up and records</td>
+          </tr>
+          <tr>
+            <td>SMS opt-out records</td>
+            <td>Indefinitely</td>
+            <td>Compliance with opt-out requests</td>
+          </tr>
+          <tr>
+            <td>Gumroad purchase records</td>
+            <td>Per Gumroad's policy (HMC has limited visibility)</td>
+            <td>Transaction history</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Upon expiration of retention periods, we delete or de-identify personal information in a manner consistent with applicable law and our security practices.</p>
+    </section>
+
+    <!-- SECTION 10 -->
+    <section id="p10">
+      <h2><span class="section-number">10</span> Security</h2>
+      <p>HMC implements reasonable and appropriate technical and organizational security measures to protect personal information from unauthorized access, disclosure, alteration, or destruction. Our security practices include:</p>
+      <ul>
+        <li>HTTPS/TLS encryption for all data in transit across HMC Platforms</li>
+        <li>Firebase Firestore security rules restricting database access to authorized users and service accounts only</li>
+        <li>Role-based access controls limiting which HMC staff and volunteers can access sensitive data</li>
+        <li>Google Cloud Platform's built-in encryption for data at rest</li>
+        <li>reCAPTCHA on forms to prevent automated malicious submissions</li>
+        <li>Regular review of third-party vendor security practices</li>
+      </ul>
+      <p>Despite these measures, no system is perfectly secure. We cannot guarantee that data transmitted over the internet or stored on our systems will never be accessed by unauthorized parties. If you believe a security incident has occurred involving your data, please contact us immediately at <a href="mailto:privacy@healthmatters.clinic">privacy@healthmatters.clinic</a>.</p>
+      <p>In the event of a data breach affecting California residents, HMC will provide notification as required by California Civil Code Section 1798.82 and any other applicable notification requirements.</p>
+    </section>
+
+    <!-- SECTION 11 -->
+    <section id="p11">
+      <h2><span class="section-number">11</span> Children's Privacy</h2>
+      <p>HMC's digital platforms are not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have inadvertently collected information from a child under 13 without verifiable parental consent, we will delete that information promptly.</p>
+      <p>Volunteers must be at least 16 years old. Volunteers between the ages of 16 and 17 must have verifiable parental or guardian consent on file with HMC before participating in any volunteer activities.</p>
+      <p>If you are a parent or guardian and believe that your minor child has provided personal information to HMC without your consent, please contact us at <a href="mailto:privacy@healthmatters.clinic">privacy@healthmatters.clinic</a> and we will promptly investigate and, where appropriate, delete the information.</p>
+      <p>This policy is consistent with the federal Children's Online Privacy Protection Act (COPPA) and California law.</p>
+    </section>
+
+    <!-- SECTION 12 -->
+    <section id="p12">
+      <h2><span class="section-number">12</span> California Privacy Rights (CCPA)</h2>
+
+      <div class="ccpa-box">
+        <h3>Your California Privacy Rights</h3>
+        <p>If you are a California resident, the California Consumer Privacy Act (CCPA), as amended by the California Privacy Rights Act (CPRA), grants you specific rights regarding your personal information. Health Matters Clinic is committed to honoring these rights.</p>
+      </div>
+
+      <h3>12.1 Right to Know</h3>
+      <p>You have the right to request that HMC disclose:</p>
+      <ul>
+        <li>The categories of personal information we have collected about you</li>
+        <li>The categories of sources from which the information was collected</li>
+        <li>The business or commercial purpose for collecting or sharing the information</li>
+        <li>The categories of third parties with whom we shared the information</li>
+        <li>The specific pieces of personal information we have collected about you</li>
+      </ul>
+
+      <h3>12.2 Right to Delete</h3>
+      <p>You have the right to request that HMC delete personal information we have collected from you, subject to certain exceptions. We may retain information where necessary to:</p>
+      <ul>
+        <li>Complete a transaction or provide a service you requested</li>
+        <li>Comply with a legal obligation</li>
+        <li>Detect security incidents or protect against illegal activity</li>
+        <li>Exercise or defend legal claims</li>
+        <li>Maintain HIPAA training records as required by law</li>
+      </ul>
+      <p>If an exception applies, we will inform you and explain the basis for retaining the data.</p>
+
+      <h3>12.3 Right to Correct</h3>
+      <p>Under the CPRA, you have the right to request correction of inaccurate personal information we hold about you. You can update most profile information directly in your Volunteer Portal account. For corrections to data held elsewhere, contact <a href="mailto:privacy@healthmatters.clinic">privacy@healthmatters.clinic</a>.</p>
+
+      <h3>12.4 Right to Opt Out of Sale or Sharing</h3>
+      <p><strong>HMC does not sell personal information and does not share personal information for cross-context behavioral advertising.</strong> Because we do not engage in these activities, there is currently nothing to opt out of under these specific CCPA provisions. However, if this practice ever changes, we will provide a clear "Do Not Sell or Share My Personal Information" link on our website and provide 30 days' notice before implementation.</p>
+
+      <h3>12.5 Right to Limit Use of Sensitive Personal Information</h3>
+      <p>To the extent HMC collects sensitive personal information as defined under the CPRA (such as health-related data in a clinical context), you have the right to limit its use to what is necessary to provide services you requested. For volunteers, HIPAA training records constitute sensitive data retained for legal compliance purposes.</p>
+
+      <h3>12.6 Right to Non-Discrimination</h3>
+      <p>HMC will not discriminate against you for exercising your CCPA rights. We will not deny you services, charge different prices, provide a different level or quality of service, or suggest that you will receive inferior treatment because you exercised your privacy rights. Since all of HMC's core community services are free, there is no pricing mechanism that could be used in a discriminatory manner.</p>
+
+      <h3>12.7 How to Submit a CCPA Request</h3>
+      <p>To exercise any of the rights described above, you may:</p>
+      <ul>
+        <li>Email us at <a href="mailto:privacy@healthmatters.clinic">privacy@healthmatters.clinic</a> with "CCPA Request" in the subject line</li>
+        <li>Call us at <a href="tel:+13239904325">(323) 990-4325</a></li>
+      </ul>
+      <p>We will acknowledge receipt of your request within 10 business days and respond substantively within 45 calendar days. If we need more time (up to an additional 45 days), we will notify you in writing with the reason for the extension.</p>
+      <p>We will verify your identity before processing your request using reasonable verification measures, such as matching information you provide with our records. We will not require you to create an account or disclose information beyond what is necessary for verification.</p>
+
+      <h3>12.8 Authorized Agents</h3>
+      <p>You may designate an authorized agent to submit a CCPA request on your behalf. The authorized agent must provide written permission signed by you, and we may still verify your identity directly. We will not require direct verification from you if your authorized agent provides a valid power of attorney executed pursuant to California Probate Code Sections 4121-4130.</p>
+
+      <h3>12.9 Categories of Personal Information Collected (CCPA Disclosure)</h3>
+      <p>In the past 12 months, HMC has collected the following categories of personal information as defined by the CCPA:</p>
+      <ul>
+        <li><strong>Identifiers:</strong> Name, email address, phone number, IP address, account identifiers (Volunteer Portal, Event Finder RSVP)</li>
+        <li><strong>California Customer Records (Civil Code 1798.80):</strong> Name, address, telephone number, physical description where photos are submitted (Volunteer Portal)</li>
+        <li><strong>Protected classification characteristics:</strong> Age (for volunteer age verification only)</li>
+        <li><strong>Internet or network activity:</strong> Browsing history on HMC platforms, interaction data (all platforms)</li>
+        <li><strong>Geolocation data:</strong> General location inferred from IP address only (no precise geolocation is collected)</li>
+        <li><strong>Professional or employment-related information:</strong> Skills, availability, role preferences (Volunteer Portal)</li>
+        <li><strong>Inferences drawn from personal information:</strong> Interest in particular event types or volunteer roles (for internal coordination only)</li>
+      </ul>
+      <p>HMC has not collected sensitive personal information as defined under CPRA (such as precise geolocation, financial account numbers, racial or ethnic origin, biometric data, or health data in a clinical context) through its digital platforms in the past 12 months, except for HIPAA training records of volunteers maintained for legal compliance.</p>
+    </section>
+
+    <!-- SECTION 13 -->
+    <section id="p13">
+      <h2><span class="section-number">13</span> Other California Privacy Laws</h2>
+
+      <h3>13.1 California Shine the Light Law (Civil Code 1798.83)</h3>
+      <p>California residents may request information about personal data we disclosed to third parties for their direct marketing purposes during the preceding calendar year. HMC does not disclose personal information to third parties for their direct marketing purposes. If this practice ever changes, California residents will have the right to request a list of such disclosures at no charge once per year.</p>
+
+      <h3>13.2 California Online Privacy Protection Act (CalOPPA)</h3>
+      <p>HMC complies with CalOPPA. This Privacy Policy is posted prominently on our website, discloses what information we collect and how it is used, and describes how you can access and correct your information.</p>
+
+      <h3>13.3 California Confidentiality of Medical Information Act (CMIA)</h3>
+      <p>To the extent HMC's activities involve medical information as defined under California Health and Safety Code Section 56.05, HMC is committed to complying with the CMIA. HMC does not share medical information about identified individuals without authorization except as permitted by law.</p>
+
+      <h3>13.4 California Consumer Legal Remedies Act (CLRA)</h3>
+      <p>HMC's privacy practices are designed to be transparent and non-deceptive. We do not engage in any unfair, deceptive, or misleading practices regarding our collection or use of personal information. California residents who believe HMC has engaged in deceptive privacy practices may have rights under the CLRA and are encouraged to contact us first to resolve concerns.</p>
+    </section>
+
+    <!-- SECTION 14 -->
+    <section id="p14">
+      <h2><span class="section-number">14</span> Do Not Track</h2>
+      <p>Some browsers include a "Do Not Track" (DNT) feature that sends a signal to websites requesting that your browsing activity not be tracked. Currently, there is no industry standard for how websites should respond to DNT signals. HMC's platforms do not currently respond to DNT signals in a manner that would change data collection behavior. We use Google Analytics with IP anonymization enabled to minimize the identifiability of analytics data.</p>
+      <p>California law requires that we disclose our response to DNT signals. We have made that disclosure here. We will update this section if our practices change or if an industry standard emerges.</p>
+    </section>
+
+    <!-- SECTION 15 -->
+    <section id="p15">
+      <h2><span class="section-number">15</span> Changes to This Policy</h2>
+      <p>HMC may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or organizational operations. When we make material changes, we will:</p>
+      <ul>
+        <li>Update the "Last Updated" date at the top of this page</li>
+        <li>Post a notice on our main website for at least 30 days after the effective date of changes</li>
+        <li>Where practicable, notify registered volunteers and active community members via email</li>
+      </ul>
+      <p>Your continued use of HMC's platforms after the effective date of a revised Privacy Policy constitutes your acceptance of the updated practices. If the changes are material and you do not agree, you should stop using the affected platforms and contact us to request deletion of your data.</p>
+    </section>
+
+    <!-- SECTION 16 -->
+    <section id="p16">
+      <h2><span class="section-number">16</span> Contact Our Privacy Team</h2>
+
+      <div class="contact-block">
+        <h3>Privacy Inquiries and CCPA Requests</h3>
+        <p>For any privacy questions, to exercise your CCPA rights, or to report a privacy concern:</p>
+        <p>Email: <a href="mailto:privacy@healthmatters.clinic">privacy@healthmatters.clinic</a></p>
+        <p>Phone: <a href="tel:+13239904325">(323) 990-4325</a></p>
+        <p style="margin-top: 16px;"><strong>Health Matters Clinic</strong><br>
+        Los Angeles, California<br>
+        Website: <a href="https://healthmatters.clinic">healthmatters.clinic</a></p>
+        <p style="margin-top: 16px; color: #666; font-size: 13px;">For general inquiries: <a href="mailto:contact@healthmatters.clinic">contact@healthmatters.clinic</a><br>
+        For volunteer matters: <a href="mailto:volunteer@healthmatters.clinic">volunteer@healthmatters.clinic</a><br>
+        For partnership inquiries: <a href="mailto:partner@healthmatters.clinic">partner@healthmatters.clinic</a></p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Health Matters Clinic &nbsp;|&nbsp; A 501(c)(3) Nonprofit Organization &nbsp;|&nbsp; <a href="mailto:privacy@healthmatters.clinic">privacy@healthmatters.clinic</a></p>
+    <p style="margin-top: 8px;"><a href="https://healthmatters.clinic">healthmatters.clinic</a> &nbsp;&middot;&nbsp; Los Angeles, California</p>
+  </footer>
+
+</body>
+</html>

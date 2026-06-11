@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service | Health Matters Clinic</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #0a0a0a;
+      color: #e8e8e8;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      padding: 0 0 80px;
+    }
+
+    .header {
+      background-color: #111111;
+      border-bottom: 1px solid #222;
+      padding: 28px 40px;
+      text-align: center;
+    }
+
+    .header a {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .header-logo-text {
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.3px;
+    }
+
+    .header-logo-text span {
+      color: #ffffff;
+    }
+
+    .header-tagline {
+      font-size: 12px;
+      color: #888;
+      margin-top: 4px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    .doc-title {
+      font-size: 36px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .doc-meta {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid #1e1e1e;
+    }
+
+    .intro-block {
+      background-color: rgba(35,61,255,0.1);
+      border: 1px solid rgba(35,61,255,0.2);
+      border-left: 4px solid #233dff;
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+      font-size: 15px;
+      color: #ccc;
+      line-height: 1.8;
+    }
+
+    .intro-block strong {
+      color: #fff;
+    }
+
+    .toc {
+      background-color: #0f0f0f;
+      border: 1px solid #1e1e1e;
+      border-radius: 8px;
+      padding: 28px 32px;
+      margin-bottom: 56px;
+    }
+
+    .toc-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .toc ol {
+      padding-left: 20px;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: #233dff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 56px;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #1e1e1e;
+    }
+
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: #e0e0e0;
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: #c8c8c8;
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+
+    ul, ol {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+
+    li {
+      color: #c8c8c8;
+      font-size: 15px;
+      margin-bottom: 8px;
+      line-height: 1.7;
+    }
+
+    .highlight-box {
+      background-color: #111;
+      border: 1px solid #2a2a2a;
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    .warning-box {
+      background-color: #1a1100;
+      border: 1px solid #3a2a00;
+      border-left: 4px solid #f59e0b;
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    .warning-box p {
+      color: #ddb96e;
+      margin-bottom: 0;
+    }
+
+    a {
+      color: #233dff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .section-number {
+      display: inline-block;
+      color: #233dff;
+      font-size: 14px;
+      font-weight: 700;
+      margin-right: 10px;
+      vertical-align: middle;
+      letter-spacing: 0.5px;
+    }
+
+    .contact-block {
+      background-color: #0f0f0f;
+      border: 1px solid #222;
+      border-radius: 8px;
+      padding: 28px 32px;
+      margin-top: 48px;
+    }
+
+    .contact-block h3 {
+      margin-top: 0;
+      color: #fff;
+    }
+
+    .contact-block p {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      border-top: 1px solid #1a1a1a;
+      color: #555;
+      font-size: 13px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #233dff;
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 40px 20px; }
+      .header { padding: 20px; }
+      .doc-title { font-size: 26px; }
+      h2 { font-size: 19px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <a href="https://healthmatters.clinic">
+      <div class="header-logo-text">Health Matters <span>Clinic</span></div>
+    </a>
+    <div class="header-tagline">A 501(c)(3) Nonprofit Organization</div>
+  </div>
+
+  <div class="container">
+
+    <h1 class="doc-title">Terms of Service</h1>
+    <div class="doc-meta">
+      Effective Date: June 1, 2026 &nbsp;&middot;&nbsp; Last Updated: June 1, 2026 &nbsp;&middot;&nbsp; Version 1.0
+    </div>
+
+    <div class="intro-block">
+      <strong>Please read these Terms of Service carefully.</strong> By accessing or using any Health Matters Clinic platform, website, or digital tool, you agree to be legally bound by these terms. If you do not agree, you must discontinue use immediately. These Terms apply to all users including community members, volunteers, partner organizations, donors, and visitors.
+    </div>
+
+    <nav class="toc">
+      <div class="toc-title">Table of Contents</div>
+      <ol>
+        <li><a href="#s1">About Health Matters Clinic</a></li>
+        <li><a href="#s2">Platforms Covered by These Terms</a></li>
+        <li><a href="#s3">Eligibility and Account Creation</a></li>
+        <li><a href="#s4">Acceptable Use Policy</a></li>
+        <li><a href="#s5">Health Information Disclaimer</a></li>
+        <li><a href="#s6">Event Finder and Community Member Terms</a></li>
+        <li><a href="#s7">Volunteer-Specific Terms</a></li>
+        <li><a href="#s8">Partner Organization Terms</a></li>
+        <li><a href="#s9">CalmKit and Digital Wellness Tools</a></li>
+        <li><a href="#s10">Intellectual Property</a></li>
+        <li><a href="#s11">Third-Party Services and Links</a></li>
+        <li><a href="#s12">User-Submitted Content</a></li>
+        <li><a href="#s13">Privacy and Data</a></li>
+        <li><a href="#s14">SMS and Electronic Communications</a></li>
+        <li><a href="#s15">Donations and Digital Products</a></li>
+        <li><a href="#s16">Account Suspension and Termination</a></li>
+        <li><a href="#s17">Disclaimer of Warranties</a></li>
+        <li><a href="#s18">Limitation of Liability</a></li>
+        <li><a href="#s19">Indemnification</a></li>
+        <li><a href="#s20">Governing Law and Dispute Resolution</a></li>
+        <li><a href="#s21">Changes to These Terms</a></li>
+        <li><a href="#s22">Contact Information</a></li>
+      </ol>
+    </nav>
+
+    <!-- SECTION 1 -->
+    <section id="s1">
+      <h2><span class="section-number">01</span> About Health Matters Clinic</h2>
+      <p>Health Matters Clinic ("HMC," "we," "us," or "our") is a California 501(c)(3) nonprofit organization based in Los Angeles, California. HMC advances health equity by connecting underserved communities to free and low-cost health services, wellness education, volunteer-powered outreach, and community-centered care programming.</p>
+      <p>HMC operates under the laws of the State of California. Our principal place of operations is Los Angeles County, California.</p>
+      <p>As a nonprofit, HMC is mission-driven. Our platforms exist to serve the community, coordinate volunteers, and support partner organizations. We do not sell personal data, and we are committed to transparency, dignity, and trust in every interaction.</p>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section id="s2">
+      <h2><span class="section-number">02</span> Platforms Covered by These Terms</h2>
+      <p>These Terms of Service govern your use of all HMC digital platforms, including:</p>
+      <ul>
+        <li><strong>Main Website</strong> (healthmatters.clinic) — organizational information, blog, resource directory, and event listings hosted on Webflow</li>
+        <li><strong>Event Finder</strong> (eventfinder.healthmatters.clinic) — community event discovery, RSVP, and SMS notification tool</li>
+        <li><strong>Volunteer Portal</strong> (volunteer.healthmatters.clinic) — volunteer applications, scheduling, training, and communications</li>
+        <li><strong>Partner Portal</strong> (partner.healthmatters.clinic) — organizational partner onboarding, data sharing, and referral coordination</li>
+        <li><strong>CalmKit</strong> (calmkit.healthmatters.clinic) — a free, anonymous mental wellness coaching and self-reflection tool</li>
+        <li><strong>Resource Directory</strong> (healthmatters.clinic/resources) — publicly searchable directory of community health and social services</li>
+        <li><strong>Gumroad Digital Companion</strong> — a pay-what-you-want digital wellness guide available via Gumroad</li>
+        <li>Any future platforms, subdomains, mobile applications, or tools operated by HMC</li>
+      </ul>
+      <p>Collectively, these are referred to in these Terms as the "Platforms."</p>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section id="s3">
+      <h2><span class="section-number">03</span> Eligibility and Account Creation</h2>
+
+      <h3>3.1 General Eligibility</h3>
+      <p>You must be at least 13 years of age to use HMC's Platforms. By using any Platform, you represent that you are at least 13 years old. Certain Platforms have higher age requirements described below. If you are under 18, you represent that a parent or legal guardian has reviewed and consented to these Terms on your behalf.</p>
+
+      <h3>3.2 Volunteer Eligibility</h3>
+      <p>Volunteers must be at least 16 years of age. Volunteers under 18 must provide written parental or guardian consent prior to participating in any in-person activities, street medicine outreach, or community events. HMC reserves the right to verify age and consent documentation.</p>
+
+      <h3>3.3 Account Creation</h3>
+      <p>Some Platforms require you to create an account. When creating an account, you agree to:</p>
+      <ul>
+        <li>Provide accurate, current, and complete information</li>
+        <li>Maintain and promptly update your information to keep it accurate</li>
+        <li>Maintain the security of your account credentials and not share your login with others</li>
+        <li>Accept responsibility for all activity that occurs under your account</li>
+        <li>Notify HMC immediately at <a href="mailto:contact@healthmatters.clinic">contact@healthmatters.clinic</a> if you suspect unauthorized access</li>
+      </ul>
+      <p>HMC may use Google OAuth for authentication on certain Platforms. Use of Google OAuth is also subject to Google's Terms of Service and Privacy Policy.</p>
+
+      <h3>3.4 Organizational Accounts</h3>
+      <p>If you create an account on behalf of an organization, you represent that you have authority to bind that organization to these Terms, and "you" includes both you individually and the organization.</p>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section id="s4">
+      <h2><span class="section-number">04</span> Acceptable Use Policy</h2>
+
+      <h3>4.1 Permitted Uses</h3>
+      <p>You may use HMC's Platforms for lawful, mission-aligned purposes, including discovering health events, applying to volunteer, accessing wellness resources, and partnering with HMC to serve the Los Angeles community.</p>
+
+      <h3>4.2 Prohibited Conduct</h3>
+      <p>You agree not to use any HMC Platform to:</p>
+      <ul>
+        <li>Violate any applicable federal, state, or local law or regulation</li>
+        <li>Submit false, misleading, or fraudulent information</li>
+        <li>Impersonate any person or entity, or misrepresent your affiliation with any person or entity</li>
+        <li>Harass, intimidate, threaten, or discriminate against any individual based on race, color, ethnicity, national origin, religion, sex, gender identity or expression, sexual orientation, disability, age, or any other protected characteristic</li>
+        <li>Access, collect, or harvest any information from HMC Platforms using automated tools, scrapers, bots, or crawlers without prior written authorization</li>
+        <li>Attempt to gain unauthorized access to any system, account, database, or network component of HMC's infrastructure</li>
+        <li>Introduce malware, viruses, or any other harmful code</li>
+        <li>Use HMC Platforms to solicit, advertise, or market any product or service not authorized by HMC</li>
+        <li>Reproduce, distribute, or create derivative works of HMC content without prior written permission</li>
+        <li>Interfere with the proper functioning of any Platform</li>
+        <li>Use HMC's platforms or brand to raise funds, promote causes, or distribute content that is not aligned with HMC's mission without explicit written authorization</li>
+      </ul>
+
+      <h3>4.3 Enforcement</h3>
+      <p>HMC reserves the right, at its sole discretion, to investigate any suspected violation of this Acceptable Use Policy. HMC may suspend or terminate access, remove content, report violations to law enforcement, and pursue all available legal remedies.</p>
+    </section>
+
+    <!-- SECTION 5 -->
+    <section id="s5">
+      <h2><span class="section-number">05</span> Health Information Disclaimer</h2>
+
+      <div class="warning-box">
+        <p><strong>Important:</strong> HMC's digital platforms and tools are not a substitute for professional medical advice, diagnosis, or treatment. Nothing on these Platforms constitutes a medical consultation, clinical assessment, or therapeutic relationship.</p>
+      </div>
+
+      <h3>5.1 Digital Tools Are Not Clinical Services</h3>
+      <p>HMC's digital tools, including the Event Finder, Resource Directory, CalmKit, and any wellness content published on healthmatters.clinic, are for informational, educational, and community coordination purposes only. They do not constitute medical care and do not create a provider-patient relationship.</p>
+
+      <h3>5.2 HMC's In-Person and Telehealth Services</h3>
+      <p>Health Matters Clinic does employ and partner with credentialed healthcare professionals for in-person and telehealth services offered directly to patients. Those services are governed by separate clinical agreements, consent forms, and applicable healthcare law. If you are receiving clinical care from HMC as a patient, your rights under HIPAA and California medical privacy law apply to that care relationship. These Terms do not govern the clinical care relationship.</p>
+
+      <h3>5.3 Emergency Situations</h3>
+      <p>If you or someone else is experiencing a medical emergency or mental health crisis, call 911 immediately or contact the 988 Suicide and Crisis Lifeline by calling or texting 988. Do not rely on any HMC digital platform for emergency response.</p>
+
+      <h3>5.4 No Guarantee of Resource Availability</h3>
+      <p>Resources listed in HMC's directory and event listings are provided for informational purposes. HMC does not guarantee the availability, quality, or appropriateness of any third-party resource or service listed on its Platforms. Always verify information directly with the service provider.</p>
+    </section>
+
+    <!-- SECTION 6 -->
+    <section id="s6">
+      <h2><span class="section-number">06</span> Event Finder and Community Member Terms</h2>
+
+      <h3>6.1 RSVP and Registration</h3>
+      <p>When you use the HMC Event Finder to RSVP for community events, you provide your name, email address, and phone number. This information is used solely to confirm your registration, send event reminders, provide logistics updates, and facilitate SMS notifications about the event for which you registered.</p>
+
+      <h3>6.2 SMS Consent</h3>
+      <p>By submitting your phone number through the Event Finder RSVP form, you expressly consent to receive text message (SMS) notifications from HMC related to your event registration. These messages may include:</p>
+      <ul>
+        <li>Registration confirmations</li>
+        <li>Event reminders and logistics updates</li>
+        <li>Post-event follow-up and feedback requests</li>
+        <li>Information about upcoming HMC events you may be interested in (only if you opt in at registration)</li>
+      </ul>
+      <p>Message and data rates may apply. Message frequency varies based on event activity. You may opt out at any time by replying STOP to any SMS message. After opting out, you will receive a single confirmation message. For help, reply HELP or contact <a href="mailto:contact@healthmatters.clinic">contact@healthmatters.clinic</a>.</p>
+
+      <h3>6.3 Event Conduct</h3>
+      <p>HMC events are community spaces. Attendees are expected to treat all people with respect and dignity. HMC reserves the right to remove any attendee from an event who engages in harassment, threatening behavior, discrimination, or conduct that disrupts the safety or wellbeing of others. HMC staff and volunteers have authority to enforce this policy on-site.</p>
+
+      <h3>6.4 Event Changes and Cancellations</h3>
+      <p>HMC reserves the right to modify, postpone, or cancel any event without liability. We will make reasonable efforts to notify registered attendees via email and SMS when changes occur.</p>
+
+      <h3>6.5 Photography and Recording at Events</h3>
+      <p>HMC and its authorized media partners may photograph and record HMC events for nonprofit documentation, social media, and promotional purposes. By attending an HMC event, you consent to being photographed or recorded in public event settings. If you have concerns about being photographed, please notify HMC staff on-site.</p>
+    </section>
+
+    <!-- SECTION 7 -->
+    <section id="s7">
+      <h2><span class="section-number">07</span> Volunteer-Specific Terms</h2>
+
+      <h3>7.1 Volunteer Status</h3>
+      <p>Volunteers serve Health Matters Clinic in an unpaid, non-employment capacity. Volunteering with HMC does not create an employment relationship, agency relationship, or entitlement to compensation, benefits, or continued volunteer status. Nothing in these Terms shall be construed to create a contract of employment.</p>
+
+      <h3>7.2 Application and Onboarding</h3>
+      <p>Prospective volunteers must complete the application process through the Volunteer Portal at volunteer.healthmatters.clinic. HMC reserves the right to accept, defer, or decline any volunteer application at its sole discretion and is not required to provide a reason for any decision. Acceptance into the volunteer program requires completion of all required onboarding steps, which may include orientation, training modules, background acknowledgment, and execution of a Volunteer Agreement.</p>
+
+      <h3>7.3 HIPAA Training and Confidentiality</h3>
+      <p>Volunteers in certain roles may have access to protected health information (PHI) or sensitive personal information about community members or patients. All such volunteers are required to complete HMC's HIPAA training module through the Volunteer Portal before engaging in any activity that involves access to PHI. Volunteers agree to:</p>
+      <ul>
+        <li>Maintain strict confidentiality of all PHI and personally identifiable information encountered during volunteer activities</li>
+        <li>Access PHI only to the minimum extent necessary to perform assigned volunteer duties</li>
+        <li>Not disclose PHI to any unauthorized person, including other volunteers, friends, or family members</li>
+        <li>Immediately report any actual or suspected privacy breach to the HMC Privacy Contact at <a href="mailto:privacy@healthmatters.clinic">privacy@healthmatters.clinic</a></li>
+        <li>Comply with all HMC policies and applicable provisions of the Health Insurance Portability and Accountability Act (HIPAA) and the California Confidentiality of Medical Information Act (CMIA)</li>
+      </ul>
+      <p>Violation of confidentiality obligations may result in immediate removal from the volunteer program and may carry legal consequences.</p>
+
+      <h3>7.4 Attendance and Conduct</h3>
+      <p>Volunteers are expected to:</p>
+      <ul>
+        <li>Honor commitments to shift assignments and events</li>
+        <li>Provide reasonable advance notice if unable to fulfill a scheduled commitment</li>
+        <li>Conduct themselves professionally, respectfully, and in alignment with HMC's values at all times</li>
+        <li>Follow all instructions from HMC staff and program coordinators</li>
+        <li>Refrain from using alcohol, cannabis, controlled substances, or any impairing substance while volunteering</li>
+        <li>Not engage in any political campaigning, unauthorized solicitation, or distribution of materials during volunteer activities</li>
+      </ul>
+
+      <h3>7.5 Intellectual Property Assignment</h3>
+      <p>Any work product, content, curriculum, tools, documentation, or materials created by a volunteer in the course of their volunteer activities for HMC shall be considered work made for hire or, to the extent applicable law does not permit that classification, the volunteer hereby irrevocably assigns to HMC all right, title, and interest in such work product, including all intellectual property rights. Volunteers waive any moral rights in such materials to the fullest extent permitted by law.</p>
+
+      <h3>7.6 Liability Release</h3>
+      <p>By participating as an HMC volunteer, you acknowledge the inherent risks associated with community outreach, street medicine, field-based activities, and event work. To the fullest extent permitted by applicable law, you release and discharge Health Matters Clinic, its officers, directors, employees, agents, and other volunteers from any and all claims, demands, and causes of action arising out of or relating to your volunteer activities, including claims arising from HMC's own ordinary negligence. This release does not apply to claims arising from HMC's gross negligence or willful misconduct.</p>
+      <p>This release does not affect any workers' compensation protections that may apply under California law.</p>
+
+      <h3>7.7 Data Collected from Volunteers</h3>
+      <p>The Volunteer Portal collects name, email, phone number, mailing address, skills, availability, training completion status, and may collect photographs submitted by volunteers for identification purposes. This data is used to manage the volunteer program, communicate with volunteers, and coordinate HMC programs. See our Privacy Policy for full details.</p>
+
+      <h3>7.8 Volunteer Program Termination</h3>
+      <p>HMC may remove a volunteer from the program at any time, with or without notice, for any reason including but not limited to violations of these Terms, failure to meet training requirements, conduct unbecoming of an HMC representative, or programmatic changes. A volunteer may also withdraw from the program at any time by notifying HMC in writing.</p>
+    </section>
+
+    <!-- SECTION 8 -->
+    <section id="s8">
+      <h2><span class="section-number">08</span> Partner Organization Terms</h2>
+
+      <h3>8.1 Partner Onboarding</h3>
+      <p>Organizations that apply to partner with HMC through the Partner Portal at partner.healthmatters.clinic must provide accurate, complete, and current organizational information, including legal organization name, type, contact information, service area, and program descriptions. HMC reserves the right to approve, defer, or decline any partnership application at its sole discretion.</p>
+
+      <h3>8.2 Referral Obligations</h3>
+      <p>Partner organizations that receive referrals from HMC agree to:</p>
+      <ul>
+        <li>Handle all referred individuals with dignity, respect, and professionalism</li>
+        <li>Provide the services represented in the partner organization's program profile</li>
+        <li>Notify HMC promptly when services are unavailable, at capacity, or when program details change materially</li>
+        <li>Maintain appropriate confidentiality for all individuals referred through HMC channels</li>
+        <li>Not use referral data for any purpose other than service delivery to the referred individual</li>
+      </ul>
+
+      <h3>8.3 Data Sharing</h3>
+      <p>Any data sharing between HMC and a partner organization is governed by a separate data sharing agreement (DSA). No personal data of community members shall be shared with a partner organization absent a valid DSA and, where required by law, appropriate individual consent. Partner organizations may not re-share, sell, or otherwise transfer individual-level data received from HMC.</p>
+
+      <h3>8.4 Representation and Conduct</h3>
+      <p>Partner organizations may not represent themselves as HMC or suggest an affiliation with HMC beyond the scope of the formal partnership without prior written authorization. Partner organizations are responsible for ensuring their own staff and volunteers comply with applicable laws, licensing requirements, and professional standards.</p>
+
+      <h3>8.5 Termination of Partnership</h3>
+      <p>Either party may terminate a partnership arrangement with 30 days written notice. HMC may terminate a partnership immediately upon discovery of misuse of referral data, fraudulent representations, conduct harmful to referred individuals, or material breach of any applicable data sharing agreement. Upon termination, partner organizations must promptly destroy or return any HMC-provided data per the terms of the applicable DSA.</p>
+    </section>
+
+    <!-- SECTION 9 -->
+    <section id="s9">
+      <h2><span class="section-number">09</span> CalmKit and Digital Wellness Tools</h2>
+
+      <h3>9.1 Nature of CalmKit</h3>
+      <p>CalmKit (calmkit.healthmatters.clinic) is a free, community-facing digital wellness coaching tool that provides guided breathing exercises, self-reflection prompts, and wellness coaching content. CalmKit is not a mental health treatment platform, is not operated by licensed therapists or psychologists in a clinical capacity through this tool, and does not create a therapeutic relationship.</p>
+
+      <h3>9.2 Self-Screening Responses</h3>
+      <p>Any self-screening or self-assessment responses you enter into CalmKit are processed locally in your browser session and are not stored, transmitted to HMC's servers, or shared with any third party. CalmKit is designed to be an anonymous, session-based experience. See our Privacy Policy for technical details.</p>
+
+      <h3>9.3 Not a Crisis Resource</h3>
+      <p>CalmKit is not designed for crisis intervention. If you are experiencing a mental health emergency, suicidal thoughts, or a psychiatric crisis, please contact 988 (Suicide and Crisis Lifeline), text HOME to 741741 (Crisis Text Line), call 911, or go to your nearest emergency room. Do not use CalmKit as a substitute for crisis support.</p>
+
+      <h3>9.4 Wellness Content Disclaimer</h3>
+      <p>CalmKit content, including coaching prompts, breathing exercises, and wellness guidance, is evidence-informed but does not constitute clinical advice. Participation in CalmKit activities is entirely voluntary. You are encouraged to consult with a licensed mental health professional for any clinical concerns.</p>
+    </section>
+
+    <!-- SECTION 10 -->
+    <section id="s10">
+      <h2><span class="section-number">10</span> Intellectual Property</h2>
+
+      <h3>10.1 HMC Ownership</h3>
+      <p>Health Matters Clinic owns or holds licenses to all content, materials, and tools on the Platforms, including but not limited to:</p>
+      <ul>
+        <li>The "Health Matters Clinic" name, logo, and all associated trademarks and service marks</li>
+        <li>All Unstoppable workshop curricula, facilitator guides, participant handouts, and presentation materials</li>
+        <li>The CalmKit tool, coaching framework, and all associated content and prompts</li>
+        <li>All blog posts, articles, videos, infographics, and written content published by HMC</li>
+        <li>The Volunteer Portal platform, Event Finder tool, and Partner Portal application code and design</li>
+        <li>The HMC Gumroad Digital Companion and any other digital publications</li>
+        <li>All photography, video, and multimedia produced by or for HMC</li>
+      </ul>
+
+      <h3>10.2 Limited License to Users</h3>
+      <p>Subject to your compliance with these Terms, HMC grants you a limited, non-exclusive, non-transferable, revocable license to access and use the Platforms for their intended purposes. This license does not permit you to reproduce, redistribute, sublicense, sell, or create derivative works from HMC content without prior written permission.</p>
+
+      <h3>10.3 Permitted Sharing</h3>
+      <p>You may share links to HMC's publicly available content on social media or within organizational communications, provided you do not alter the content and clearly attribute Health Matters Clinic as the source. For requests to reproduce HMC content for educational, nonprofit, or media purposes, contact <a href="mailto:contact@healthmatters.clinic">contact@healthmatters.clinic</a>.</p>
+
+      <h3>10.4 Feedback</h3>
+      <p>If you provide feedback, suggestions, or ideas to HMC about any Platform, you grant HMC a perpetual, royalty-free, worldwide license to use that feedback for any purpose without compensation or attribution to you.</p>
+    </section>
+
+    <!-- SECTION 11 -->
+    <section id="s11">
+      <h2><span class="section-number">11</span> Third-Party Services and Links</h2>
+
+      <h3>11.1 Third-Party Integrations</h3>
+      <p>HMC's Platforms utilize the following third-party services. Your use of these services is subject to their respective privacy policies and terms of service:</p>
+      <ul>
+        <li><strong>Google Analytics</strong> — website traffic and usage analytics (Google LLC)</li>
+        <li><strong>Google Firebase and Firestore</strong> — backend infrastructure, authentication, and database services (Google LLC)</li>
+        <li><strong>Twilio</strong> — SMS messaging and notification delivery (Twilio Inc.)</li>
+        <li><strong>Webflow</strong> — website hosting and content management for healthmatters.clinic (Webflow, Inc.)</li>
+        <li><strong>Google reCAPTCHA</strong> — bot and spam prevention on forms (Google LLC)</li>
+        <li><strong>Google OAuth</strong> — account authentication (Google LLC)</li>
+        <li><strong>Gumroad</strong> — digital product distribution and payment processing (Gumroad, Inc.)</li>
+        <li><strong>Cloudflare</strong> — DNS management and network security (Cloudflare, Inc.)</li>
+      </ul>
+
+      <h3>11.2 Third-Party Links</h3>
+      <p>HMC's Resource Directory and event listings may contain links to third-party websites and organizations. These links are provided for convenience and informational purposes only. HMC does not endorse, control, or assume responsibility for the content, privacy practices, or accuracy of any third-party website. Your interactions with third-party websites are governed by their own terms and privacy policies.</p>
+
+      <h3>11.3 No HMC Liability for Third-Party Services</h3>
+      <p>HMC is not responsible for the acts or omissions of any third-party service provider, including service interruptions, data breaches occurring on third-party infrastructure, or changes in third-party policies.</p>
+    </section>
+
+    <!-- SECTION 12 -->
+    <section id="s12">
+      <h2><span class="section-number">12</span> User-Submitted Content</h2>
+
+      <h3>12.1 Accuracy Responsibility</h3>
+      <p>You are solely responsible for all content you submit through HMC Platforms, including application information, profile data, event feedback, and communications. You represent that all information you submit is truthful, accurate, and not misleading.</p>
+
+      <h3>12.2 License to HMC</h3>
+      <p>For content submitted by volunteers or partners that is intended for organizational use (such as event recaps, photos submitted for HMC's social media, or testimonials), you grant HMC a non-exclusive, royalty-free license to use, display, and distribute that content in connection with HMC's mission and communications. HMC will not use personal testimonials for commercial fundraising purposes without your separate consent.</p>
+
+      <h3>12.3 No Obligation to Retain</h3>
+      <p>HMC has no obligation to store, maintain, or back up any content you submit. You should retain your own copies of any information important to you.</p>
+    </section>
+
+    <!-- SECTION 13 -->
+    <section id="s13">
+      <h2><span class="section-number">13</span> Privacy and Data</h2>
+      <p>HMC's collection and use of personal information is governed by our Privacy Policy, available at <a href="https://healthmatters.clinic/privacy-policy">healthmatters.clinic/privacy-policy</a>, which is incorporated into these Terms by reference. By using HMC's Platforms, you consent to the data practices described in the Privacy Policy.</p>
+      <p>California residents have additional rights under the California Consumer Privacy Act (CCPA). Those rights are described in full in the Privacy Policy.</p>
+    </section>
+
+    <!-- SECTION 14 -->
+    <section id="s14">
+      <h2><span class="section-number">14</span> SMS and Electronic Communications</h2>
+
+      <h3>14.1 Consent to Electronic Communications</h3>
+      <p>By creating an account or submitting contact information through any HMC Platform, you consent to receive electronic communications from HMC, including email notifications related to your account, volunteer activities, event registrations, and organizational updates.</p>
+
+      <h3>14.2 SMS Program</h3>
+      <p>HMC operates SMS programs through Twilio for event notifications and volunteer communications. By providing your mobile phone number and opting in through any HMC Platform, you consent to receive autodialed text messages from HMC. Message and data rates may apply. You may opt out of SMS communications at any time by replying STOP to any message. Opting out of SMS does not affect email communications.</p>
+
+      <h3>14.3 Transactional Communications</h3>
+      <p>Even if you opt out of marketing or non-essential communications, HMC may still send you communications that are essential to the operation of services you have signed up for, such as password resets, security alerts, or critical updates to your volunteer status or event registrations.</p>
+
+      <h3>14.4 California Electronic Communications</h3>
+      <p>As a California resident, you may have rights under California Business and Professions Code Section 17538.4 regarding unsolicited commercial email. HMC does not send unsolicited commercial emails. All email communications from HMC result from an action you took (RSVP, account creation, or opt-in).</p>
+    </section>
+
+    <!-- SECTION 15 -->
+    <section id="s15">
+      <h2><span class="section-number">15</span> Donations and Digital Products</h2>
+
+      <h3>15.1 Charitable Donations</h3>
+      <p>Health Matters Clinic is a 501(c)(3) tax-exempt organization. Donations made to HMC may be tax-deductible to the extent permitted by law. A donation receipt will be provided upon request. HMC does not guarantee any specific tax outcome and recommends consulting a qualified tax advisor regarding deductibility.</p>
+
+      <h3>15.2 Gumroad Digital Companion</h3>
+      <p>The HMC Digital Companion is available through Gumroad on a pay-what-you-want basis. Payments are processed by Gumroad, Inc. and are subject to Gumroad's terms and privacy policy. HMC does not retain payment card information. The Digital Companion is provided as-is for educational purposes. No clinical guarantees are made regarding outcomes from use of the Digital Companion.</p>
+
+      <h3>15.3 No Refunds on Donations</h3>
+      <p>Charitable donations to HMC are generally non-refundable. For concerns about a specific donation, contact <a href="mailto:contact@healthmatters.clinic">contact@healthmatters.clinic</a> within 30 days of the transaction.</p>
+    </section>
+
+    <!-- SECTION 16 -->
+    <section id="s16">
+      <h2><span class="section-number">16</span> Account Suspension and Termination</h2>
+
+      <h3>16.1 HMC's Right to Suspend or Terminate</h3>
+      <p>HMC reserves the right to suspend, restrict, or permanently terminate your access to any Platform, with or without prior notice, for any of the following reasons:</p>
+      <ul>
+        <li>Violation of these Terms of Service or any Platform-specific policy</li>
+        <li>Submission of fraudulent or false information</li>
+        <li>Conduct that poses a risk to HMC, its staff, volunteers, partners, or the community members it serves</li>
+        <li>Misuse of HIPAA-protected information</li>
+        <li>Any activity that is illegal under applicable law</li>
+        <li>Extended inactivity, at HMC's discretion, with reasonable prior notice where practicable</li>
+      </ul>
+
+      <h3>16.2 Effect of Termination</h3>
+      <p>Upon termination of your account or access, your right to use the applicable Platform immediately ceases. Provisions of these Terms that by their nature should survive termination will survive, including Sections 5, 7.5, 7.6, 10, 17, 18, 19, and 20.</p>
+
+      <h3>16.3 User-Initiated Deactivation</h3>
+      <p>You may request deactivation of your account at any time by contacting <a href="mailto:contact@healthmatters.clinic">contact@healthmatters.clinic</a>. Account deactivation may not result in immediate deletion of all associated data. Data retention and deletion rights are described in the Privacy Policy.</p>
+    </section>
+
+    <!-- SECTION 17 -->
+    <section id="s17">
+      <h2><span class="section-number">17</span> Disclaimer of Warranties</h2>
+
+      <div class="highlight-box">
+        <p style="text-transform: uppercase; font-size: 13px; font-weight: 600; color: #aaa; margin-bottom: 12px;">Important: Please Read Carefully</p>
+        <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, HMC'S PLATFORMS ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. HMC EXPRESSLY DISCLAIMS ALL WARRANTIES, INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.</p>
+        <p style="margin-bottom: 0;">HMC DOES NOT WARRANT THAT THE PLATFORMS WILL BE UNINTERRUPTED, ERROR-FREE, SECURE, OR FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. HMC DOES NOT WARRANT THE ACCURACY, COMPLETENESS, OR USEFULNESS OF ANY INFORMATION ON THE PLATFORMS.</p>
+      </div>
+
+      <p>Some states or jurisdictions do not allow the exclusion of implied warranties. In such jurisdictions, the above exclusions may not apply to you. In those cases, HMC's warranties are limited to the minimum warranty required by applicable law.</p>
+    </section>
+
+    <!-- SECTION 18 -->
+    <section id="s18">
+      <h2><span class="section-number">18</span> Limitation of Liability</h2>
+
+      <div class="highlight-box">
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL HEALTH MATTERS CLINIC, ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, VOLUNTEERS, OR LICENSORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, OR EXEMPLARY DAMAGES, INCLUDING BUT NOT LIMITED TO DAMAGES FOR LOSS OF PROFITS, GOODWILL, DATA, BUSINESS OPPORTUNITIES, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR IN CONNECTION WITH THESE TERMS OR YOUR USE OF THE PLATFORMS, EVEN IF HMC HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+        <p style="margin-bottom: 0;">IN NO EVENT SHALL HMC'S TOTAL AGGREGATE LIABILITY TO YOU FOR ANY CLAIM ARISING OUT OF THESE TERMS OR YOUR USE OF THE PLATFORMS EXCEED THE GREATER OF (A) THE AMOUNT YOU PAID TO HMC IN THE TWELVE MONTHS PRECEDING THE CLAIM, OR (B) ONE HUNDRED DOLLARS ($100.00).</p>
+      </div>
+
+      <p>The limitations above reflect a reasonable allocation of risk. HMC would not be able to provide free community services without these protections. These limitations apply regardless of the legal theory under which a claim is brought, including contract, tort, strict liability, or otherwise.</p>
+
+      <p>Nothing in these Terms limits HMC's liability for fraud, intentional misconduct, or any liability that cannot be excluded under applicable California law or federal law.</p>
+    </section>
+
+    <!-- SECTION 19 -->
+    <section id="s19">
+      <h2><span class="section-number">19</span> Indemnification</h2>
+      <p>You agree to defend, indemnify, and hold harmless Health Matters Clinic and its officers, directors, employees, agents, and volunteers from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorneys' fees and costs) arising out of or in any way connected with:</p>
+      <ul>
+        <li>Your access to or use of any HMC Platform</li>
+        <li>Your violation of these Terms</li>
+        <li>Your violation of any applicable law, regulation, or third-party right</li>
+        <li>Any content or information you submit through HMC Platforms</li>
+        <li>Your conduct at any HMC event or volunteer activity</li>
+      </ul>
+      <p>HMC reserves the right, at its own expense, to assume the exclusive defense and control of any matter otherwise subject to indemnification by you, and you agree to cooperate with HMC's defense of that claim.</p>
+    </section>
+
+    <!-- SECTION 20 -->
+    <section id="s20">
+      <h2><span class="section-number">20</span> Governing Law and Dispute Resolution</h2>
+
+      <h3>20.1 Governing Law</h3>
+      <p>These Terms shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law provisions. The United Nations Convention on Contracts for the International Sale of Goods does not apply.</p>
+
+      <h3>20.2 Jurisdiction and Venue</h3>
+      <p>Any legal action or proceeding arising out of or relating to these Terms or your use of HMC's Platforms shall be brought exclusively in the state or federal courts located in Los Angeles County, California. You and HMC each irrevocably consent to personal jurisdiction and exclusive venue in Los Angeles County for any such dispute.</p>
+
+      <h3>20.3 Informal Resolution</h3>
+      <p>Before initiating any legal action, you agree to first contact HMC in writing at <a href="mailto:contact@healthmatters.clinic">contact@healthmatters.clinic</a> and attempt in good faith to resolve the dispute informally within 30 days. Many concerns can be resolved quickly and directly.</p>
+
+      <h3>20.4 California Consumer Rights</h3>
+      <p>Nothing in these Terms waives rights you may have under the California Consumer Legal Remedies Act (CLRA), California Business and Professions Code Section 17200 et seq. (Unfair Competition Law), or any other non-waivable consumer protection statute. California residents may contact the California Department of Consumer Affairs for additional information.</p>
+
+      <h3>20.5 No Class Action Waiver</h3>
+      <p>Nothing in these Terms constitutes a waiver of any right to bring a class action under California law or applicable federal law. HMC does not impose mandatory arbitration clauses in these Terms.</p>
+    </section>
+
+    <!-- SECTION 21 -->
+    <section id="s21">
+      <h2><span class="section-number">21</span> Changes to These Terms</h2>
+      <p>HMC reserves the right to modify these Terms at any time. When we make material changes, we will update the "Last Updated" date at the top of this page and, where practicable, provide notice to registered users via email or in-platform notification.</p>
+      <p>Your continued use of any HMC Platform after the effective date of revised Terms constitutes your acceptance of the revised Terms. If you do not agree to the revised Terms, you must discontinue use of the applicable Platform and, if applicable, deactivate your account.</p>
+      <p>We encourage you to review these Terms periodically. The current version will always be available at healthmatters.clinic.</p>
+    </section>
+
+    <!-- SECTION 22 -->
+    <section id="s22">
+      <h2><span class="section-number">22</span> Contact Information</h2>
+
+      <div class="contact-block">
+        <h3>Questions About These Terms</h3>
+        <p>If you have questions about these Terms of Service, please contact us:</p>
+        <p><strong>Health Matters Clinic</strong><br>
+        Los Angeles, California</p>
+        <p>Email: <a href="mailto:contact@healthmatters.clinic">contact@healthmatters.clinic</a></p>
+        <p>Phone: <a href="tel:+13239904325">(323) 990-4325</a></p>
+        <p>Website: <a href="https://healthmatters.clinic">healthmatters.clinic</a></p>
+        <p style="margin-top: 16px; color: #666; font-size: 13px;">For privacy-specific inquiries, including CCPA requests, contact: <a href="mailto:privacy@healthmatters.clinic">privacy@healthmatters.clinic</a></p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Health Matters Clinic &nbsp;|&nbsp; A 501(c)(3) Nonprofit Organization &nbsp;|&nbsp; <a href="mailto:privacy@healthmatters.clinic">privacy@healthmatters.clinic</a></p>
+    <p style="margin-top: 8px;"><a href="https://healthmatters.clinic">healthmatters.clinic</a> &nbsp;&middot;&nbsp; Los Angeles, California</p>
+  </footer>
+
+</body>
+</html>

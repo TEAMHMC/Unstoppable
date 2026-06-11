@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookie Policy | Health Matters Clinic</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #0a0a0a;
+      color: #e8e8e8;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      padding: 0 0 80px;
+    }
+
+    .header {
+      background-color: #111111;
+      border-bottom: 1px solid #222;
+      padding: 28px 40px;
+      text-align: center;
+    }
+
+    .header a {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .header-logo-text {
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.3px;
+    }
+
+    .header-logo-text span {
+      color: #ffffff;
+    }
+
+    .header-tagline {
+      font-size: 12px;
+      color: #888;
+      margin-top: 4px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    .doc-title {
+      font-size: 36px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .doc-meta {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid #1e1e1e;
+    }
+
+    .intro-block {
+      background-color: rgba(35,61,255,0.1);
+      border: 1px solid rgba(35,61,255,0.2);
+      border-left: 4px solid #233dff;
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+      font-size: 15px;
+      color: #ccc;
+      line-height: 1.8;
+    }
+
+    .intro-block strong {
+      color: #fff;
+    }
+
+    .toc {
+      background-color: #0f0f0f;
+      border: 1px solid #1e1e1e;
+      border-radius: 8px;
+      padding: 28px 32px;
+      margin-bottom: 56px;
+    }
+
+    .toc-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .toc ol {
+      padding-left: 20px;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: #233dff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 56px;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #1e1e1e;
+    }
+
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: #e0e0e0;
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: #c8c8c8;
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+
+    ul, ol {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+
+    li {
+      color: #c8c8c8;
+      font-size: 15px;
+      margin-bottom: 8px;
+      line-height: 1.7;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 14px;
+    }
+
+    th {
+      background-color: #141414;
+      color: #aaa;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #222;
+    }
+
+    td {
+      padding: 14px 16px;
+      color: #c8c8c8;
+      border-bottom: 1px solid #1a1a1a;
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background-color: #0f0f0f;
+    }
+
+    .cookie-category {
+      background-color: #0f0f0f;
+      border: 1px solid #1e1e1e;
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin-bottom: 20px;
+    }
+
+    .cookie-category-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .cookie-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    .badge-required {
+      background-color: rgba(35,61,255,0.15);
+      color: #7b96ff;
+      border: 1px solid rgba(35,61,255,0.3);
+    }
+
+    .badge-analytics {
+      background-color: #1a1a2a;
+      color: #818cf8;
+      border: 1px solid #2a2a4a;
+    }
+
+    .badge-functional {
+      background-color: #1a1a1a;
+      color: #94a3b8;
+      border: 1px solid #2a2a2a;
+    }
+
+    .cookie-category-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .cookie-category p {
+      margin-bottom: 10px;
+    }
+
+    .highlight-box {
+      background-color: #111;
+      border: 1px solid #2a2a2a;
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    .ccpa-box {
+      background-color: rgba(35,61,255,0.1);
+      border: 1px solid rgba(35,61,255,0.2);
+      border-left: 4px solid #233dff;
+      border-radius: 6px;
+      padding: 24px 28px;
+      margin: 24px 0;
+    }
+
+    .ccpa-box h3 {
+      color: #ffffff;
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    .optout-box {
+      background-color: #111;
+      border: 1px solid #222;
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin: 24px 0;
+    }
+
+    .optout-box h3 {
+      margin-top: 0;
+      color: #fff;
+      font-size: 17px;
+    }
+
+    a {
+      color: #233dff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .section-number {
+      display: inline-block;
+      color: #233dff;
+      font-size: 14px;
+      font-weight: 700;
+      margin-right: 10px;
+      vertical-align: middle;
+      letter-spacing: 0.5px;
+    }
+
+    .contact-block {
+      background-color: #0f0f0f;
+      border: 1px solid #222;
+      border-radius: 8px;
+      padding: 28px 32px;
+      margin-top: 48px;
+    }
+
+    .contact-block h3 {
+      margin-top: 0;
+      color: #fff;
+    }
+
+    .contact-block p {
+      margin-bottom: 8px;
+    }
+
+    .browser-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 14px;
+      margin: 20px 0;
+    }
+
+    .browser-card {
+      background-color: #0f0f0f;
+      border: 1px solid #1e1e1e;
+      border-radius: 6px;
+      padding: 16px 18px;
+    }
+
+    .browser-card-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #e0e0e0;
+      margin-bottom: 6px;
+    }
+
+    .browser-card a {
+      font-size: 13px;
+      color: #233dff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      border-top: 1px solid #1a1a1a;
+      color: #555;
+      font-size: 13px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #233dff;
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 40px 20px; }
+      .header { padding: 20px; }
+      .doc-title { font-size: 26px; }
+      h2 { font-size: 19px; }
+      table { font-size: 13px; }
+      th, td { padding: 10px 12px; }
+      .browser-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <a href="https://healthmatters.clinic">
+      <div class="header-logo-text">Health Matters <span>Clinic</span></div>
+    </a>
+    <div class="header-tagline">A 501(c)(3) Nonprofit Organization</div>
+  </div>
+
+  <div class="container">
+
+    <h1 class="doc-title">Cookie and Tracking Policy</h1>
+    <div class="doc-meta">
+      Effective Date: June 1, 2026 &nbsp;&middot;&nbsp; Last Updated: June 1, 2026 &nbsp;&middot;&nbsp; Version 1.0
+    </div>
+
+    <div class="intro-block">
+      <strong>What this policy covers:</strong> This Cookie and Tracking Policy explains what cookies and similar tracking technologies Health Matters Clinic uses across our platforms, why we use them, and how you can control or opt out of them. We use cookies to keep our platforms functioning, understand how they are used, and improve the experience for community members, volunteers, and partners. We do not use cookies for advertising or behavioral profiling.
+    </div>
+
+    <nav class="toc">
+      <div class="toc-title">Table of Contents</div>
+      <ol>
+        <li><a href="#c1">What Are Cookies</a></li>
+        <li><a href="#c2">Platforms Where Cookies Are Used</a></li>
+        <li><a href="#c3">Categories of Cookies We Use</a></li>
+        <li><a href="#c4">Specific Cookies and Tracking Technologies</a></li>
+        <li><a href="#c5">CalmKit: No Persistent Tracking</a></li>
+        <li><a href="#c6">How to Control and Opt Out of Cookies</a></li>
+        <li><a href="#c7">California Privacy Rights and CCPA Disclosure</a></li>
+        <li><a href="#c8">Third-Party Tracking Tools</a></li>
+        <li><a href="#c9">Changes to This Policy</a></li>
+        <li><a href="#c10">Contact Us</a></li>
+      </ol>
+    </nav>
+
+    <!-- SECTION 1 -->
+    <section id="c1">
+      <h2><span class="section-number">01</span> What Are Cookies</h2>
+      <p>Cookies are small text files placed on your device (computer, phone, or tablet) when you visit a website. They are widely used to make websites function correctly, remember your preferences, and provide analytical information to website operators.</p>
+      <p>In addition to cookies, websites use similar technologies for tracking and analytics, including:</p>
+      <ul>
+        <li><strong>Local storage and session storage:</strong> Browser-side data storage that persists beyond a page load or is cleared when you close the tab</li>
+        <li><strong>Pixels and web beacons:</strong> Tiny invisible images or scripts embedded in pages or emails that signal when content has been loaded</li>
+        <li><strong>Fingerprinting-adjacent data:</strong> Technical attributes like browser type, screen resolution, and IP address used to identify and distinguish sessions</li>
+        <li><strong>SDK-based tracking:</strong> In-app analytics frameworks embedded in web applications</li>
+      </ul>
+      <p>This policy covers all of these technologies, not just traditional browser cookies.</p>
+
+      <h3>1.1 Session Cookies vs. Persistent Cookies</h3>
+      <p>Session cookies are temporary and are deleted automatically when you close your browser. They are used to maintain your experience during a single visit, such as keeping you logged in while navigating between pages.</p>
+      <p>Persistent cookies remain on your device for a defined period (or until manually deleted) and are used to remember preferences and collect analytics across multiple visits.</p>
+
+      <h3>1.2 First-Party vs. Third-Party Cookies</h3>
+      <p>First-party cookies are set by HMC directly for the domain you are visiting. Third-party cookies are set by external services (such as Google Analytics or reCAPTCHA) when their code is loaded on our pages. HMC does not allow advertising networks to place third-party cookies on our platforms.</p>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section id="c2">
+      <h2><span class="section-number">02</span> Platforms Where Cookies Are Used</h2>
+      <p>Cookies and tracking technologies are used on the following HMC platforms:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Platform</th>
+            <th>URL</th>
+            <th>Cookies Used</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Main Website</td>
+            <td>healthmatters.clinic</td>
+            <td>Analytics, functional, reCAPTCHA, session</td>
+          </tr>
+          <tr>
+            <td>Event Finder</td>
+            <td>eventfinder.healthmatters.clinic</td>
+            <td>Session, reCAPTCHA, minimal analytics</td>
+          </tr>
+          <tr>
+            <td>Volunteer Portal</td>
+            <td>volunteer.healthmatters.clinic</td>
+            <td>Authentication (Firebase), session, reCAPTCHA</td>
+          </tr>
+          <tr>
+            <td>Partner Portal</td>
+            <td>partner.healthmatters.clinic</td>
+            <td>Authentication (Firebase), session, reCAPTCHA</td>
+          </tr>
+          <tr>
+            <td>CalmKit</td>
+            <td>calmkit.healthmatters.clinic</td>
+            <td>Session only (no persistent or analytics cookies)</td>
+          </tr>
+          <tr>
+            <td>Resource Directory</td>
+            <td>healthmatters.clinic/resources</td>
+            <td>Analytics, session (via Webflow)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>HMC's Gumroad product listing uses cookies set by Gumroad, Inc. Those cookies are governed by Gumroad's own Cookie and Privacy Policy.</p>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section id="c3">
+      <h2><span class="section-number">03</span> Categories of Cookies We Use</h2>
+
+      <div class="cookie-category">
+        <div class="cookie-category-header">
+          <span class="cookie-badge badge-required">Strictly Necessary</span>
+          <div class="cookie-category-title">Cannot Be Disabled</div>
+        </div>
+        <p>These cookies are essential for HMC's platforms to function. Without them, services like logging into the Volunteer Portal, submitting RSVP forms, or completing training modules would not work. These cookies do not track browsing behavior across other websites and do not require consent under applicable law.</p>
+        <p><strong>Examples:</strong> Authentication tokens (Firebase), session identifiers, CSRF protection tokens, form submission state</p>
+        <p><strong>Data stored:</strong> Encrypted session identifiers, authentication state. No personal content is stored in these cookies.</p>
+        <p><strong>Retention:</strong> Session cookies expire when you close your browser. Authentication cookies expire based on your login session, typically 30 days unless you log out sooner.</p>
+      </div>
+
+      <div class="cookie-category">
+        <div class="cookie-category-header">
+          <span class="cookie-badge badge-analytics">Analytics</span>
+          <div class="cookie-category-title">Optional / Can Be Opted Out</div>
+        </div>
+        <p>Analytics cookies help HMC understand how our platforms are used so we can improve them. We use Google Analytics with IP anonymization enabled, which means your IP address is truncated before it is processed by Google. Analytics data is aggregated and is not linked to your name or account unless you are logged in and we have explicitly configured user-ID tracking (which we do not do for our public-facing platforms).</p>
+        <p><strong>Examples:</strong> Google Analytics cookies (_ga, _ga_*, _gid)</p>
+        <p><strong>What we measure:</strong> Pages visited, time on page, referral source, device type, browser type, general geographic region (city or state level), and interaction with key features</p>
+        <p><strong>What we do NOT do with analytics data:</strong> Cross-site tracking, behavioral advertising, individual-level profiling, data resale</p>
+        <p><strong>Retention:</strong> _ga cookies persist for 24 months. _gid cookies persist for 24 hours.</p>
+        <p><strong>How to opt out:</strong> See Section 6 for browser-level and Google-level opt-out options.</p>
+      </div>
+
+      <div class="cookie-category">
+        <div class="cookie-category-header">
+          <span class="cookie-badge badge-functional">Functional</span>
+          <div class="cookie-category-title">Enhance Your Experience</div>
+        </div>
+        <p>Functional cookies remember choices you make on HMC platforms to provide a more personalized and convenient experience. These are not advertising cookies and do not track you across unrelated websites.</p>
+        <p><strong>Examples:</strong> Language or accessibility preferences, notification preferences, previously viewed resources (stored locally in your browser)</p>
+        <p><strong>Retention:</strong> Varies by cookie; typically 90 days to 12 months.</p>
+        <p>Disabling functional cookies may affect convenience features (such as remembering your preferred event filters) but will not prevent you from using core services.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section id="c4">
+      <h2><span class="section-number">04</span> Specific Cookies and Tracking Technologies</h2>
+
+      <h3>4.1 Google Analytics</h3>
+      <p>HMC uses Google Analytics (provided by Google LLC) to collect aggregated usage data about how visitors interact with our platforms. Google Analytics uses first-party cookies stored in your browser to track sessions and page views.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Cookie Name</th>
+            <th>Purpose</th>
+            <th>Duration</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code style="color:#7b96ff;">_ga</code></td>
+            <td>Distinguishes users for analytics reporting</td>
+            <td>24 months</td>
+            <td>Persistent, first-party</td>
+          </tr>
+          <tr>
+            <td><code style="color:#7b96ff;">_ga_[ID]</code></td>
+            <td>Maintains session state for Google Analytics 4</td>
+            <td>24 months</td>
+            <td>Persistent, first-party</td>
+          </tr>
+          <tr>
+            <td><code style="color:#7b96ff;">_gid</code></td>
+            <td>Distinguishes users across a 24-hour window</td>
+            <td>24 hours</td>
+            <td>Persistent, first-party</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>HMC has enabled IP anonymization in Google Analytics, which means the last octet of your IP address is removed before analytics data is stored. HMC does not use Google Analytics Advertising features, Remarketing, or User ID linking on public-facing platforms.</p>
+      <p>Google's use of analytics data is governed by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. You can opt out of Google Analytics across all websites using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</p>
+
+      <h3>4.2 Google Firebase and Authentication Cookies</h3>
+      <p>The Volunteer Portal and Partner Portal use Google Firebase for backend services, database access, and authentication. Firebase sets cookies and uses local storage to manage authentication sessions and security.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Technology</th>
+            <th>Purpose</th>
+            <th>Duration</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Firebase Auth Token</td>
+            <td>Maintains your authenticated session in the Volunteer or Partner Portal</td>
+            <td>Session or 30 days (if "stay signed in" is selected)</td>
+            <td>Browser local storage, strictly necessary</td>
+          </tr>
+          <tr>
+            <td>Firebase Session Cookie</td>
+            <td>Security token for API requests between browser and HMC's Cloud Run backend</td>
+            <td>Session</td>
+            <td>Session cookie, strictly necessary</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>These cookies are strictly necessary for authenticated platforms to function. Disabling them will prevent login to the Volunteer Portal and Partner Portal.</p>
+
+      <h3>4.3 Google reCAPTCHA</h3>
+      <p>HMC uses Google reCAPTCHA (v2 and/or v3) on forms across our platforms to distinguish human users from automated bots and prevent spam submissions. reCAPTCHA analyzes behavioral signals from your browser session, including mouse movements, typing patterns, and browser characteristics, to generate a risk score.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Technology</th>
+            <th>Purpose</th>
+            <th>Duration</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>reCAPTCHA cookies</td>
+            <td>Bot detection and form spam prevention on RSVP and contact forms</td>
+            <td>6 months (Google-set)</td>
+            <td>Third-party (google.com domain)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>reCAPTCHA data is processed by Google LLC under its own privacy policy. HMC receives only a pass/fail assessment, not the underlying behavioral data. By using forms on HMC's platforms, you acknowledge that reCAPTCHA will analyze your browser session.</p>
+      <p>More information is available in the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and the <a href="https://developers.google.com/recaptcha" target="_blank" rel="noopener">reCAPTCHA documentation</a>.</p>
+
+      <h3>4.4 Webflow Platform Cookies</h3>
+      <p>HMC's main website (healthmatters.clinic) is hosted on Webflow. Webflow may set its own operational cookies for site functionality and performance monitoring.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Cookie Name</th>
+            <th>Purpose</th>
+            <th>Duration</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Webflow session cookies</td>
+            <td>Site functionality, form state, and CMS rendering</td>
+            <td>Session</td>
+            <td>Session, functional</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Webflow's data practices are governed by the <a href="https://webflow.com/legal/privacy" target="_blank" rel="noopener">Webflow Privacy Policy</a>.</p>
+
+      <h3>4.5 Session Storage (Non-Cookie Browser Storage)</h3>
+      <p>Some HMC platforms use browser sessionStorage or localStorage to temporarily hold data like form progress, selected filters in the Event Finder, or accessibility preferences. This data is stored in your browser only and is never transmitted to HMC's servers unless you explicitly submit a form. SessionStorage is cleared when you close the tab. LocalStorage persists until cleared by you or by the application.</p>
+    </section>
+
+    <!-- SECTION 5 -->
+    <section id="c5">
+      <h2><span class="section-number">05</span> CalmKit: No Persistent Tracking</h2>
+
+      <div class="ccpa-box">
+        <h3>CalmKit Is a Tracking-Free Zone</h3>
+        <p>By design, CalmKit (calmkit.healthmatters.clinic) does not use persistent cookies, does not run Google Analytics, does not store any user-entered content, and does not transmit any identifiable information to HMC's servers.</p>
+        <p>The only browser storage used by CalmKit is sessionStorage for maintaining the state of your current coaching session (for example, which stage of a breathing exercise you are in). This data is automatically cleared when you close the tab.</p>
+      </div>
+
+      <p>This design reflects our belief that mental wellness tools should be safe to use without fear that your inputs will be recorded, analyzed, or shared. CalmKit is anonymous by architecture, not merely by policy.</p>
+    </section>
+
+    <!-- SECTION 6 -->
+    <section id="c6">
+      <h2><span class="section-number">06</span> How to Control and Opt Out of Cookies</h2>
+
+      <h3>6.1 Browser-Level Cookie Controls</h3>
+      <p>All modern browsers allow you to view, block, and delete cookies through their settings. The instructions vary by browser. Use the links below to find guidance for your browser:</p>
+
+      <div class="browser-grid">
+        <div class="browser-card">
+          <div class="browser-card-name">Google Chrome</div>
+          <a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Manage cookies in Chrome</a>
+        </div>
+        <div class="browser-card">
+          <div class="browser-card-name">Safari (Mac and iOS)</div>
+          <a href="https://support.apple.com/guide/safari/manage-cookies-sfri11471" target="_blank" rel="noopener">Manage cookies in Safari</a>
+        </div>
+        <div class="browser-card">
+          <div class="browser-card-name">Mozilla Firefox</div>
+          <a href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer" target="_blank" rel="noopener">Manage cookies in Firefox</a>
+        </div>
+        <div class="browser-card">
+          <div class="browser-card-name">Microsoft Edge</div>
+          <a href="https://support.microsoft.com/en-us/windows/manage-cookies-in-microsoft-edge" target="_blank" rel="noopener">Manage cookies in Edge</a>
+        </div>
+        <div class="browser-card">
+          <div class="browser-card-name">Brave Browser</div>
+          <a href="https://support.brave.com/hc/en-us/articles/360022806212" target="_blank" rel="noopener">Manage shields and cookies</a>
+        </div>
+        <div class="browser-card">
+          <div class="browser-card-name">Opera</div>
+          <a href="https://help.opera.com/en/latest/web-preferences/#cookies" target="_blank" rel="noopener">Manage cookies in Opera</a>
+        </div>
+      </div>
+
+      <p><strong>Important:</strong> Blocking all cookies will prevent you from logging into authenticated HMC platforms such as the Volunteer Portal and Partner Portal. Strictly necessary cookies cannot be disabled without disabling the core service they support.</p>
+
+      <div class="optout-box">
+        <h3>Opt-Out Options by Tracking Type</h3>
+
+        <p><strong>Google Analytics:</strong> Install the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>. This add-on prevents Google Analytics from collecting data about your visits on any website that uses it, not just HMC's.</p>
+
+        <p><strong>Google services broadly:</strong> Manage your Google privacy settings and ad personalization at <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener">myaccount.google.com/data-and-privacy</a>.</p>
+
+        <p><strong>reCAPTCHA:</strong> reCAPTCHA is a strictly necessary security technology on HMC forms. There is no opt-out for reCAPTCHA that preserves form functionality, as it is required to distinguish human users from bots. You may use browser privacy extensions that block reCAPTCHA, but this may prevent form submission.</p>
+
+        <p><strong>Webflow platform cookies:</strong> These are operational cookies managed by Webflow. Blocking them via browser settings may affect website rendering. There is no Webflow-specific opt-out tool.</p>
+
+        <p><strong>All analytics cookies (global opt-out):</strong> You can use browser extensions such as Privacy Badger, uBlock Origin, or similar tools to block third-party tracking scripts on all websites including HMC's. These tools block analytics and functional cookies while generally allowing strictly necessary first-party cookies.</p>
+      </div>
+
+      <h3>6.2 Mobile Device Controls</h3>
+      <p>On mobile devices, you can control cookies and tracking through your browser settings. iOS and Android also provide system-level privacy controls:</p>
+      <ul>
+        <li><strong>iOS:</strong> Settings &gt; Privacy and Security &gt; Tracking allows you to limit cross-app tracking (not directly applicable to web cookies, but relevant for Safari)</li>
+        <li><strong>Android:</strong> Your browser app's settings control cookie behavior; the specific path varies by device and browser</li>
+      </ul>
+
+      <h3>6.3 Effect of Opting Out</h3>
+      <p>Opting out of analytics cookies will not affect your ability to use HMC's public resources, browse the Resource Directory, RSVP for events, or access CalmKit. It will prevent HMC from counting your visit in our analytics reports. Opting out of authentication cookies will prevent you from logging into authenticated portals.</p>
+    </section>
+
+    <!-- SECTION 7 -->
+    <section id="c7">
+      <h2><span class="section-number">07</span> California Privacy Rights and CCPA Disclosure</h2>
+
+      <div class="ccpa-box">
+        <h3>California Residents: Your Cookie-Related Rights</h3>
+        <p>Under the California Consumer Privacy Act (CCPA), as amended by the California Privacy Rights Act (CPRA), California residents have specific rights regarding personal information collected through cookies and tracking technologies.</p>
+      </div>
+
+      <h3>7.1 CCPA Category Disclosure for Cookie Data</h3>
+      <p>Cookie and tracking data collected on HMC platforms may fall into the following CCPA personal information categories:</p>
+      <ul>
+        <li><strong>Identifiers:</strong> IP address (anonymized in Google Analytics), device identifiers, session identifiers</li>
+        <li><strong>Internet or network activity information:</strong> Pages visited, time on page, interaction with platform features, referral sources</li>
+        <li><strong>Geolocation data:</strong> General location data derived from IP address (city or state level only; no precise geolocation tracking)</li>
+      </ul>
+
+      <h3>7.2 No Sale of Cookie Data</h3>
+      <p>HMC does not sell personal information collected through cookies or tracking technologies. We do not share cookie data with advertising networks, data brokers, or third parties for cross-context behavioral advertising. The analytics data collected through Google Analytics is used solely for HMC's internal platform improvement purposes.</p>
+
+      <h3>7.3 Your CCPA Rights Regarding Cookie Data</h3>
+      <p>California residents may exercise the following rights regarding cookie-collected data:</p>
+      <ul>
+        <li><strong>Right to Know:</strong> Request disclosure of the categories of personal information we collect through cookies and how it is used</li>
+        <li><strong>Right to Delete:</strong> Request deletion of personal information collected through cookies (note: some technical data may be outside HMC's direct control once processed by third-party analytics providers)</li>
+        <li><strong>Right to Opt Out of Sale or Sharing:</strong> Not applicable because HMC does not sell or share cookie data for advertising purposes</li>
+        <li><strong>Right to Non-Discrimination:</strong> Exercising cookie opt-out rights will not result in any discrimination in access to HMC's free services</li>
+      </ul>
+      <p>To exercise these rights, contact <a href="mailto:privacy@healthmatters.clinic">privacy@healthmatters.clinic</a>. For more information about your full CCPA rights, see our <a href="https://healthmatters.clinic/privacy-policy">Privacy Policy</a>.</p>
+
+      <h3>7.4 Global Privacy Control (GPC)</h3>
+      <p>The Global Privacy Control (GPC) is a browser-level signal that communicates your privacy preferences to websites. HMC is aware of the GPC specification and the California Attorney General's guidance that GPC signals may constitute a valid opt-out request under the CCPA. HMC will treat GPC signals as opt-out requests to the extent technically feasible and legally required. We are actively working to ensure technical compliance with GPC signals on our platforms.</p>
+    </section>
+
+    <!-- SECTION 8 -->
+    <section id="c8">
+      <h2><span class="section-number">08</span> Third-Party Tracking Tools</h2>
+
+      <h3>8.1 What We Do Not Use</h3>
+      <p>HMC explicitly does not use any of the following on its platforms:</p>
+      <ul>
+        <li>Facebook Pixel or any Meta advertising tracking</li>
+        <li>Twitter/X advertising pixels</li>
+        <li>LinkedIn Insight Tag or advertising pixels</li>
+        <li>Google Ads remarketing or conversion tracking</li>
+        <li>Any third-party advertising networks or demand-side platforms</li>
+        <li>Data broker integrations or audience enrichment services</li>
+        <li>Hotjar, FullStory, or session recording tools (which record individual user interactions)</li>
+        <li>Fingerprinting services designed to re-identify users without cookies</li>
+      </ul>
+
+      <h3>8.2 What We Do Use</h3>
+      <p>Third-party tools currently active on HMC platforms are limited to those described in this policy: Google Analytics (analytics), Google Firebase (infrastructure and authentication), Google reCAPTCHA (security), and Webflow (hosting). These are operational, not advertising, tools.</p>
+
+      <h3>8.3 Embedded Content</h3>
+      <p>HMC may embed content from YouTube on blog posts or event pages for educational purposes. When you view embedded YouTube content, YouTube may set its own cookies under Google's privacy policy. HMC uses YouTube's privacy-enhanced embed mode where possible to minimize cookie placement before you interact with embedded video.</p>
+    </section>
+
+    <!-- SECTION 9 -->
+    <section id="c9">
+      <h2><span class="section-number">09</span> Changes to This Policy</h2>
+      <p>HMC may update this Cookie and Tracking Policy when we add new platforms, change tracking tools, or when applicable law changes. Material changes will be reflected in an updated "Last Updated" date at the top of this page.</p>
+      <p>We recommend reviewing this policy periodically. If we introduce new analytics or functional tracking technologies beyond what is described here, we will update this page before deploying those technologies.</p>
+      <p>Continued use of HMC's platforms after a policy update constitutes acceptance of the revised policy. If you have concerns about any changes, contact us at <a href="mailto:privacy@healthmatters.clinic">privacy@healthmatters.clinic</a>.</p>
+    </section>
+
+    <!-- SECTION 10 -->
+    <section id="c10">
+      <h2><span class="section-number">10</span> Contact Us</h2>
+
+      <div class="contact-block">
+        <h3>Cookie and Tracking Questions</h3>
+        <p>If you have questions about this policy, want to exercise your CCPA rights, or want to report a tracking concern:</p>
+        <p>Email: <a href="mailto:privacy@healthmatters.clinic">privacy@healthmatters.clinic</a></p>
+        <p>Phone: <a href="tel:+13239904325">(323) 990-4325</a></p>
+        <p style="margin-top: 16px;"><strong>Health Matters Clinic</strong><br>
+        Los Angeles, California<br>
+        Website: <a href="https://healthmatters.clinic">healthmatters.clinic</a></p>
+        <p style="margin-top: 20px; padding-top: 16px; border-top: 1px solid #222; color: #888; font-size: 13px;">
+          Related documents:<br>
+          <a href="https://healthmatters.clinic/privacy-policy">Privacy Policy</a> &nbsp;&middot;&nbsp;
+          <a href="https://healthmatters.clinic/terms-of-service">Terms of Service</a>
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Health Matters Clinic &nbsp;|&nbsp; A 501(c)(3) Nonprofit Organization &nbsp;|&nbsp; <a href="mailto:privacy@healthmatters.clinic">privacy@healthmatters.clinic</a></p>
+    <p style="margin-top: 8px;"><a href="https://healthmatters.clinic">healthmatters.clinic</a> &nbsp;&middot;&nbsp; Los Angeles, California</p>
+  </footer>
+
+</body>
+</html>
