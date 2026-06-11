@@ -115,12 +115,14 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .hero-copy-grid{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:16px!important;width:100%!important;max-width:680px!important;}
 .hero-right{display:flex;flex-direction:column;gap:10px;pointer-events:all;}
 .hero-tagline{border-left:none!important;background:none!important;backdrop-filter:none!important;padding:0!important;margin:0!important;font-size:clamp(18px,2vw,26px)!important;font-weight:700!important;color:#fff!important;max-width:100%!important;}
-.hero-free{color:rgba(255,255,255,.75);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;}
+.hero-free{color:rgba(255,255,255,.85);font-size:clamp(14px,1.2vw,16px);letter-spacing:0;text-transform:none;font-weight:400;line-height:1.55;max-width:480px;}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:4px;pointer-events:all;}
-.hero-cta-primary{display:inline-flex;align-items:center;padding:14px 28px;background:#233dff;color:#fff;font-weight:800;font-size:14px;letter-spacing:.04em;border-radius:100px;text-decoration:none;transition:background .2s,transform .2s;white-space:nowrap;pointer-events:all;}
-.hero-cta-primary:hover{background:#1a2ecc;transform:translateY(-2px);}
-.hero-cta-secondary{display:inline-flex;align-items:center;padding:13px 26px;background:transparent;color:#fff;font-weight:700;font-size:14px;letter-spacing:.04em;border-radius:100px;border:1.5px solid rgba(255,255,255,.8);text-decoration:none;transition:border-color .2s,background .2s;white-space:nowrap;pointer-events:all;}
+.hero-cta-primary{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:#0a0a0a;color:#fff;font-weight:800;font-size:14px;letter-spacing:.04em;border-radius:100px;text-decoration:none;transition:background .2s,transform .2s;white-space:nowrap;pointer-events:all;}
+.hero-cta-primary:hover{background:#233dff;transform:translateY(-2px);}
+.hero-cta-secondary{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;background:transparent;color:#fff;font-weight:700;font-size:14px;letter-spacing:.04em;border-radius:100px;border:1.5px solid rgba(255,255,255,.8);text-decoration:none;transition:border-color .2s,background .2s;white-space:nowrap;pointer-events:all;}
 .hero-cta-secondary:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+.btn-dot{width:8px;height:8px;border-radius:50%;background:#fff;display:inline-block;flex-shrink:0;}
+.btn-dot-outline{width:8px;height:8px;border-radius:50%;background:#fff;display:inline-block;flex-shrink:0;}
 .hero-content{pointer-events:none!important;}
 .hero-ctas,.hero-cta-primary,.hero-cta-secondary,.hero-right a{pointer-events:all!important;}
 @media(max-width:760px){.hero-ctas{flex-direction:column;gap:10px;}.hero-cta-primary,.hero-cta-secondary{width:100%;justify-content:center;}}
@@ -379,8 +381,8 @@ html.is-embedded body{background:transparent}
 .facilitator-card-cta{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:100px;font-weight:800;font-size:12px;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;transition:all .3s;min-height:48px;position:relative;z-index:1;width:fit-content}
 .facilitator-card.community .facilitator-card-cta{background:#233dff;color:#fff;border:1.5px solid #233dff}
 .facilitator-card.community .facilitator-card-cta:hover{background:#1a2bcc;transform:translateY(-3px);box-shadow:0 12px 32px rgba(35,61,255,.4)}
-.facilitator-card.professional .facilitator-card-cta{background:#12c06b;color:#0a0a0a;border:1.5px solid #12c06b}
-.facilitator-card.professional .facilitator-card-cta:hover{background:#0fa85e;transform:translateY(-3px);box-shadow:0 12px 32px rgba(18,192,107,.35)}
+.facilitator-card.professional .facilitator-card-cta{background:#0a0a0a;color:#fff;border:1.5px solid #0a0a0a}
+.facilitator-card.professional .facilitator-card-cta:hover{background:#233dff;border-color:#233dff;transform:translateY(-3px);box-shadow:0 12px 32px rgba(35,61,255,.3)}
 .facilitator-approval{margin-top:clamp(40px,5vw,64px);text-align:center;padding:clamp(24px,3vw,36px);background:rgba(18,192,107,.06);border:1px solid rgba(18,192,107,.15);border-radius:16px}
 .facilitator-approval-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:#12c06b;margin-bottom:10px;display:block}
 .facilitator-approval-text{font-size:clamp(13px,1.3vw,14.5px);color:rgba(255,255,255,.5);line-height:1.6}
@@ -853,10 +855,10 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
       <h1 class="hero-title">Unstoppable</h1>
       <div class="hero-right">
         <p class="hero-tagline">Heal. Grow. Keep Moving Forward.</p>
-        <p class="hero-free">Free and open to all &mdash; Los Angeles</p>
+        <p class="hero-free">A community movement for mental health offering workshops, wellness events, digital tools, and community support to help people build resilience, strengthen wellbeing, and stay connected.</p>
         <div class="hero-ctas">
-          <a class="hero-cta-primary" href="https://events.healthmatters.clinic" target="_blank" rel="noopener">Find a Free Event</a>
-          <a class="hero-cta-secondary" href="./register.html">Join a Workshop</a>
+          <a class="hero-cta-primary" href="https://events.healthmatters.clinic" target="_blank" rel="noopener"><span class="btn-dot"></span>Find a Free Event</a>
+          <a class="hero-cta-secondary" href="./register.html"><span class="btn-dot-outline"></span>Join a Workshop</a>
         </div>
       </div>
     </div>
@@ -873,7 +875,7 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
     </div>
     <div class="mission-slide">
       <h2 class="rise-on-scroll">Built with the community. Proven by the data.</h2>
-      <p class="rise-on-scroll">Health Matters Clinic's flagship Unstoppable program, built with and for the community, explores the cultural realities that shape mental health and the grassroots support that drives healing.</p>
+      <p class="rise-on-scroll">Unstoppable is a community movement for mental health that offers workshops, wellness events, digital tools, and community support to help people build resilience, strengthen wellbeing, and stay connected. A Health Matters Clinic program, recognized by LACDMH.</p>
     </div>
   </div>
   <div class="mission-dots" role="tablist" aria-label="Mission slides">
@@ -1282,7 +1284,7 @@ body p,.hero-tagline,.mission-slide p,.intro-stories-slide .body,.stories-intro 
         <span class="attend-eyebrow">Not a professional? That's the point.</span>
         <p>Unstoppable workshops are free and open to everyone in the community. No credentials required. Just show up.</p>
       </div>
-      <a class="attend-cta" href="https://events.healthmatters.clinic" target="_blank" rel="noopener">Find a Free Workshop Near You &#8594;</a>
+      <a class="attend-cta" href="https://events.healthmatters.clinic" target="_blank" rel="noopener"><span class="btn-dot"></span>Find a Free Workshop Near You</a>
     </div>
 
     <div class="facilitator-grid">
